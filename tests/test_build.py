@@ -46,6 +46,31 @@ def test_city_hint():
     assert city_hint("Doral") == "Doral"
 
 
+def test_polish_promotes_header_titles():
+    from scraper.build import polish
+    items = [_item(title="NEW BUSINESS", summary="Rezoning of 361 Los Pinos Blvd for townhomes")]
+    polish(items)
+    assert items[0]["title"].startswith("Rezoning of 361 Los Pinos")
+
+
+def test_polish_drops_venue_address():
+    from scraper.build import polish
+    venue = [_item(link=f"https://x/{i}", address="601 City Center Way") for i in range(4)]
+    real = [_item(link="https://x/r", address="123 Project Site Rd")]
+    items = venue + real
+    polish(items)
+    assert all(i["address"] is None and i["lat"] is None for i in items[:4])
+    assert items[4]["address"] == "123 Project Site Rd"
+    assert items[4]["lat"] == 25.7
+
+
+def test_polish_keeps_parcel_coords_when_venue_dropped():
+    from scraper.build import polish
+    items = [_item(link=f"https://x/{i}", address="601 City Center Way", parcel="01-4137-030-0010") for i in range(3)]
+    polish(items)
+    assert all(i["address"] is None and i["lat"] == 25.7 for i in items)
+
+
 def test_first_seen_carries_forward(tmp_path):
     from scraper.build import load_first_seen
     old = finalize([_item()], today="2026-07-01")

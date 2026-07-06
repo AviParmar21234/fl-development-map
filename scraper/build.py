@@ -2,7 +2,41 @@
 import hashlib
 import json
 import os
+import re
+from collections import Counter
 from datetime import date, datetime, timezone
+
+_HEADER_TITLE_RE = re.compile(
+    r"^(new business|old business|unfinished business|information:?|consent( agenda)?:?|"
+    r"discussion( items?)?:?|public hearings?:?|[\w' ]{0,20}report'?s?:?)$", re.I)
+
+
+def polish(items: list[dict]) -> None:
+    """Fix low-information items in place.
+
+    1. Items whose title is a bare section header ("NEW BUSINESS") get their
+       real text promoted from the summary/agenda-note field.
+    2. Venue addresses (the same address on >=40% and >=3 of a source's items
+       is almost certainly the meeting location, not a project site) are
+       dropped so items don't produce misleading pins at city hall.
+    """
+    for it in items:
+        t = (it.get("title") or "").strip()
+        if len(t) < 40 and _HEADER_TITLE_RE.match(t) and (it.get("summary") or "").strip():
+            it["title"] = it["summary"][:300]
+    by_src: dict[str, list[dict]] = {}
+    for it in items:
+        by_src.setdefault(it["source"], []).append(it)
+    for its in by_src.values():
+        counts = Counter(i["address"] for i in its if i.get("address"))
+        total = sum(counts.values())
+        for addr, n in counts.items():
+            if n >= 3 and n / total >= 0.4:
+                for i in its:
+                    if i.get("address") == addr:
+                        i["address"] = None
+                        if not i.get("parcel"):
+                            i["lat"] = i["lon"] = None
 
 SCHEMA_KEYS = ["id", "source", "jurisdiction", "county", "meeting_body", "meeting_date",
                "title", "summary", "link", "project_type", "multifamily", "address",

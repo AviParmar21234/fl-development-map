@@ -64,6 +64,8 @@
     return `
       <div class="pp-chips">${chips}</div>
       <div class="pp-title">${esc(p.title)}</div>
+      ${p.summary && p.summary !== p.title && !p.title.startsWith(p.summary.slice(0, 40))
+        ? `<div class="pp-summary">${esc(p.summary.slice(0, 220))}${p.summary.length > 220 ? "…" : ""}</div>` : ""}
       <div class="pp-meta">
         <b>${esc(p.jurisdiction)}</b> · ${esc(p.county)} County<br>
         ${esc(p.meeting_body)}${p.meeting_date ? ` · <b>${esc(p.meeting_date)}</b>` : ""}<br>

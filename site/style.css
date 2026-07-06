@@ -254,6 +254,12 @@ body {
   font-size: 13px; font-weight: 500; line-height: 1.45;
   max-height: 116px; overflow: hidden;
 }
+.pp-summary {
+  margin-top: 7px; padding: 7px 9px;
+  font-size: 11.5px; line-height: 1.5; color: var(--text-dim);
+  background: rgba(255,255,255,.03);
+  border-left: 2px solid var(--line); border-radius: 0 6px 6px 0;
+}
 .pp-meta { margin-top: 9px; font-size: 11.5px; color: var(--text-dim); line-height: 1.6; }
 .pp-meta b { color: var(--text); font-weight: 600; }
 .pp-link {

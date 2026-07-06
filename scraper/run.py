@@ -9,7 +9,7 @@ import re
 import sys
 import traceback
 
-from scraper.build import finalize, load_first_seen, write_outputs
+from scraper.build import finalize, load_first_seen, polish, write_outputs
 from scraper.extract import extract_intel, extract_location, opportunity_score
 from scraper.filter import classify
 from scraper.geocode import geocode_all
@@ -116,6 +116,7 @@ def main(argv=None) -> int:
         print(f"DRY RUN: {len(all_items)} dev items from {len(coverage)} sources")
         return 0
 
+    polish(all_items)  # promote header-only titles, drop venue addresses (pre-geocode: saves lookups)
     print(f"geocoding {sum(1 for i in all_items if i['address'] and i['lat'] is None)} addresses...", flush=True)
     geocode_all(all_items)
     try:
