@@ -21,19 +21,38 @@ body {
 
 main { max-width: 1060px; margin: 0 auto; padding: 0 24px 60px; }
 
-/* ---------- hero ---------- */
-.hero { max-width: 1060px; margin: 0 auto; padding: 64px 24px 36px; }
-.hero-inner { display: flex; align-items: center; gap: 20px; animation: rise .6s cubic-bezier(.2,.8,.3,1) both; }
-.hero-logo { width: 72px; height: 72px; }
-.hero-word h1 {
-  font-family: var(--serif); font-weight: 550; font-size: 40px;
-  letter-spacing: .2px; line-height: 1.05;
+/* ---------- nav ---------- */
+.nav {
+  max-width: 1060px; margin: 0 auto;
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px 24px 0;
 }
-.hero-sub {
-  margin-top: 4px;
-  font-size: 12.5px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 3.2px;
-  color: var(--slate);
+.nav-brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--navy); }
+.nav-brand img { width: 34px; height: 34px; }
+.nav-brand span { font-family: var(--serif); font-weight: 600; font-size: 18px; }
+.nav-spacer { flex: 1; }
+.nav-link {
+  font-weight: 700; font-size: 13px; text-decoration: none; color: var(--navy);
+  padding: 9px 18px; border-radius: 18px 18px 8px 8px;
+  border: 1.5px solid var(--navy);
+  transition: all .15s;
+}
+.nav-link-solid { background: var(--navy); color: var(--white); }
+.nav-link-solid:hover { background: var(--navy-deep); transform: translateY(-1px); }
+
+/* ---------- hero ---------- */
+.hero { max-width: 1060px; margin: 0 auto; padding: 58px 24px 36px; }
+.hero-eyebrow {
+  font-size: 11.5px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 3px;
+  color: var(--gold);
+  animation: rise .6s cubic-bezier(.2,.8,.3,1) both;
+}
+.hero-h1 {
+  margin-top: 12px;
+  font-family: var(--serif); font-weight: 550; font-size: 56px;
+  letter-spacing: -.4px; line-height: 1.03;
+  animation: rise .6s .05s cubic-bezier(.2,.8,.3,1) both;
 }
 .hero-lede {
   margin-top: 22px; max-width: 620px;
@@ -180,8 +199,8 @@ main { max-width: 1060px; margin: 0 auto; padding: 0 24px 60px; }
 
 @media (max-width: 720px) {
   .regions { grid-template-columns: 1fr; }
-  .hero { padding-top: 40px; }
-  .hero-word h1 { font-size: 30px; }
+  .hero { padding-top: 36px; }
+  .hero-h1 { font-size: 36px; }
   .hero-stats { flex-wrap: wrap; }
   .hero-stats > div { min-width: 45%; }
   .region { padding-top: 130px; }

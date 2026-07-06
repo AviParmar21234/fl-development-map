@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Morgan Group · Florida Development Radar</title>
+<title>Map · Morgan Group Development Radar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,550;9..144,650&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="vendor/leaflet.css">
 <link rel="stylesheet" href="vendor/MarkerCluster.css">
 <link rel="stylesheet" href="vendor/MarkerCluster.Default.css">
@@ -14,64 +14,68 @@
 <link rel="icon" href="logo.svg">
 </head>
 <body>
-<div id="map" aria-label="Development projects map"></div>
 
-<aside class="panel" id="panel">
-  <header class="brand">
-    <a class="brand-mark" href="index.html" title="Back to regions"><img src="logo.svg" alt="Morgan Group"></a>
-    <div class="brand-text">
-      <h1>Morgan&nbsp;Group</h1>
-      <p id="brandSub">Florida Development Radar</p>
-    </div>
-    <button class="panel-collapse" id="collapseBtn" title="Collapse panel" aria-label="Collapse panel">‹</button>
-  </header>
+<nav class="topbar">
+  <a class="tb-brand" href="index.html" title="Back to overview">
+    <span class="tb-logo"><img src="logo.svg" alt=""></span>
+    <span class="tb-word">Morgan&nbsp;Group</span>
+  </a>
+  <span class="tb-div"></span>
+  <span class="tb-context" id="brandSub">Florida Development Radar</span>
+  <span class="tb-spacer"></span>
+  <span class="tb-updated" id="updatedAt"></span>
+  <button id="csvBtn" class="tb-btn" title="Export the currently filtered projects as CSV">⤓ Export CSV</button>
+  <a class="tb-btn tb-btn-ghost" href="index.html">Overview</a>
+</nav>
 
-  <section class="stats" id="stats">
-    <div class="stat"><b id="statMapped">–</b><span>on map</span></div>
-    <div class="stat stat-mf"><b id="statMF">–</b><span>multifamily</span></div>
-    <div class="stat"><b id="statUpcoming">–</b><span>upcoming</span></div>
-    <div class="stat"><b id="statSources">–</b><span>sources</span></div>
-  </section>
+<div class="content">
+  <aside class="sidebar" id="panel">
+    <section class="stats" id="stats">
+      <div class="stat"><b id="statMapped">–</b><span>on map</span></div>
+      <div class="stat stat-mf"><b id="statMF">–</b><span>multifamily</span></div>
+      <div class="stat"><b id="statUpcoming">–</b><span>upcoming</span></div>
+      <div class="stat"><b id="statSources">–</b><span>sources</span></div>
+    </section>
 
-  <section class="filters">
-    <input type="search" id="search" placeholder="Search projects, addresses…" autocomplete="off">
+    <section class="filters">
+      <input type="search" id="search" placeholder="Search projects, addresses…" autocomplete="off">
 
-    <div class="filter-row">
-      <label class="mf-toggle">
-        <input type="checkbox" id="mfOnly">
-        <span class="mf-slider"></span>
-        Multifamily only
-      </label>
-      <label class="mf-toggle new-toggle">
-        <input type="checkbox" id="newOnly">
-        <span class="mf-slider"></span>
-        New
-      </label>
-      <select id="statusSel" aria-label="Hearing status">
-        <option value="all">All hearings</option>
-        <option value="upcoming">Upcoming</option>
-        <option value="heard">Recently heard</option>
-      </select>
-    </div>
+      <div class="filter-row">
+        <label class="mf-toggle">
+          <input type="checkbox" id="mfOnly">
+          <span class="mf-slider"></span>
+          Multifamily
+        </label>
+        <label class="mf-toggle new-toggle">
+          <input type="checkbox" id="newOnly">
+          <span class="mf-slider"></span>
+          New
+        </label>
+        <select id="statusSel" aria-label="Hearing status">
+          <option value="all">All hearings</option>
+          <option value="upcoming">Upcoming</option>
+          <option value="heard">Recently heard</option>
+        </select>
+      </div>
 
-    <div class="chips" id="countyChips" aria-label="County filters"></div>
-    <div class="types" id="typeChecks" aria-label="Project type filters"></div>
-  </section>
+      <div class="f-label">Counties</div>
+      <div class="chips" id="countyChips" aria-label="County filters"></div>
+      <div class="f-label">Project types</div>
+      <div class="types" id="typeChecks" aria-label="Project type filters"></div>
+    </section>
 
-  <nav class="drawer-tabs">
-    <button data-drawer="hearings" id="hearingsTab">Hearings <span id="hearingsCount"></span></button>
-    <button data-drawer="unmapped" id="unmappedTab">Unmapped <span id="unmappedCount"></span></button>
-    <button data-drawer="coverage" id="coverageTab">Coverage <span id="coverageCount"></span></button>
-  </nav>
-  <section class="drawer" id="drawer" hidden></section>
+    <nav class="drawer-tabs">
+      <button data-drawer="projects" id="projectsTab">Ranked</button>
+      <button data-drawer="hearings" id="hearingsTab">Hearings <span id="hearingsCount"></span></button>
+      <button data-drawer="unmapped" id="unmappedTab">Unmapped <span id="unmappedCount"></span></button>
+      <button data-drawer="coverage" id="coverageTab">Sources <span id="coverageCount"></span></button>
+    </nav>
+    <section class="drawer" id="drawer" hidden></section>
+  </aside>
 
-  <footer class="panel-foot">
-    <span id="updatedAt"></span>
-    <button id="csvBtn" class="csv-btn" title="Export the currently filtered projects as CSV">⤓ CSV</button>
-  </footer>
-</aside>
-
-<button class="panel-expand" id="expandBtn" hidden title="Show panel">›</button>
+  <button class="panel-toggle" id="collapseBtn" title="Toggle panel" aria-label="Toggle panel">‹</button>
+  <div id="map" aria-label="Development projects map"></div>
+</div>
 
 <script src="vendor/leaflet.js"></script>
 <script src="vendor/leaflet.markercluster.js"></script>

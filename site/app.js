@@ -125,7 +125,7 @@
     $("statMapped").textContent = shown;
     $("statMF").textContent = mf;
     $("statUpcoming").textContent = upcoming;
-    if (openDrawer === "hearings") renderDrawer();
+    if (openDrawer === "hearings" || openDrawer === "projects") renderDrawer();
   }
 
   function exportCSV() {
@@ -187,7 +187,32 @@
     const d = $("drawer");
     if (!openDrawer) { d.hidden = true; return; }
     d.hidden = false;
-    if (openDrawer === "hearings") {
+    if (openDrawer === "projects") {
+      const seen = new Set();
+      const ranked = state.features.map((f) => f.properties)
+        .filter((p) => matches(p))
+        .sort((a, b) => (b.score || 0) - (a.score || 0) || (b.meeting_date || "").localeCompare(a.meeting_date || ""))
+        .filter((p) => {
+          const k = p.plain || p.title;
+          if (seen.has(k)) return false;
+          seen.add(k);
+          return true;
+        })
+        .slice(0, 60);
+      d.innerHTML = ranked.length ? ranked.map((p, i) => `
+        <div class="u-item p-item" data-id="${p.id}">
+          <span class="p-rank">${i + 1}</span><a href="${esc(p.link)}" target="_blank" rel="noopener">${esc((p.plain || p.title).slice(0, 110))}</a>
+          <div class="u-meta">${esc(p.jurisdiction)}${p.meeting_date ? ` · ${esc(p.meeting_date)}` : ""} · <span class="pp-hot">★ ${p.score || 0}</span>${isNew(p) ? ' · <span style="color:var(--green)">new</span>' : ""}</div>
+        </div>`).join("")
+        : '<div class="u-meta" style="padding:12px 0">No projects match the current filters.</div>';
+      d.querySelectorAll(".p-item").forEach((el) => {
+        el.addEventListener("click", (ev) => {
+          if (ev.target.tagName === "A") return;
+          const m = state.markerById[el.dataset.id];
+          if (m) { map.setView(m.getLatLng(), Math.max(map.getZoom(), 14)); m.openPopup(); }
+        });
+      });
+    } else if (openDrawer === "hearings") {
       const today = new Date().toISOString().slice(0, 10);
       const horizon = new Date(); horizon.setDate(horizon.getDate() + 14);
       const hz = horizon.toISOString().slice(0, 10);
@@ -234,8 +259,11 @@
   });
 
   /* panel collapse */
-  $("collapseBtn").onclick = () => { $("panel").style.display = "none"; $("expandBtn").hidden = false; };
-  $("expandBtn").onclick = () => { $("panel").style.display = ""; $("expandBtn").hidden = true; };
+  $("collapseBtn").onclick = () => {
+    const hidden = document.body.classList.toggle("panel-hidden");
+    $("collapseBtn").textContent = hidden ? "›" : "‹";
+    setTimeout(() => map.invalidateSize(), 300);
+  };
 
   /* filter inputs */
   $("search").addEventListener("input", (e) => { state.q = e.target.value.trim().toLowerCase(); render(); });
@@ -280,6 +308,11 @@
       const b = L.geoJSON({ type: "FeatureCollection", features: visible }).getBounds();
       if (b.isValid()) map.fitBounds(b.pad(0.08));
     }
+    // open the ranked list by default — the product leads with its best answer
+    openDrawer = "projects";
+    document.querySelectorAll(".drawer-tabs button").forEach((b) =>
+      b.classList.toggle("active", b.dataset.drawer === "projects"));
+    renderDrawer();
   }).catch((err) => {
     $("updatedAt").textContent = "Data failed to load — run ./refresh.sh";
     console.error(err);
