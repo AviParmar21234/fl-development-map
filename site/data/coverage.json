@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 393,
-  "items_dev": 34,
+  "items_raw": 0,
+  "items_dev": 0,
   "error": null
  },
  {
@@ -33,6 +33,15 @@
   "ok": true,
   "items_raw": 0,
   "items_dev": 0,
+  "error": null
+ },
+ {
+  "source_id": "miami-beach",
+  "name": "Miami Beach",
+  "county": "Miami-Dade",
+  "ok": true,
+  "items_raw": 1520,
+  "items_dev": 69,
   "error": null
  },
  {
@@ -238,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1311,
-  "items_dev": 197,
+  "items_raw": 1316,
+  "items_dev": 199,
   "error": null
  },
  {
@@ -337,7 +346,7 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1577,
+  "items_raw": 1589,
   "items_dev": 86,
   "error": null
  },
@@ -384,15 +393,6 @@
   "ok": true,
   "items_raw": 0,
   "items_dev": 0,
-  "error": null
- },
- {
-  "source_id": "miami-beach",
-  "name": "Miami Beach",
-  "county": "Miami-Dade",
-  "ok": true,
-  "items_raw": 1520,
-  "items_dev": 69,
   "error": null
  }
 ]
