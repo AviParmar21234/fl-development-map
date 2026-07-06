@@ -1,4 +1,12 @@
 {
+"00 TO FRIENDSHIP CIRCLE, Miami Beach, FL": null,
+"00032 TPD Howard Ave, Tampa, FL": null,
+"01-032 Curry Ford Road, , FL": null,
+"1 OCEAN DRIVE, Miami Beach, FL": [
+25.768373300509,
+-80.133245756018
+],
+"1 and Taylor Street, Hollywood, FL": null,
 "10 Edgewater Drive. 1, Coral Gables, FL": [
 25.706960317072,
 -80.255195688745
@@ -6,6 +14,10 @@
 "10 N. SWINTON AVENUE, Delray Beach, FL": [
 26.461831987438,
 -80.073169257628
+],
+"10 SW 4th Ave, Delray Beach, FL": [
+26.461425120962,
+-80.077223376452
 ],
 "10 and 11 of Court, Clearwater, FL": null,
 "10002 Alafia St, , FL": [
@@ -16,6 +28,14 @@
 25.754086282104,
 -80.275415593393
 ],
+"1008 W. La Salle Street, Tampa, FL": [
+27.954802778386,
+-82.469658800231
+],
+"101 E. Palmetto Park Road, Boca Raton, FL": [
+26.350568187219,
+-80.08559271687
+],
 "101 N. US Highway, Jupiter, FL": [
 27.030313,
 -80.1107108
@@ -23,6 +43,10 @@
 "1014 Eckles Dr, , FL": [
 28.057962335748,
 -82.470764329224
+],
+"10149 Okeechobee Boulevard, Royal Palm Beach, FL": [
+26.709351084603,
+-80.202716035549
 ],
 "1015 Sevilla Avenue, Coral Gables, FL": [
 25.745188003502,
@@ -51,6 +75,10 @@
 "1045 SW 11th Way, Deerfield Beach, FL": [
 26.302948473915,
 -80.118161981603
+],
+"105 Station Street, Altamonte Springs, FL": [
+28.665088509055,
+-81.355666646231
 ],
 "10550 Regents Park Dr, , FL": [
 28.153896607501,
@@ -84,6 +112,10 @@
 25.761292187425,
 -80.257264848091
 ],
+"110 South Boulevard, Tampa, FL": [
+27.944430828706,
+-82.468464140904
+],
 "11015 E Dr, , FL": [
 25.814726,
 -80.2729711
@@ -91,6 +123,10 @@
 "11017 E 92 Hwy, , FL": [
 27.999035495625,
 -82.316503633935
+],
+"1104 5685 Alton Rd, Miami Beach, FL": [
+25.836434830341,
+-80.130244202315
 ],
 "11102 N 301 Hwy, , FL": [
 29.0575034,
@@ -115,6 +151,10 @@
 "11302 N 301 Hwy, , FL": [
 29.0572912,
 -82.049352
+],
+"11315 North 46th Street, Tampa, FL": [
+28.051658907164,
+-82.409835689021
 ],
 "1139 Venetia Avenue, Coral Gables, FL": [
 25.758675741209,
@@ -152,6 +192,11 @@
 28.2167106,
 -80.6992093
 ],
+"12 Street, , FL": [
+27.4534633,
+-82.5779752
+],
+"12-028 1600 Columbia Street, , FL": null,
 "1200 Enderby Court, , FL": [
 28.658015845999,
 -81.10452021059
@@ -204,6 +249,14 @@
 28.652515744902,
 -81.302020519789
 ],
+"124 Avenue, , FL": [
+30.0018037,
+-82.252713
+],
+"12400 NE 8th Avenue North, North Miami, FL": [
+25.889585524,
+-80.182449213006
+],
 "12430 Horseshoe Bend Dr, , FL": [
 27.816126968494,
 -82.226902967501
@@ -216,6 +269,10 @@
 28.6862465,
 -81.4073144
 ],
+"125 Street, North Miami, FL": [
+25.8844724,
+-80.2008555
+],
 "125 Trinity Assembly Circle, , FL": null,
 "1250 Ocoee Apopka Rd, Apopka, FL": [
 28.661232505152,
@@ -224,6 +281,19 @@
 "1250 Ocoee Apopka Road, Apopka, FL": [
 28.661232505152,
 -81.526362885424
+],
+"1250 WEST AVE, Miami Beach, FL": [
+25.784035353412,
+-80.142324017783
+],
+"1250 WEST AVENUE, Miami Beach, FL": [
+25.784035353412,
+-80.142324017783
+],
+"12540 Southwest 112 Avenue, Hialeah, FL": null,
+"1255 NW 135TH STREET, North Miami, FL": [
+25.900037241953,
+-80.173693473336
 ],
 "1256 South Greenway Drive, Coral Gables, FL": [
 25.751291159592,
@@ -237,9 +307,21 @@
 26.007552961421,
 -80.3175775284
 ],
+"1281 Ray Charles Blvd, Tampa, FL": [
+27.955505,
+-82.4515958
+],
 "12839 Wyandotte Rd, , FL": [
 27.805420447811,
 -82.397087482214
+],
+"12975 W DIXIE HIGHWAY, North Miami, FL": [
+25.894757593898,
+-80.182878372257
+],
+"13 Street, , FL": [
+27.4534633,
+-82.5779752
 ],
 "130-136 SE 1st Avenue, Delray Beach, FL": [
 26.459653597526,
@@ -249,9 +331,21 @@
 28.065894171128,
 -82.563670123373
 ],
+"1301 E. 4th Ave, Tampa, FL": [
+27.958085458745,
+-82.445256470769
+],
+"1301 East Columbus Avenue, Tampa, FL": [
+27.966779139855,
+-82.445427839911
+],
 "13030 E 92 Hwy, , FL": [
 30.282527145463,
 -83.016245196283
+],
+"1307 W. La Salle Street, Tampa, FL": [
+27.954953712308,
+-82.472729216596
 ],
 "1312 Via Villanova Way, , FL": [
 28.6513415,
@@ -260,6 +354,10 @@
 "13120 N Ola Ave, , FL": [
 28.066939247798,
 -82.463524013353
+],
+"1313 W. Nassau Street, Tampa, FL": [
+27.953499965285,
+-82.473240519684
 ],
 "1315 Genoa Street, Coral Gables, FL": [
 25.75881343829,
@@ -278,6 +376,10 @@
 "13400 Pine Street, , FL": [
 28.069015860963,
 -82.422955093691
+],
+"136 Avenue, , FL": [
+29.3014678,
+-82.5456132
 ],
 "138 Holderness Drive, , FL": [
 28.68624442498,
@@ -307,6 +409,10 @@
 28.07551100962,
 -82.559369824816
 ],
+"1401-1405 S Federal Hwy, Pompano Beach, FL": [
+26.212984520048,
+-80.106640450692
+],
 "1414 East Crown Point Road, , FL": [
 28.589720000542,
 -81.560332547773
@@ -331,6 +437,10 @@
 26.007959968648,
 -80.135626864063
 ],
+"1440 SW 28 Ave, Pompano Beach, FL": [
+26.211386902416,
+-80.159905652458
+],
 "1446 North Lakewood Avenue, , FL": [
 28.5885242,
 -81.5424759
@@ -339,13 +449,26 @@
 25.830799041115,
 -80.198551701225
 ],
+"1450 Brickell Avenue, Aventura, FL": null,
 "14743 South Military Trail, Delray Beach, FL": [
 26.45859956098,
 -80.122697637263
 ],
+"148 th Ave, , FL": [
+25.4695106,
+-80.4346412
+],
 "14833 50TH STREET, Wellington, FL": [
 26.608585075182,
 -80.284195849537
+],
+"15 Avenue, , FL": [
+28.4805163,
+-81.3168934
+],
+"15 NE 126th Street, North Miami, FL": [
+25.890636285421,
+-80.199824201143
 ],
 "150 NW 68 Street, Fort Lauderdale, FL": [
 26.209792776734,
@@ -354,6 +477,14 @@
 "150-156 SE 1st Avenue, Delray Beach, FL": [
 26.459137407775,
 -80.072102926051
+],
+"1500 W. LaSalle Street, Tampa, FL": [
+27.954855811857,
+-82.474698274012
+],
+"1502 and 1506 North Morgan Street, Tampa, FL": [
+27.957416495284,
+-82.458118520294
 ],
 "151 SW 184 Avenue, Pembroke Pines, FL": [
 26.005277798862,
@@ -379,9 +510,25 @@
 28.707021793439,
 -81.557129461817
 ],
+"16 St, Pompano Beach, FL": [
+26.2098911,
+-80.1244781
+],
+"160 Avenue, , FL": [
+25.5116035,
+-80.4513793
+],
 "160-166 SE 1st Avenue, Delray Beach, FL": [
 26.458879312899,
 -80.072097815268
+],
+"1600 Aaron Ave, Orlando, FL": [
+28.523225957804,
+-81.432382366769
+],
+"1600 Aaron Avenue, Orlando, FL": [
+28.523225957804,
+-81.432382366769
 ],
 "1604 Bonair Street, Clearwater, FL": [
 27.976147124831,
@@ -390,6 +537,10 @@
 "1604 Lithia Pinecrest Rd, , FL": [
 27.917428323518,
 -82.264861424171
+],
+"1605 North Waters Court, Tampa, FL": [
+27.959092077009,
+-82.450179046791
 ],
 "16116 Lake Magdalene Blvd, , FL": [
 28.095353351386,
@@ -406,6 +557,14 @@
 "1625 NW 107 AVE, Doral, FL": [
 25.788423377801,
 -80.368727089
+],
+"1650 West 37 Street, Hialeah, FL": [
+25.85521899992,
+-80.315590112717
+],
+"167 West 23 Street, Hialeah, FL": [
+25.842799827517,
+-80.285428512681
 ],
 "1680 NW 31 Avenue, Fort Lauderdale, FL": [
 26.099780370193,
@@ -424,6 +583,10 @@
 26.458621218024,
 -80.072092704486
 ],
+"1701 East 2nd Avenue, Tampa, FL": [
+27.956628529683,
+-82.440404237811
+],
 "1702 Highway 17, , FL": [
 29.3171507,
 -81.4929832
@@ -432,13 +595,33 @@
 28.117851734287,
 -82.593150304002
 ],
+"1704 W. North B Street, Tampa, FL": [
+27.946789857207,
+-82.476899530785
+],
 "171 W. Orange St, Apopka, FL": [
 28.678014614617,
 -81.515072608454
 ],
+"1711 NE 2 Ter, Pompano Beach, FL": [
+26.25219401193,
+-80.121412756375
+],
 "1714 Van Burden Street, Hollywood, FL": [
 26.009660500733,
 -80.141293363807
+],
+"1718 North Betty Lane, , FL": [
+27.984072849635,
+-82.783701302129
+],
+"1724 N Nebraska Ave, Tampa, FL": [
+27.95981979889,
+-82.451308217503
+],
+"1725 NE 39 ST, Pompano Beach, FL": [
+26.278846479583,
+-80.099850486547
 ],
 "1731 Perch Lane, , FL": [
 28.8379399,
@@ -447,6 +630,10 @@
 "1744 W. Cheryl Street, , FL": [
 28.63484889403,
 -81.274449698312
+],
+"1775 COLLINS AVENUE, Miami Beach, FL": [
+25.793468053369,
+-80.129492825027
 ],
 "1788 Rock Springs Road, Apopka, FL": [
 28.710356215723,
@@ -464,9 +651,17 @@
 28.711785402658,
 -81.557423654898
 ],
+"184 Avenue, , FL": [
+29.1277558,
+-80.9849123
+],
 "1841-1857 Jackson Street, Hollywood, FL": [
 26.008783865516,
 -80.144103249374
+],
+"1843 Pelican Hill Way, , FL": [
+28.136067668595,
+-81.512264340473
 ],
 "18810 Pines Boulevard, Pembroke Pines, FL": [
 26.007454303166,
@@ -480,6 +675,10 @@
 "1885 Boy Scout Road, Apopka, FL": [
 28.662027927768,
 -81.540927985455
+],
+"1890 NE 146TH STREET, North Miami, FL": [
+25.910299739091,
+-80.161668298157
 ],
 "18950 Sunlake Blvd, , FL": [
 28.152841396599,
@@ -501,13 +700,33 @@
 27.9960229,
 -82.505174
 ],
+"1915 W. Palmetto Street, Tampa, FL": [
+27.962273495585,
+-82.478906037862
+],
 "1920 Sheeler Avenue, Apopka, FL": [
 28.649018571835,
 -81.492920143698
 ],
+"19200 W. Country Club Drive, Aventura, FL": [
+25.952497562873,
+-80.138563052447
+],
+"19297 3448 Charles Avenue, Miami, FL": [
+25.725516801655,
+-80.248686886597
+],
+"1936 Clearview Lake Dr, Clearwater, FL": [
+27.991391034568,
+-82.765316316834
+],
 "1938 Filly Trail, , FL": [
 28.644220791195,
 -81.222052738607
+],
+"1940 PARK AVENUE, Miami Beach, FL": [
+25.795561636191,
+-80.131483098586
 ],
 "19411 Golden Slipper Pl, , FL": [
 28.162898115896,
@@ -516,6 +735,18 @@
 "1946 Manatee Ct, , FL": [
 28.070274365131,
 -81.502516480766
+],
+"1948 W. Spruce Street, Tampa, FL": [
+27.959253568829,
+-82.479440871691
+],
+"1952 NE 49 ST, Pompano Beach, FL": [
+26.291560771673,
+-80.097013695084
+],
+"196 Avenue, , FL": [
+25.7681446,
+-80.3266446
 ],
 "1980 Grant Street, Hollywood, FL": [
 26.019733844599,
@@ -529,17 +760,34 @@
 28.27338405021,
 -81.422139594515
 ],
+"2 776 NE 125th Street, North Miami, FL": [
+25.890369412461,
+-80.182939989355
+],
 "2 Pl, , FL": [
 29.3354255,
 -82.515861
 ],
+"2 mile east of Oregon St, , FL": null,
 "200 Hibiscus Street, Jupiter, FL": [
 26.935111057483,
 -80.095984955976
 ],
+"200 S. Biscayne Blvd, Aventura, FL": [
+25.9643966,
+-80.1465958
+],
+"200 S. Biscayne Boulevard, Aventura, FL": [
+25.9686792,
+-80.1446
+],
 "200 SW 6th Street, Delray Beach, FL": [
 26.457929717082,
 -80.079175550889
+],
+"200 South Federal Highway, Boca Raton, FL": [
+26.347789425235,
+-80.086329284521
 ],
 "2017 Alhambra Circle, Coral Gables, FL": [
 25.752176634021,
@@ -565,6 +813,7 @@
 28.671950259057,
 -81.54634014801
 ],
+"2025 for the TPD Howard Avenue, Tampa, FL": null,
 "2025-11 324 Recker Hwy, , FL": null,
 "2025-12 Keller Road, , FL": [
 28.620229671516,
@@ -586,6 +835,7 @@
 "2025-36 Hwy, , FL": null,
 "2025-37 Hwy 17, , FL": null,
 "2025-39 Braddock Road, , FL": null,
+"2025-46 Annexing the Jennie Jewel Drive, Orlando, FL": null,
 "2026-11 Medulla Rd, , FL": [
 27.9638961,
 -82.0281796
@@ -594,12 +844,21 @@
 27.9638961,
 -82.0281796
 ],
+"2026-18 Anderson Road, , FL": [
+25.7452342,
+-80.2707648
+],
 "2026-2 Main Street, , FL": null,
 "2026-23 Shepherd Road, , FL": [
 27.9382737,
 -82.0378842
 ],
 "2026-3 Sumner North Cozart Road, , FL": null,
+"2026-39 Lake Buffum Road, , FL": null,
+"2026-7 Chambers Street, , FL": [
+24.5631271,
+-81.7893911
+],
 "2050 Plymouth Sorrento Road, Apopka, FL": [
 28.714057527196,
 -81.557634525335
@@ -607,6 +866,14 @@
 "206 W 92 Hwy, , FL": [
 27.9546596,
 -82.5054565
+],
+"20807 BISCAYNE BOULEVARD, Aventura, FL": [
+25.96837543884,
+-80.144760268967
+],
+"2101 S. Congress Avenue, Delray Beach, FL": [
+26.433543945647,
+-80.092305579705
 ],
 "2101-2111 N 16th Ave, Hollywood, FL": [
 26.030615774915,
@@ -620,9 +887,22 @@
 28.715349601574,
 -81.509129177939
 ],
+"2105 W Morrison Ave, Tampa, FL": [
+27.933794350337,
+-82.482069924667
+],
 "2121 East Semoran Blvd, Apopka, FL": [
 28.67308892328,
 -81.471716167656
+],
+"21291 NE 28 AVENUE, Aventura, FL": null,
+"213 St, Aventura, FL": [
+25.974401,
+-80.1505303
+],
+"213 Street, Aventura, FL": [
+25.974401,
+-80.1505303
 ],
 "2140 Chapman Woods Place, , FL": [
 28.639435586976,
@@ -673,6 +953,18 @@
 28.59523894393,
 -81.544902153164
 ],
+"2295 West 4th Court, Hialeah, FL": [
+25.842366857833,
+-80.290980646797
+],
+"2314 E Atlantic Blvd, Pompano Beach, FL": [
+26.2316709001,
+-80.10072763877
+],
+"2318 Indigo Drive, , FL": [
+28.005359277263,
+-82.752892534736
+],
 "2323 Polk Street, Hollywood, FL": [
 26.012596195947,
 -80.153154794748
@@ -681,9 +973,17 @@
 27.693957384511,
 -82.354437580162
 ],
+"2335 E Atlantic Blvd, Pompano Beach, FL": [
+26.231922961739,
+-80.10056924958
+],
 "2339 LINCOLN ST, Hollywood, FL": [
 26.01749555483,
 -80.153906324889
+],
+"235 WASHINGTON AVENUE, Miami Beach, FL": [
+25.772302711724,
+-80.13461893489
 ],
 "2350 W Columbia Avenue, Kissimmee, FL": [
 28.308024418766,
@@ -705,6 +1005,10 @@
 25.706953590464,
 -80.255787631388
 ],
+"2400 E Atlantic Blvd, Pompano Beach, FL": [
+26.231671500108,
+-80.099910298785
+],
 "2404 Plymouth Sorrento Road, Apopka, FL": [
 28.720726067144,
 -81.557706536506
@@ -712,6 +1016,10 @@
 "2407 E 148th Ave, , FL": [
 28.084302498654,
 -82.431633351529
+],
+"2414 West State Street, Tampa, FL": [
+27.951303514565,
+-82.485398422188
 ],
 "2419 North Federal Highway, Delray Beach, FL": [
 26.487572307011,
@@ -737,13 +1045,25 @@
 25.9878777,
 -80.2383959
 ],
+"25 Street, , FL": [
+29.2927597,
+-82.4821092
+],
 "25-27 SE 3rd Avenue, Delray Beach, FL": [
 26.461129776162,
 -80.069799632932
 ],
+"2500 NE 5 Ave, Pompano Beach, FL": [
+26.261796882842,
+-80.11534808859
+],
 "2506 Oak Landing Dr, , FL": [
 27.909081709344,
 -82.267779331539
+],
+"2507 South MacDill Avenue, Tampa, FL": [
+27.923077787108,
+-82.493644133783
 ],
 "2509 Indian Mound Trail, Coral Gables, FL": [
 25.747480092334,
@@ -757,6 +1077,10 @@
 25.748043705033,
 -80.262594826366
 ],
+"256 NW 8th Avenue, Delray Beach, FL": [
+26.466297115018,
+-80.08136037783
+],
 "2560 West Orange Blossom Trail, Apopka, FL": [
 28.691370776111,
 -81.551127219206
@@ -765,14 +1089,27 @@
 28.151838380277,
 -82.713001025636
 ],
+"26 Avenue, , FL": [
+29.6520607,
+-82.3389408
+],
+"26-0405 Orlando Health Central Porter Road, , FL": null,
 "26-055 CMAR Smith Lane, , FL": null,
 "26-3 Kelly Park Road, Apopka, FL": [
 28.7564443,
 -81.5807175
 ],
+"2604 E. Dr, Tampa, FL": [
+27.9815478,
+-82.4304649
+],
 "2605 Holly Road, , FL": [
 28.6218274,
 -81.3058511
+],
+"261 S Andrews Ave, Pompano Beach, FL": [
+26.2115413,
+-80.1408817
 ],
 "2615 Alhambra Circle, Coral Gables, FL": [
 25.746450197539,
@@ -782,9 +1119,46 @@
 28.513593367423,
 -81.36287919238
 ],
+"2619 Mayer Street, Orlando, FL": [
+28.513593367423,
+-81.36287919238
+],
+"2690 W Sample Road, Pompano Beach, FL": [
+26.274189368616,
+-80.160072580794
+],
+"27 Avenue, , FL": [
+29.1586289,
+-82.1309651
+],
+"27 south of Ernie Caldwell Blvd. west, , FL": null,
+"2700 NW 25 ST, Pompano Beach, FL": [
+26.261994061606,
+-80.164038095433
+],
+"2707 E. 22nd Avenue, Tampa, FL": [
+27.971122728645,
+-82.429507289138
+],
+"2707 East 22nd Avenue, Tampa, FL": [
+27.971122728645,
+-82.429507289138
+],
 "2716 Granada Boulevard, Coral Gables, FL": [
 25.745869514961,
 -80.274946581955
+],
+"2730 West Highland Street, , FL": [
+28.031274500367,
+-81.998743531874
+],
+"2742 Polk Street, Hollywood, FL": [
+26.012234694473,
+-80.162137355309
+],
+"28 Avenue, Aventura, FL": [
+25.9454962,
+-80.1385881
 ],
 "2820 Jacana Ct, , FL": [
 28.740348769924,
@@ -794,9 +1168,17 @@
 25.744931705114,
 -80.275451664726
 ],
+"2832 S. MacDill Ave, Tampa, FL": [
+27.9199895342,
+-82.493559091289
+],
 "2850 and 2864 Dowman Drive, Apopka, FL": [
 28.762370206752,
 -81.559153073509
+],
+"2851 N. McMullen Booth Road, Clearwater, FL": [
+28.026729851511,
+-82.708734642446
 ],
 "2864 Dowman Drive, Apopka, FL": [
 28.762370206752,
@@ -806,6 +1188,10 @@
 25.803085035325,
 -80.195709896918
 ],
+"2901 Corrine Drive, Orlando, FL": [
+28.567878945334,
+-81.347601661434
+],
 "2901 NE 9 Court, Fort Lauderdale, FL": [
 26.13758449532,
 -80.10686718306
@@ -813,6 +1199,10 @@
 "2905 SOUTH CONGRESS AVENUE, Delray Beach, FL": [
 26.428901033831,
 -80.092263192628
+],
+"2907 W Euclid Avenue, Tampa, FL": [
+27.908746133929,
+-82.490732211164
 ],
 "2910 Polk Street, Hollywood, FL": [
 26.012167110201,
@@ -825,6 +1215,31 @@
 "2941 Abbey Lake Road, Clearwater, FL": [
 27.9934191,
 -82.7130444
+],
+"2995 Greenbriar Boulevard, Wellington, FL": [
+26.641826968511,
+-80.285767762741
+],
+"2999 NE 191 ST, Aventura, FL": [
+25.952306382628,
+-80.142867386888
+],
+"2999 NE 191 STREET, Aventura, FL": [
+25.952306382628,
+-80.142867386888
+],
+"2999 NE 191 Street, Aventura, FL": [
+25.952306382628,
+-80.142867386888
+],
+"2999 NE 199 STREET, Aventura, FL": null,
+"3 Avenue, , FL": [
+27.4937009,
+-80.3536966
+],
+"30 SANDY LANE, , FL": [
+28.0596688,
+-81.8004549
 ],
 "300 Catalonia Avenue, Coral Gables, FL": [
 25.744623740403,
@@ -839,9 +1254,33 @@
 25.744735026716,
 -80.258487910873
 ],
+"301 and 305 South MacDill Avenue, Tampa, FL": [
+27.942247938566,
+-82.493379336171
+],
+"3010 ALTON ROAD, Miami Beach, FL": [
+25.806748462918,
+-80.137954445742
+],
+"3062 Prestige Drive, Clearwater, FL": [
+27.991456119596,
+-82.710656676773
+],
 "3100 Ondich Road, Apopka, FL": [
 28.77129811329,
 -81.562029800476
+],
+"3101 N. Florida Avenue, Tampa, FL": [
+27.97254682617,
+-82.459371393875
+],
+"3101 North Nebraska Avenue, Tampa, FL": [
+27.972006638289,
+-82.451140686784
+],
+"3106 North Massachusetts Avenue 1, Tampa, FL": [
+27.972017918549,
+-82.466192969681
 ],
 "3116 Deer Creek Country Club Boulevard, Deerfield Beach, FL": [
 26.320079670909,
@@ -875,6 +1314,14 @@
 25.750995212551,
 -80.261209552194
 ],
+"3204 SE 6 St, Pompano Beach, FL": [
+26.227499783643,
+-80.093609326045
+],
+"3206 N. Tampa Street, Tampa, FL": [
+27.973431907829,
+-82.460936441932
+],
 "3251 North Ponkan Road, Apopka, FL": [
 28.727520912653,
 -81.563988669165
@@ -895,6 +1342,30 @@
 27.835539,
 -82.7134934
 ],
+"34 Sunset Circle, , FL": [
+28.0765139,
+-81.7558183
+],
+"340 23RD STREET, Miami Beach, FL": [
+25.798762663655,
+-80.129441863214
+],
+"3407 W. Kennedy Blvd, Tampa, FL": [
+27.944863125436,
+-82.499774096909
+],
+"3412 West 84th Street, Hialeah, FL": [
+25.897472,
+-80.3529869
+],
+"3415 Dover Rd, Pompano Beach, FL": [
+26.258242365673,
+-80.085556173427
+],
+"3415 West Harbor View Avenue, Tampa, FL": [
+27.902410135719,
+-82.500925967963
+],
 "3425 Gleaves Court, , FL": [
 28.666539342395,
 -81.446592628157
@@ -912,6 +1383,18 @@
 25.726168742654,
 -80.251020424002
 ],
+"3550 West State Road 46, , FL": [
+28.7341464,
+-81.1159972
+],
+"3600 34 th Street South, , FL": [
+27.735138928358,
+-82.679218927533
+],
+"3602 West Euclid Avenue, Tampa, FL": [
+27.908596459336,
+-82.502124430547
+],
 "3603 West Kelly Park Road, Apopka, FL": [
 28.756608905816,
 -81.569300081924
@@ -928,6 +1411,7 @@
 27.977080887079,
 -82.373092499426
 ],
+"3631 E Hwy 60, , FL": null,
 "3658 Ondich Road, Apopka, FL": [
 28.771706623098,
 -81.571849656587
@@ -936,9 +1420,21 @@
 28.076221968278,
 -82.168060473362
 ],
+"3705 North Darwin Avenue, Tampa, FL": [
+27.977972460879,
+-82.464492265381
+],
+"371 Pash E Ho Wa Drive, Hialeah, FL": [
+25.819087969087,
+-80.274202653171
+],
 "3716 Hogshead Road, Apopka, FL": [
 28.694488971457,
 -81.570086307107
+],
+"3724 West San Pedro Street, Tampa, FL": [
+27.917633890297,
+-82.504487621926
 ],
 "3802 Kinsley Place, , FL": [
 28.624429892339,
@@ -948,9 +1444,17 @@
 25.764566058942,
 -80.257441417909
 ],
+"3812-3816 Temple St, Tampa, FL": [
+27.979981566632,
+-82.401078822476
+],
 "3814 Lemon Ave, , FL": [
 27.979386506561,
 -82.302344199944
+],
+"3817 and 3819 Temple Street, Tampa, FL": [
+27.980016762994,
+-82.400949150608
 ],
 "3845 Ondich Road, Apopka, FL": [
 28.771182859042,
@@ -963,6 +1467,10 @@
 "3905 Americana Dr, , FL": [
 27.970871424471,
 -82.55812090998
+],
+"391 West 48th Street, Hialeah, FL": [
+25.86558834661,
+-80.2905075912
 ],
 "3910 Jason Dwelley Parkway, Apopka, FL": [
 28.733429464076,
@@ -983,6 +1491,10 @@
 "398 NE 6th Avenue, Delray Beach, FL": [
 26.469170745025,
 -80.067250595111
+],
+"4-1 E Colonial Drive, , FL": [
+28.553163949706,
+-81.379124161872
 ],
 "40 S. Swinton Avenue, Delray Beach, FL": [
 26.460911234446,
@@ -1017,11 +1529,27 @@
 30.8657335,
 -87.3201512
 ],
+"4093 Rolling Oaks Drive, , FL": [
+27.996371801349,
+-81.79184036877
+],
+"4102 N. 22nd Street, Tampa, FL": [
+27.982548881479,
+-82.43483770052
+],
+"4102 North 22nd Street, Tampa, FL": [
+27.982548881479,
+-82.43483770052
+],
 "4104 Hollowtrail Dr, , FL": null,
 "4104 Hollowtrail Drive, , FL": null,
 "4112 Sadler Road, Apopka, FL": [
 28.749264491359,
 -81.576840774844
+],
+"413 Grand Canal Dr, , FL": [
+25.7658144,
+-80.3179732
 ],
 "415 Aragon Avenue, Coral Gables, FL": [
 25.750380989986,
@@ -1035,9 +1563,33 @@
 28.782211,
 -81.31459
 ],
+"4201 East Osborne Avenue, Tampa, FL": [
+27.988713609197,
+-82.411084086059
+],
+"4205 and 4230 South MacDill Avenue, Tampa, FL": [
+27.903806607483,
+-82.493751723828
+],
+"4211 N Federal Hwy, Pompano Beach, FL": [
+26.283438035299,
+-80.09645568376
+],
+"4216 North 26th Street, Tampa, FL": [
+27.98383001771,
+-82.430728486634
+],
 "426 and James Dr, , FL": null,
 "426 and Mystic Lake Dr, , FL": null,
+"4290 East 4th Avenue, Hialeah, FL": [
+25.861491463523,
+-80.274697243385
+],
 "43 and the abutting Bayview Terrace, Clearwater, FL": null,
+"4304 North 26th Street, Tampa, FL": [
+27.984458869755,
+-82.430729784767
+],
 "4332 W Waters Ave, , FL": [
 28.025379515026,
 -82.515940317915
@@ -1048,6 +1600,7 @@
 25.754818470684,
 -80.263740799665
 ],
+"44 acres on EE Williamson Road, , FL": null,
 "4400 Palmarito Street, Coral Gables, FL": [
 25.731512515334,
 -80.268279035387
@@ -1059,6 +1612,10 @@
 "4420 Chandler Road, Apopka, FL": [
 28.750011098642,
 -81.542898888428
+],
+"4420 W. Carmen Street, Tampa, FL": [
+27.949401533421,
+-82.518505325109
 ],
 "4490 Rock Springs Road, Apopka, FL": [
 28.749100567081,
@@ -1073,10 +1630,18 @@
 28.012955723055,
 -82.403666712816
 ],
+"4550 SHERIDAN AVENUE, Miami Beach, FL": [
+25.819662782508,
+-80.126683453521
+],
 "46 and Harvest Time Dr, , FL": null,
 "46 and Henderson Lane, , FL": null,
 "46 and Henderson Ln, , FL": null,
 "46 and S Hunt Club Blvd, , FL": null,
+"4615 and 4801 East Fowler Avenue, Tampa, FL": [
+28.054386123997,
+-82.404764620874
+],
 "4625 Chandler Rd, Apopka, FL": [
 28.752225906363,
 -81.550366981283
@@ -1084,6 +1649,10 @@
 "4648 Chandler Road, Apopka, FL": [
 28.752714314852,
 -81.550493188057
+],
+"4714 E. Hillsborough Avenue, Tampa, FL": [
+27.996154110624,
+-82.404710223132
 ],
 "4813 Lynn Oaks Cir, , FL": [
 28.021926879489,
@@ -1096,6 +1665,26 @@
 "4953 Nolan Road, , FL": [
 28.737993079787,
 -81.280782857349
+],
+"5 CC Washington Avenue, Miami Beach, FL": [
+25.768598925525,
+-80.135388854529
+],
+"5 Street, Pompano Beach, FL": [
+26.209305,
+-80.1233076
+],
+"5 and South Young Circle, Hollywood, FL": [
+26.010705711285,
+-80.142143669669
+],
+"50 SW 5 ST, Pompano Beach, FL": [
+26.224238077344,
+-80.123956791135
+],
+"500 ALTON ROAD, Miami Beach, FL": [
+25.774854577329,
+-80.140796084853
 ],
 "500 NW 62 Street, Fort Lauderdale, FL": [
 26.203194908366,
@@ -1113,6 +1702,14 @@
 26.1186039,
 -80.1058458
 ],
+"502 East 14 Street, Hialeah, FL": [
+25.834719744111,
+-80.271684698967
+],
+"5024 N. 30th Street, Tampa, FL": [
+27.991636448356,
+-82.426516492287
+],
 "5030 Linton Boulevard, Delray Beach, FL": [
 26.439196264581,
 -80.122786689482
@@ -1124,6 +1721,10 @@
 "509 Grove Court, , FL": [
 28.653161132135,
 -81.407204088194
+],
+"510 East 49th Street, Hialeah, FL": [
+25.867156448663,
+-80.272431113478
 ],
 "5128 SR 674 Hwy, , FL": [
 27.712547291466,
@@ -1137,6 +1738,10 @@
 25.823475589357,
 -80.191718257807
 ],
+"52 Avenue, , FL": [
+28.3646496,
+-82.1903854
+],
 "52 TERRACE, Doral, FL": [
 25.8160556,
 -80.3291387
@@ -1144,6 +1749,10 @@
 "5200 62nd Avenue North, , FL": [
 27.82824070565,
 -82.704852552901
+],
+"5200 S. Manhattan Avenue, Tampa, FL": [
+27.8883678,
+-82.5171412
 ],
 "5215 WEST FLAGLER STREET, Miami, FL": [
 25.771176432154,
@@ -1170,9 +1779,17 @@
 27.994134,
 -82.2977887
 ],
+"533 East 22nd Street, Hialeah, FL": [
+25.842109854908,
+-80.271379839736
+],
 "538 NW 8 Avenue, Fort Lauderdale, FL": [
 26.12832631584,
 -80.152511223032
+],
+"5391 N Federal Hwy, Pompano Beach, FL": [
+26.297391938996,
+-80.094289993702
 ],
 "540 West Atlantic Avenue, Delray Beach, FL": [
 26.461557841726,
@@ -1207,6 +1824,10 @@
 25.9369542,
 -80.1969501
 ],
+"5608 WILEY STREET, Hollywood, FL": [
+25.99812096124,
+-80.199185204843
+],
 "5624 Anna Dr, , FL": [
 28.000003419503,
 -82.322574262619
@@ -1219,6 +1840,15 @@
 26.017852614275,
 -80.201885672528
 ],
+"574 East 21 Street, Hialeah, FL": [
+25.841115611288,
+-80.270504195878
+],
+"574 East 21st Street, Hialeah, FL": [
+25.841115611288,
+-80.270504195878
+],
+"5757 WATERFORD DISTRICT DRIVE, North Miami, FL": null,
 "5819 Bear Lake Circle, , FL": [
 28.647204110128,
 -81.445860717297
@@ -1226,6 +1856,10 @@
 "5851 PARK BOULEVARD, Pinellas Park, FL": [
 27.839252825896,
 -82.71376332787
+],
+"590 East 8th Avenue, Hialeah, FL": [
+25.82741661368,
+-80.265433167179
 ],
 "5902 Bassa St, , FL": [
 27.718891462766,
@@ -1240,6 +1874,10 @@
 -80.186930984915
 ],
 "6 MILES WEST OF STATE ROAD 7, Wellington, FL": null,
+"600-604 N Ocean Blvd, Pompano Beach, FL": [
+26.241789411871,
+-80.088047529018
+],
 "601 CITY CENTER WAY, Pembroke Pines, FL": [
 26.0027141,
 -80.2868311
@@ -1255,6 +1893,14 @@
 "606 Valley Hill Dr, , FL": [
 27.947249579935,
 -82.270538927082
+],
+"6090 Central Avenue, , FL": [
+27.7707702,
+-82.7179686
+],
+"6100 90th Avenue N, Pinellas Park, FL": [
+27.853686561626,
+-82.71861132989
 ],
 "6100 Caballero Blvd, Coral Gables, FL": [
 25.711956980289,
@@ -1279,6 +1925,10 @@
 "6201 150th Avenue North, , FL": [
 27.908801306264,
 -82.721134512871
+],
+"621 NE 1 Ave, Pompano Beach, FL": [
+26.237573030255,
+-80.123340092094
 ],
 "6210 579 Hwy, , FL": [
 28.012061355726,
@@ -1308,9 +1958,25 @@
 27.831845540628,
 -82.722781694381
 ],
+"6339 80th Avenue N, Pinellas Park, FL": [
+27.844684155316,
+-82.723305726974
+],
+"640 East 60 Street, Hialeah, FL": [
+25.877165378502,
+-80.270173678066
+],
+"6520 116th Avenue North, Pinellas Park, FL": [
+27.8776836,
+-82.7276558
+],
 "6536 Lincoln Way North, Pinellas Park, FL": [
 27.8314208,
 -82.6791419
+],
+"66 Street, , FL": [
+27.4534633,
+-82.5779752
 ],
 "6605 E Hillsborough Ave, , FL": [
 27.996218616489,
@@ -1320,9 +1986,17 @@
 27.779410151037,
 -82.34319811676
 ],
+"6625 INDIAN CREEK DRIVE, Miami Beach, FL": [
+25.849623882892,
+-80.121376172769
+],
 "6726 Pembroke Road, Pembroke Pines, FL": [
 25.995034336616,
 -80.221769156642
+],
+"6731 Bryan Dairy Road, , FL": [
+27.872238534033,
+-82.731479993917
 ],
 "674 Hwy, , FL": [
 28.6827377,
@@ -1340,6 +2014,10 @@
 28.009758021766,
 -82.564558859197
 ],
+"6815 West 4th Avenue, Hialeah, FL": [
+25.884711482322,
+-80.291223235648
+],
 "6819 Robinswood Ln, , FL": [
 28.009058790276,
 -82.55757231049
@@ -1348,9 +2026,17 @@
 27.879229,
 -82.73437
 ],
+"6868 118th Avenue North, Pinellas Park, FL": [
+27.879229,
+-82.73437
+],
 "6902 Shady Pl, , FL": [
 28.017694011339,
 -82.552591695888
+],
+"6903 66th Street N, Pinellas Park, FL": [
+27.834877146053,
+-82.728390731688
 ],
 "6910 174th St N, Jupiter, FL": [
 26.933026842905,
@@ -1364,11 +2050,19 @@
 27.985260111393,
 -82.377278647523
 ],
+"7 and Pembroke Road, Hollywood, FL": [
+25.996234256522,
+-80.157930323932
+],
 "7-11 Ocoee Apopka Road, Apopka, FL": [
 28.6665509,
 -81.5192499
 ],
 "700 feet east of Skyway Drive, , FL": null,
+"701 E McNab Rd, Pompano Beach, FL": [
+26.211562496831,
+-80.112627968698
+],
 "701 NORTHEAST 68 STREET, Miami, FL": [
 25.83804499672,
 -80.182712846453
@@ -1405,6 +2099,10 @@
 28.014941731427,
 -82.501548573201
 ],
+"730 N Ocean Blvd, Pompano Beach, FL": [
+26.243822977411,
+-80.087686366562
+],
 "7310 Lake Drive, , FL": [
 28.4599934,
 -81.3558574
@@ -1413,6 +2111,10 @@
 28.621581930895,
 -81.290420142935
 ],
+"744 NE 125 ST, North Miami, FL": [
+25.890341394815,
+-80.183668076035
+],
 "765 NORTHEAST 70 STREET, Miami, FL": [
 25.839740165951,
 -80.180354873821
@@ -1420,6 +2122,10 @@
 "770 NORTHWEST 41 AVENUE, Miami, FL": [
 25.77940191778,
 -80.263063112339
+],
+"7747 Nature Trail, , FL": [
+28.142308431794,
+-81.92502386056
 ],
 "777 S Douglas Road, Pembroke Pines, FL": [
 26.003933857539,
@@ -1433,6 +2139,7 @@
 28.725481364456,
 -81.334763379413
 ],
+"79 acres between Northwest 13 Street, , FL": null,
 "7910 N Saint Vincent St, , FL": [
 28.021094059133,
 -82.496197892168
@@ -1444,6 +2151,14 @@
 "80 NORTHEAST 40TH STREET, Miami, FL": [
 25.813345142216,
 -80.193839591415
+],
+"801 E. Whiting St, Tampa, FL": [
+27.9470113,
+-82.4526511
+],
+"801 NW 18th Ave, Pompano Beach, FL": [
+26.239300162989,
+-80.147351948133
 ],
 "801 S Douglas Road, Pembroke Pines, FL": [
 26.002910682691,
@@ -1465,6 +2180,10 @@
 25.754339914758,
 -80.271853852208
 ],
+"817 NW 119 ST, North Miami, FL": [
+25.883710821106,
+-80.212827827416
+],
 "818 Shriver Circle, , FL": [
 28.731767106442,
 -81.35038669388
@@ -1472,6 +2191,10 @@
 "819 Hollywood Boulevard, Hollywood, FL": [
 26.012194470941,
 -80.121119405152
+],
+"825 NE 12 Ave, Pompano Beach, FL": [
+26.239593529289,
+-80.111842286937
 ],
 "826 Medina Avenue, Coral Gables, FL": [
 25.760604853149,
@@ -1509,9 +2232,18 @@
 27.999063352383,
 -82.579688235242
 ],
+"855 S Federal Highway, Pompano Beach, FL": [
+26.220176689549,
+-80.104600872528
+],
+"88 Avenue, , FL": null,
 "8800 Old Culter Rd. 1, Coral Gables, FL": [
 25.690120480493,
 -80.270008491795
+],
+"89 Street, , FL": [
+27.4534633,
+-82.5779752
 ],
 "9107 Memorial Hwy, , FL": [
 28.001477243987,
@@ -1520,6 +2252,10 @@
 "911 Bryan Rd, , FL": [
 27.92424826415,
 -82.277449082467
+],
+"915 East 23rd Avenue, Tampa, FL": [
+27.971891043615,
+-82.450858574483
 ],
 "920 NW 7 Avenue, Fort Lauderdale, FL": [
 26.136329508648,
@@ -1532,6 +2268,14 @@
 "95 Hermit Smith Road, Apopka, FL": [
 28.6845933,
 -81.5664424
+],
+"951 SW 12 Ave, Pompano Beach, FL": [
+26.217198700457,
+-80.13864521339
+],
+"951 SW 12th Ave, Pompano Beach, FL": [
+26.217198700457,
+-80.13864521339
 ],
 "951 South Andrews Avenue 10, Pompano Beach, FL": null,
 "951 South Highland Avenue, Apopka, FL": [
@@ -1550,10 +2294,15 @@
 27.863422209753,
 -82.153700775837
 ],
+"9710 and 9720 North Armenia Avenue, Tampa, FL": [
+28.038728629719,
+-82.482100533286
+],
 "972 Dogwood Drive, Delray Beach, FL": [
 26.432073848895,
 -80.067666791623
 ],
+"980 acres along State Road 7, Hollywood, FL": null,
 "9809 Harold Bedford Rd, , FL": [
 27.830907864566,
 -82.345282895507
@@ -1561,5 +2310,9 @@
 "9916 Alafia Vista Dr, , FL": [
 27.853791364137,
 -82.374426498699
+],
+"998 N Federal Hwy, Pompano Beach, FL": [
+26.2114702,
+-80.1069536
 ]
 }

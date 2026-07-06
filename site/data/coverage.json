@@ -36,13 +36,49 @@
   "error": null
  },
  {
-  "source_id": "miami-beach",
-  "name": "Miami Beach",
+  "source_id": "hialeah",
+  "name": "Hialeah",
   "county": "Miami-Dade",
-  "ok": false,
+  "ok": true,
+  "items_raw": 342,
+  "items_dev": 56,
+  "error": null
+ },
+ {
+  "source_id": "homestead",
+  "name": "Homestead",
+  "county": "Miami-Dade",
+  "ok": true,
   "items_raw": 0,
   "items_dev": 0,
-  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
+  "error": null
+ },
+ {
+  "source_id": "north-miami",
+  "name": "North Miami",
+  "county": "Miami-Dade",
+  "ok": true,
+  "items_raw": 439,
+  "items_dev": 80,
+  "error": null
+ },
+ {
+  "source_id": "miami-gardens",
+  "name": "Miami Gardens",
+  "county": "Miami-Dade",
+  "ok": true,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": null
+ },
+ {
+  "source_id": "aventura",
+  "name": "Aventura",
+  "county": "Miami-Dade",
+  "ok": true,
+  "items_raw": 1925,
+  "items_dev": 196,
+  "error": null
  },
  {
   "source_id": "broward-county",
@@ -108,33 +144,6 @@
   "error": null
  },
  {
-  "source_id": "davie",
-  "name": "Davie",
-  "county": "Broward",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
- },
- {
-  "source_id": "sunrise",
-  "name": "Sunrise",
-  "county": "Broward",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
- },
- {
-  "source_id": "plantation",
-  "name": "Plantation",
-  "county": "Broward",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
- },
- {
   "source_id": "deerfield-beach",
   "name": "Deerfield Beach",
   "county": "Broward",
@@ -186,6 +195,33 @@
   "ok": true,
   "items_raw": 229,
   "items_dev": 13,
+  "error": null
+ },
+ {
+  "source_id": "boca-raton",
+  "name": "Boca Raton",
+  "county": "Palm Beach",
+  "ok": true,
+  "items_raw": 441,
+  "items_dev": 10,
+  "error": null
+ },
+ {
+  "source_id": "boynton-beach",
+  "name": "Boynton Beach",
+  "county": "Palm Beach",
+  "ok": true,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": null
+ },
+ {
+  "source_id": "royal-palm-beach",
+  "name": "Royal Palm Beach",
+  "county": "Palm Beach",
+  "ok": true,
+  "items_raw": 114,
+  "items_dev": 3,
   "error": null
  },
  {
@@ -261,13 +297,22 @@
   "error": null
  },
  {
-  "source_id": "sanford",
-  "name": "Sanford",
+  "source_id": "orlando",
+  "name": "City of Orlando",
+  "county": "Orange",
+  "ok": true,
+  "items_raw": 1087,
+  "items_dev": 23,
+  "error": null
+ },
+ {
+  "source_id": "altamonte-springs",
+  "name": "Altamonte Springs",
   "county": "Seminole",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
+  "ok": true,
+  "items_raw": 129,
+  "items_dev": 5,
+  "error": null
  },
  {
   "source_id": "hillsborough-county",
@@ -315,21 +360,39 @@
   "error": null
  },
  {
-  "source_id": "temple-terrace",
-  "name": "Temple Terrace",
-  "county": "Hillsborough",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
- },
- {
   "source_id": "hillsborough-dev-tracker",
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 134,
   "items_dev": 78,
+  "error": null
+ },
+ {
+  "source_id": "tampa",
+  "name": "City of Tampa",
+  "county": "Hillsborough",
+  "ok": true,
+  "items_raw": 639,
+  "items_dev": 68,
+  "error": null
+ },
+ {
+  "source_id": "winter-haven",
+  "name": "Winter Haven",
+  "county": "Polk",
+  "ok": true,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": null
+ },
+ {
+  "source_id": "miami-beach",
+  "name": "Miami Beach",
+  "county": "Miami-Dade",
+  "ok": true,
+  "items_raw": 1520,
+  "items_dev": 69,
   "error": null
  }
 ]
