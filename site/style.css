@@ -232,6 +232,24 @@ body {
   padding: 3px 8px; border-radius: 4px; color: var(--ink);
 }
 .pp-chip-mf { background: linear-gradient(135deg, var(--brass-hi), var(--brass)); }
+.pp-chip-new { background: #7bd88f; animation: newPulse 2s ease-in-out infinite; }
+@keyframes newPulse { 50% { box-shadow: 0 0 10px rgba(123,216,143,.7); } }
+.pp-hot { color: var(--brass-hi); }
+.new-toggle { color: #7bd88f; }
+.new-toggle input:checked + .mf-slider { background: rgba(123,216,143,.3); border-color: #7bd88f; }
+.new-toggle input:checked + .mf-slider::after { background: #7bd88f; }
+
+.h-item { cursor: pointer; }
+.h-item:hover { background: rgba(255,255,255,.03); }
+.h-date { font: 700 11px var(--sans); color: var(--brass-hi); margin-bottom: 2px; }
+
+.panel-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.csv-btn {
+  background: none; border: 1px solid var(--line); border-radius: 6px;
+  color: var(--text-dim); font: 600 10.5px var(--sans);
+  padding: 3px 9px; cursor: pointer; flex: none;
+}
+.csv-btn:hover { color: var(--brass-hi); border-color: var(--brass); }
 .pp-title {
   font-size: 13px; font-weight: 500; line-height: 1.45;
   max-height: 116px; overflow: hidden;

@@ -42,6 +42,11 @@
         <span class="mf-slider"></span>
         Multifamily only
       </label>
+      <label class="mf-toggle new-toggle">
+        <input type="checkbox" id="newOnly">
+        <span class="mf-slider"></span>
+        New
+      </label>
       <select id="statusSel" aria-label="Hearing status">
         <option value="all">All hearings</option>
         <option value="upcoming">Upcoming</option>
@@ -54,6 +59,7 @@
   </section>
 
   <nav class="drawer-tabs">
+    <button data-drawer="hearings" id="hearingsTab">Hearings <span id="hearingsCount"></span></button>
     <button data-drawer="unmapped" id="unmappedTab">Unmapped <span id="unmappedCount"></span></button>
     <button data-drawer="coverage" id="coverageTab">Coverage <span id="coverageCount"></span></button>
   </nav>
@@ -61,6 +67,7 @@
 
   <footer class="panel-foot">
     <span id="updatedAt"></span>
+    <button id="csvBtn" class="csv-btn" title="Export the currently filtered projects as CSV">⤓ CSV</button>
   </footer>
 </aside>
 

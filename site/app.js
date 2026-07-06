@@ -29,10 +29,21 @@
   map.addLayer(cluster);
 
   const state = {
-    q: "", mfOnly: false, status: "all",
+    q: "", mfOnly: false, newOnly: false, status: "all",
     counties: new Set(), types: new Set(Object.keys(TYPE_META)),
     features: [], unmapped: [], coverage: [],
+    newCutoff: null, // items with first_seen >= this are NEW
+    markerById: {},
   };
+
+  function computeNewCutoff(meta) {
+    const dates = new Set(state.features.map((f) => f.properties.first_seen).filter(Boolean));
+    if (dates.size <= 1) return null; // first build: nothing is meaningfully "new"
+    const gen = meta ? meta.generated_at.slice(0, 10) : new Date().toISOString().slice(0, 10);
+    const d = new Date(gen); d.setDate(d.getDate() - 7);
+    return d.toISOString().slice(0, 10);
+  }
+  const isNew = (p) => state.newCutoff && p.first_seen && p.first_seen >= state.newCutoff;
 
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -40,10 +51,16 @@
   function popupHTML(p) {
     const [label, varName] = TYPE_META[p.project_type] || ["Development", "--c-other-development"];
     const chips = [
+      isNew(p) ? '<span class="pp-chip pp-chip-new">New</span>' : "",
       `<span class="pp-chip" style="background:${css(varName)}">${label}</span>`,
       p.multifamily ? '<span class="pp-chip pp-chip-mf">Multifamily</span>' : "",
       `<span class="pp-chip" style="background:#3a4454;color:#e8e4da">${p.status === "upcoming" ? "Upcoming" : "Heard"}</span>`,
     ].join("");
+    const intel = [
+      p.units ? `<b>${p.units}</b> units` : "",
+      p.acres ? `<b>${p.acres}</b> ac` : "",
+      p.score >= 5 ? `<b class="pp-hot">★ ${p.score}/8</b>` : (p.score ? `★ ${p.score}/8` : ""),
+    ].filter(Boolean).join(" · ");
     return `
       <div class="pp-chips">${chips}</div>
       <div class="pp-title">${esc(p.title)}</div>
@@ -51,6 +68,7 @@
         <b>${esc(p.jurisdiction)}</b> · ${esc(p.county)} County<br>
         ${esc(p.meeting_body)}${p.meeting_date ? ` · <b>${esc(p.meeting_date)}</b>` : ""}<br>
         ${p.address ? esc(p.address) : (p.parcel ? "Parcel " + esc(p.parcel) : "")}
+        ${intel ? `<br>${intel}` : ""}
       </div>
       <a class="pp-link" href="${esc(p.link)}" target="_blank" rel="noopener">View source item →</a>`;
   }
@@ -70,6 +88,7 @@
 
   function matches(p) {
     if (state.mfOnly && !p.multifamily) return false;
+    if (state.newOnly && !isNew(p)) return false;
     if (state.status !== "all" && p.status !== state.status) return false;
     if (state.counties.size && !state.counties.has(p.county)) return false;
     if (!state.types.has(p.project_type)) return false;
@@ -82,6 +101,7 @@
 
   function render() {
     cluster.clearLayers();
+    state.markerById = {};
     let shown = 0, mf = 0, upcoming = 0;
     const markers = [];
     for (const f of state.features) {
@@ -90,12 +110,33 @@
       shown++;
       if (p.multifamily) mf++;
       if (p.status === "upcoming") upcoming++;
-      markers.push(makeMarker(f));
+      const m = makeMarker(f);
+      state.markerById[p.id] = m;
+      markers.push(m);
     }
     cluster.addLayers(markers);
     $("statMapped").textContent = shown;
     $("statMF").textContent = mf;
     $("statUpcoming").textContent = upcoming;
+    if (openDrawer === "hearings") renderDrawer();
+  }
+
+  function exportCSV() {
+    const cols = ["id","score","multifamily","units","acres","project_type","status","meeting_date",
+                  "jurisdiction","county","meeting_body","address","parcel","title","link","first_seen"];
+    const q = (v) => `"${String(v ?? "").replace(/"/g, '""').replace(/\s+/g, " ")}"`;
+    const rows = [cols.join(",")];
+    const all = [...state.features.map((f) => f.properties), ...state.unmapped];
+    for (const p of all) {
+      if (!matches(p)) continue;
+      rows.push(cols.map((c) => q(p[c])).join(","));
+    }
+    const blob = new Blob([rows.join("\n")], { type: "text/csv" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `morgan-fl-projects-${new Date().toISOString().slice(0,10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(a.href);
   }
 
   function buildCountyChips() {
@@ -139,7 +180,28 @@
     const d = $("drawer");
     if (!openDrawer) { d.hidden = true; return; }
     d.hidden = false;
-    if (openDrawer === "unmapped") {
+    if (openDrawer === "hearings") {
+      const today = new Date().toISOString().slice(0, 10);
+      const horizon = new Date(); horizon.setDate(horizon.getDate() + 14);
+      const hz = horizon.toISOString().slice(0, 10);
+      const up = state.features.map((f) => f.properties)
+        .filter((p) => matches(p) && p.meeting_date >= today && p.meeting_date <= hz)
+        .sort((a, b) => a.meeting_date.localeCompare(b.meeting_date) || (b.score || 0) - (a.score || 0));
+      d.innerHTML = up.length ? up.map((p) => `
+        <div class="u-item h-item" data-id="${p.id}">
+          <div class="h-date">${esc(p.meeting_date)}${isNew(p) ? ' <span class="pp-chip pp-chip-new">New</span>' : ""}${p.score >= 5 ? ' <span class="pp-hot">★' + p.score + "</span>" : ""}</div>
+          <a href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.title.slice(0, 110))}${p.title.length > 110 ? "…" : ""}</a>
+          <div class="u-meta">${esc(p.jurisdiction)} · ${esc(p.meeting_body)}${p.units ? ` · ${p.units} units` : ""}</div>
+        </div>`).join("")
+        : '<div class="u-meta" style="padding:12px 0">No hearings in the next 14 days match the current filters.</div>';
+      d.querySelectorAll(".h-item").forEach((el) => {
+        el.addEventListener("click", (ev) => {
+          if (ev.target.tagName === "A") return;
+          const m = state.markerById[el.dataset.id];
+          if (m) { map.setView(m.getLatLng(), Math.max(map.getZoom(), 14)); m.openPopup(); }
+        });
+      });
+    } else if (openDrawer === "unmapped") {
       d.innerHTML = state.unmapped.length
         ? state.unmapped.map((u) => `
           <div class="u-item">
@@ -171,7 +233,9 @@
   /* filter inputs */
   $("search").addEventListener("input", (e) => { state.q = e.target.value.trim().toLowerCase(); render(); });
   $("mfOnly").addEventListener("change", (e) => { state.mfOnly = e.target.checked; render(); });
+  $("newOnly").addEventListener("change", (e) => { state.newOnly = e.target.checked; render(); });
   $("statusSel").addEventListener("change", (e) => { state.status = e.target.value; render(); });
+  $("csvBtn").addEventListener("click", exportCSV);
 
   /* load */
   Promise.all([
@@ -183,9 +247,13 @@
     state.features = fc.features || [];
     state.unmapped = unmapped;
     state.coverage = coverage;
+    state.newCutoff = computeNewCutoff(meta);
     buildCountyChips();
     buildTypeChecks();
     render();
+    const today = new Date().toISOString().slice(0, 10);
+    const nHear = state.features.filter((f) => f.properties.meeting_date >= today).length;
+    $("hearingsCount").textContent = nHear ? `(${nHear})` : "";
     $("unmappedCount").textContent = unmapped.length ? `(${unmapped.length})` : "";
     $("coverageCount").textContent = coverage.length ? `(${coverage.length})` : "";
     $("statSources").textContent = coverage.filter((c) => c.ok).length || "–";
