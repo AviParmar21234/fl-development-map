@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-07-06T05:18:44+00:00",
+ "generated_at": "2026-07-06T08:11:51+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 44,
-  "projects_mapped": 844,
-  "projects_unmapped": 948,
+  "projects_mapped": 804,
+  "projects_unmapped": 988,
   "multifamily": 282
  }
 }

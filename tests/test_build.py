@@ -79,6 +79,16 @@ def test_polish_drops_venue_address():
     assert items[4]["lat"] == 25.7
 
 
+def test_polish_drops_out_of_county_geocode():
+    from scraper.build import polish
+    wrong = _item(lat=29.2, lon=-82.1)  # "Miami-Dade" item geocoded near Ocala
+    right = _item(link="https://x/ok", lat=25.77, lon=-80.19)
+    items = [wrong, right]
+    polish(items)
+    assert wrong["lat"] is None and wrong["lon"] is None
+    assert right["lat"] == 25.77
+
+
 def test_polish_keeps_parcel_coords_when_venue_dropped():
     from scraper.build import polish
     items = [_item(link=f"https://x/{i}", address="601 City Center Way", parcel="01-4137-030-0010") for i in range(3)]

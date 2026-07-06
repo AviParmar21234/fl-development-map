@@ -11,6 +11,22 @@ _HEADER_TITLE_RE = re.compile(
     r"discussion( items?)?:?|public hearings?:?|[\w' ]{0,20}report'?s?:?)$", re.I)
 
 
+# generous county bounding boxes (lat_min, lon_min, lat_max, lon_max) — a geocode
+# outside its item's county is a mismatch, not a real location
+COUNTY_BOUNDS = {
+    "Miami-Dade": (25.05, -80.95, 26.05, -80.05),
+    "Broward": (25.90, -80.55, 26.40, -80.00),
+    "Palm Beach": (26.25, -80.95, 27.05, -79.95),
+    "Orange": (28.25, -81.75, 28.85, -80.75),
+    "Osceola": (27.75, -81.75, 28.40, -80.75),
+    "Seminole": (28.55, -81.55, 28.95, -80.85),
+    "Lake": (28.25, -82.05, 29.05, -81.25),
+    "Hillsborough": (27.55, -82.75, 28.25, -81.95),
+    "Pinellas": (27.55, -82.95, 28.25, -82.45),
+    "Polk": (27.55, -82.15, 28.45, -81.05),
+}
+
+
 def polish(items: list[dict]) -> None:
     """Fix low-information items in place.
 
@@ -19,7 +35,14 @@ def polish(items: list[dict]) -> None:
     2. Venue addresses (the same address on >=40% and >=3 of a source's items
        is almost certainly the meeting location, not a project site) are
        dropped so items don't produce misleading pins at city hall.
+    3. Coordinates outside the item's own county are geocoder mismatches
+       (street name matched in the wrong city) — unset them.
     """
+    for it in items:
+        b = COUNTY_BOUNDS.get(it.get("county"))
+        if b and it.get("lat") is not None:
+            if not (b[0] <= it["lat"] <= b[2] and b[1] <= it["lon"] <= b[3]):
+                it["lat"] = it["lon"] = None
     for it in items:
         t = (it.get("title") or "").strip()
         if len(t) < 40 and _HEADER_TITLE_RE.match(t) and (it.get("summary") or "").strip():
