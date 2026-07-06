@@ -40,3 +40,8 @@ def test_ignores_ordinance_numbers():
 
 def test_multiword_street_name():
     assert extract_location("at 7811 Coral Way, Miami FL")["address"] == "7811 Coral Way"
+
+
+def test_all_caps_miami_style():
+    r = extract_location("LOCATED AT APPROXIMATELY 5135 NW 7 STREET, MIAMI, FLORIDA")
+    assert r["address"] == "5135 NW 7 STREET"

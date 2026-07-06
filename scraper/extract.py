@@ -15,7 +15,8 @@ _ADDR_RE = re.compile(
     rf"(?:[A-Z0-9][A-Za-z0-9']*\s+){{0,4}}?"
     rf"(?:{_SUFFIXES})\b\.?"
     rf"(?:\s+{_DIR}\b)?"
-    rf"(?:\s+\d{{1,4}}\b)?)"
+    rf"(?:\s+\d{{1,4}}\b)?)",
+    re.IGNORECASE,
 )
 
 # FL folio/parcel formats: 01-4137-030-0010, 30-2029-005-1050, and long digit runs with dashes
