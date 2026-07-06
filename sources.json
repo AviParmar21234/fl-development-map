@@ -44,11 +44,11 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "state": "FL",
-  "platform": "novus",
-  "url": "https://miamibeach.novusagenda.com/agendapublic/",
+  "platform": "primegov",
+  "url": "https://miamibeachfl.primegov.com",
   "legistar_client": null,
-  "enabled": false,
-  "note": "Moved to PrimeGov: https://miamibeachfl.primegov.com - api/v2/PublicPortal/ListUpcomingMeetings + ListArchivedMeetings?year= JSON; HTML agenda via Portal/Meeting?compiledMeetingDocumentFileId=. Build primegov connector."
+  "enabled": true,
+  "note": "PrimeGov (moved off NovusAgenda); Planning Board, DRB, HPB, BOA, Commission"
  },
  {
   "id": "miami-dade-county",

@@ -26,6 +26,7 @@ CONNECTORS = {
     "civicplus": "scraper.connectors.civicplus",
     "onbase": "scraper.connectors.onbase",
     "escribe": "scraper.connectors.escribe",
+    "primegov": "scraper.connectors.primegov",
 }
 
 _JURIS_PREFIX_RE = re.compile(r"^(City of|Town of|Village of)\s+", re.I)
@@ -129,6 +130,28 @@ def main(argv=None) -> int:
     final = finalize(all_items, first_seen=load_first_seen(args.out_dir))
     for it in final:
         it["score"] = opportunity_score(it)
+
+    if args.source:
+        # single-source run: merge into existing outputs instead of clobbering them
+        import json as _json, os as _os
+        kept_items, kept_cov = [], []
+        scraped_ids = {c["source_id"] for c in coverage}
+        gj = _os.path.join(args.out_dir, "projects.geojson")
+        um = _os.path.join(args.out_dir, "unmapped.json")
+        if _os.path.exists(gj):
+            fc = _json.load(open(gj))
+            kept_items += [{**f["properties"],
+                            "lon": f["geometry"]["coordinates"][0],
+                            "lat": f["geometry"]["coordinates"][1]}
+                           for f in fc["features"] if f["properties"]["source"] not in scraped_ids]
+        if _os.path.exists(um):
+            kept_items += [it for it in _json.load(open(um)) if it["source"] not in scraped_ids]
+        cv = _os.path.join(args.out_dir, "coverage.json")
+        if _os.path.exists(cv):
+            kept_cov = [c for c in _json.load(open(cv)) if c["source_id"] not in scraped_ids]
+        final = kept_items + final
+        coverage = kept_cov + coverage
+
     meta = write_outputs(final, coverage, args.out_dir)
     print(json.dumps(meta["totals"], indent=1))
     return 0
