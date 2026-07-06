@@ -22,6 +22,10 @@ CONNECTORS = {
     "civicclerk": "scraper.connectors.civicclerk",
     "novus": "scraper.connectors.novus",
     "county_custom": "scraper.connectors.county_custom",
+    "granicus_mm": "scraper.connectors.granicus_mm",
+    "civicplus": "scraper.connectors.civicplus",
+    "onbase": "scraper.connectors.onbase",
+    "escribe": "scraper.connectors.escribe",
 }
 
 _JURIS_PREFIX_RE = re.compile(r"^(City of|Town of|Village of)\s+", re.I)

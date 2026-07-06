@@ -48,7 +48,7 @@
   "url": "https://miamibeach.novusagenda.com/agendapublic/",
   "legistar_client": null,
   "enabled": false,
-  "note": "NovusAgenda tenant is live but returns zero meetings for any date range (verified in real browser 2026-07-06) - agendas must live elsewhere; follow-up"
+  "note": "Moved to PrimeGov: https://miamibeachfl.primegov.com - api/v2/PublicPortal/ListUpcomingMeetings + ListArchivedMeetings?year= JSON; HTML agenda via Portal/Meeting?compiledMeetingDocumentFileId=. Build primegov connector."
  },
  {
   "id": "miami-dade-county",
@@ -69,8 +69,7 @@
   "platform": "civicplus",
   "url": "https://www.hialeahfl.gov/AgendaCenter",
   "legistar_client": null,
-  "enabled": false,
-  "note": "CivicPlus AgendaCenter, agendas are PDFs - follow-up"
+  "enabled": true
  },
  {
   "id": "homestead",
@@ -80,8 +79,7 @@
   "platform": "civicplus",
   "url": "https://www.homesteadfl.gov/AgendaCenter",
   "legistar_client": null,
-  "enabled": false,
-  "note": "CivicPlus PDFs - follow-up"
+  "enabled": true
  },
  {
   "id": "north-miami",
@@ -91,8 +89,7 @@
   "platform": "civicplus",
   "url": "https://www.northmiamifl.gov/agendacenter",
   "legistar_client": null,
-  "enabled": false,
-  "note": "CivicPlus PDFs - follow-up"
+  "enabled": true
  },
  {
   "id": "miami-gardens",
@@ -102,8 +99,7 @@
   "platform": "civicplus",
   "url": "https://www.miamigardens-fl.gov/AgendaCenter",
   "legistar_client": null,
-  "enabled": false,
-  "note": "CivicPlus PDFs; CivicClerk tenant exists but empty - follow-up"
+  "enabled": true
  },
  {
   "id": "aventura",
@@ -113,8 +109,7 @@
   "platform": "civicplus",
   "url": "https://www.cityofaventura.com/AgendaCenter",
   "legistar_client": null,
-  "enabled": false,
-  "note": "CivicPlus PDFs - follow-up"
+  "enabled": true
  },
  {
   "id": "broward-county",
@@ -295,22 +290,20 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "state": "FL",
-  "platform": "other",
+  "platform": "granicus_mm",
   "url": "https://bocaraton.granicus.com/ViewPublisher.php?view_id=9",
   "legistar_client": null,
-  "enabled": false,
-  "note": "Granicus MediaManager AgendaViewer - follow-up"
+  "enabled": true
  },
  {
   "id": "boynton-beach",
   "name": "Boynton Beach",
   "county": "Palm Beach",
   "state": "FL",
-  "platform": "other",
+  "platform": "granicus_mm",
   "url": "https://boynton-beach.granicus.com/ViewPublisher.php?view_id=1",
   "legistar_client": null,
-  "enabled": false,
-  "note": "Granicus MediaManager - follow-up"
+  "enabled": true
  },
  {
   "id": "palm-beach-gardens",
@@ -342,8 +335,7 @@
   "platform": "civicplus",
   "url": "https://www.royalpalmbeachfl.gov/agendacenter",
   "legistar_client": null,
-  "enabled": false,
-  "note": "CivicPlus PDFs - follow-up"
+  "enabled": true
  },
  {
   "id": "orange-county",
@@ -441,11 +433,11 @@
   "name": "City of Orlando",
   "county": "Orange",
   "state": "FL",
-  "platform": "other",
+  "platform": "escribe",
   "url": "https://pub-orlando.escribemeetings.com/",
   "legistar_client": null,
-  "enabled": false,
-  "note": "eScribe platform - follow-up"
+  "enabled": true,
+  "note": "eScribe; GetCalendarMeetings POST + Meeting.aspx agenda HTML"
  },
  {
   "id": "osceola-county",
@@ -466,8 +458,7 @@
   "platform": "civicplus",
   "url": "https://www.altamonte.org/AgendaCenter",
   "legistar_client": null,
-  "enabled": false,
-  "note": "CivicPlus PDFs - follow-up"
+  "enabled": true
  },
  {
   "id": "hillsborough-county",
@@ -545,11 +536,11 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "state": "FL",
-  "platform": "other",
+  "platform": "onbase",
   "url": "https://tampagov.hylandcloud.com/251agendaonline/",
   "legistar_client": null,
-  "enabled": false,
-  "note": "OnBase JS-rendered - follow-up via JSON backend"
+  "enabled": true,
+  "note": "OnBase; meetings JSON in /Meetings/Search, items via /Documents/ViewAgenda"
  },
  {
   "id": "st-petersburg",
@@ -589,11 +580,10 @@
   "name": "Winter Haven",
   "county": "Polk",
   "state": "FL",
-  "platform": "other",
+  "platform": "granicus_mm",
   "url": "https://winterhaven-fl.granicus.com/ViewPublisher.php?view_id=1",
   "legistar_client": null,
-  "enabled": false,
-  "note": "Granicus MediaManager - follow-up"
+  "enabled": true
  },
  {
   "id": "plant-city",
