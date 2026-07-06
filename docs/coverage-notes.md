@@ -1,5 +1,11 @@
 # Coverage Notes — jurisdictions needing follow-up connectors
 
+> **Update 2026-07-06 (night 2):** Tampa (onbase), Orlando (escribe), Miami Beach (primegov),
+> Boca Raton / Boynton Beach / Winter Haven (granicus_mm), and the CivicPlus family
+> (hialeah, homestead, north-miami, miami-gardens, aventura, altamonte-springs, royal-palm-beach)
+> are now LIVE connectors — 44 sources total. Remaining below.
+> Watch: winter-haven returned 0 items on first run (its Granicus view may be video-only — check view_id).
+
 Verified 2026-07-06 by parallel discovery agents. Every entry below is real and reachable; it just needs a connector we didn't build on night one. All are also flagged `enabled: false` with a `note` in `sources.json`.
 
 ## High-value follow-ups (biggest cities first)
