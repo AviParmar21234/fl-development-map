@@ -14,3 +14,7 @@ fi
 git commit -m "data: refresh $(date +%F)"
 git push origin main
 echo "Pushed. GitHub Pages will redeploy in ~1 minute."
+
+if command -v vercel >/dev/null 2>&1; then
+  vercel deploy --prod --yes >/dev/null 2>&1 && echo "Vercel redeployed." || echo "Vercel deploy failed (non-fatal)."
+fi
