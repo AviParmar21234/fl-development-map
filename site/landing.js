@@ -61,17 +61,25 @@
       const total = counties.reduce((s, c) => s + agg[c].total, 0);
       const mf = counties.reduce((s, c) => s + agg[c].mf, 0);
       const up = counties.reduce((s, c) => s + agg[c].upcoming, 0);
+      const idx = Object.keys(REGIONS).indexOf(key) + 1;
       const btn = document.createElement("button");
       btn.className = "region";
       btn.innerHTML = `
-        <h3>${r.name}</h3>
-        <div class="r-counties">${counties.join(" · ")}</div>
-        <div class="r-nums">
-          <div><b>${total.toLocaleString()}</b><i>projects</i></div>
-          <div class="gold"><b>${mf.toLocaleString()}</b><i>multifamily</i></div>
-          <div><b>${up.toLocaleString()}</b><i>upcoming</i></div>
+        <div class="r-main">
+          <p class="r-kicker">Market ${String(idx).padStart(2, "0")}</p>
+          <h3>${r.name}</h3>
+          <div class="r-counties">${counties.map((c) => `<span>${c}</span>`).join("")}</div>
+          <div class="r-nums">
+            <div><b>${total.toLocaleString()}</b><i>projects</i></div>
+            <div><b>${up.toLocaleString()}</b><i>upcoming</i></div>
+          </div>
+          <span class="r-go">Explore market →</span>
         </div>
-        <span class="r-go">Explore →</span>`;
+        <div class="r-arch" aria-hidden="true">
+          <span class="r-arch-ring"></span>
+          <b>${mf.toLocaleString()}</b>
+          <i>multifamily</i>
+        </div>`;
       btn.onclick = () => selectRegion(key, btn);
       regionsEl.appendChild(btn);
     }
