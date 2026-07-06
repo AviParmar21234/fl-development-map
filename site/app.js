@@ -30,7 +30,7 @@
   const pinLayer = L.layerGroup().addTo(map);
 
   const state = {
-    q: "", mfOnly: false, newOnly: false, status: "all",
+    q: "", mfOnly: false, newOnly: false, status: "all", showArchived: false,
     counties: new Set(), types: new Set(Object.keys(TYPE_META)),
     features: [], unmapped: [], coverage: [],
     newCutoff: null,
@@ -42,6 +42,45 @@
 
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  /* ---------- archive (persisted locally per browser) ---------- */
+  const ARCH_KEY = "mgRadarArchived";
+  function loadArchive() {
+    try { return new Set(JSON.parse(localStorage.getItem(ARCH_KEY) || "[]")); }
+    catch { return new Set(); }
+  }
+  const archived = loadArchive();
+  const saveArchive = () => localStorage.setItem(ARCH_KEY, JSON.stringify([...archived]));
+  const isArchived = (key) => archived.has(key);
+  function toggleArchive(key) {
+    archived.has(key) ? archived.delete(key) : archived.add(key);
+    saveArchive();
+    updateArchCount();
+    render();
+    if (state.selectedKey === key && state.entities[key]) {
+      // keep the card open so the user sees the state change / can undo
+      $("pcBody").innerHTML = cardHTML(state.entities[key]);
+      wireCard();
+    }
+  }
+  function updateArchCount() {
+    $("archCount").textContent = archived.size ? `(${archived.size})` : "";
+  }
+
+  /* one address = one site: normalize so formatting quirks can't split it */
+  const ADDR_ABBR = [
+    [/\bSTREET\b/g, "ST"], [/\bAVENUE\b/g, "AVE"], [/\bBOULEVARD\b/g, "BLVD"],
+    [/\bROAD\b/g, "RD"], [/\bDRIVE\b/g, "DR"], [/\bCOURT\b/g, "CT"],
+    [/\bTERRACE\b/g, "TER"], [/\bPLACE\b/g, "PL"], [/\bLANE\b/g, "LN"],
+    [/\bHIGHWAY\b/g, "HWY"], [/\bPARKWAY\b/g, "PKWY"], [/\bCIRCLE\b/g, "CIR"],
+    [/\bTRAIL\b/g, "TRL"], [/\bNORTHWEST\b/g, "NW"], [/\bNORTHEAST\b/g, "NE"],
+    [/\bSOUTHWEST\b/g, "SW"], [/\bSOUTHEAST\b/g, "SE"],
+  ];
+  function normAddr(a) {
+    let s = a.toUpperCase().replace(/[.,#]/g, " ").replace(/\s+/g, " ").trim();
+    for (const [re, to] of ADDR_ABBR) s = s.replace(re, to);
+    return s;
+  }
 
   function computeNewCutoff(meta) {
     const dates = new Set(state.features.map((f) => f.properties.first_seen).filter(Boolean));
@@ -59,7 +98,11 @@
     for (const f of state.features) {
       const p = f.properties;
       const [lon, lat] = f.geometry.coordinates;
-      const key = `${lat.toFixed(5)},${lon.toFixed(5)}`;
+      // one site = one entity: same normalized address (or parcel) always merges,
+      // regardless of small geocode differences; coords only when nothing better
+      const key = p.address ? `a:${p.jurisdiction}|${normAddr(p.address)}`
+        : p.parcel ? `p:${p.county}|${p.parcel}`
+        : `c:${lat.toFixed(5)},${lon.toFixed(5)}`;
       let e = state.entities[key];
       if (!e) {
         e = state.entities[key] = { key, lat, lon, items: [] };
@@ -74,6 +117,7 @@
       e.jurisdiction = e.items[0].jurisdiction;
       e.county = e.items[0].county;
       e.best = [...e.items].sort((a, b) => (b.score || 0) - (a.score || 0))[0];
+      e.planTypes = [...new Set(e.items.map((i) => i.project_type))];
     }
   }
 
@@ -90,6 +134,11 @@
     return true;
   }
   const visibleItems = (e) => e.items.filter(matches);
+  // archived sites drop out of lists/stats too (drawer rows check the entity)
+  const listable = (p) => {
+    const k = state.entityByItemId[p.id];
+    return matches(p) && (!k || !isArchived(k) || state.showArchived);
+  };
 
   /* ---------- pins ---------- */
   function pinIcon(e, active) {
@@ -120,16 +169,21 @@
     state.markerByKey = {};
     let sites = 0, mf = 0, upcoming = 0;
     for (const e of Object.values(state.entities)) {
+      const arch = isArchived(e.key);
+      if (arch && !state.showArchived) continue;
       const vis = visibleItems(e);
       if (!vis.length) continue;
-      sites++;
-      if (vis.some((i) => i.multifamily)) mf++;
-      if (vis.some((i) => i.status === "upcoming")) upcoming++;
+      if (!arch) {
+        sites++;
+        if (vis.some((i) => i.multifamily)) mf++;
+        if (vis.some((i) => i.status === "upcoming")) upcoming++;
+      }
       const m = L.marker([e.lat, e.lon], {
         icon: pinIcon(e, e.key === state.selectedKey),
         riseOnHover: true,
+        opacity: arch ? 0.45 : 1,
       });
-      m.bindTooltip(esc(e.address || e.parcel || e.jurisdiction), { direction: "top", opacity: 0.95 });
+      m.bindTooltip(esc(e.address || e.parcel || e.jurisdiction) + (arch ? " (archived)" : ""), { direction: "top", opacity: 0.95 });
       m.on("click", () => selectEntity(e.key, false));
       m.addTo(pinLayer);
       state.markerByKey[e.key] = m;
@@ -137,7 +191,8 @@
     $("statMapped").textContent = sites;
     $("statMF").textContent = mf;
     $("statUpcoming").textContent = upcoming;
-    if (state.selectedKey && !state.markerByKey[state.selectedKey]) closeCard();
+    // keep the card open when its site was just archived (undo affordance)
+    if (state.selectedKey && !state.markerByKey[state.selectedKey] && !isArchived(state.selectedKey)) closeCard();
     if (openDrawer === "hearings" || openDrawer === "projects") renderDrawer();
   }
 
@@ -153,7 +208,7 @@
       acres ? `${acres} ac` : "",
       score ? `★ ${score}/8` : "",
     ].filter(Boolean).join(" · ");
-    const rows = vis.map((i) => `
+    const itemRow = (i) => `
       <div class="pc-item">
         <div class="pc-item-head">
           <span class="pc-type"><i class="pc-type-dot" style="background:${typeColor(i.project_type)}"></i>${typeLabel(i.project_type)}</span>
@@ -164,12 +219,27 @@
         <p class="pc-plain">${esc(i.plain || i.title)}</p>
         <p class="pc-legal">${esc(i.title.slice(0, 170))}${i.title.length > 170 ? "…" : ""}</p>
         <div class="pc-meta">${esc(i.meeting_body)} · <a href="${esc(i.link)}" target="_blank" rel="noopener">View source →</a></div>
-      </div>`).join("");
+      </div>`;
+    // one site, one card — but distinct plans at this address get their own sections
+    const types = [...new Set(vis.map((i) => i.project_type))];
+    const rows = types.length > 1
+      ? types.map((t) => `
+          <div class="pc-plan">
+            <div class="pc-plan-head"><i class="pc-type-dot" style="background:${typeColor(t)}"></i>${typeLabel(t)} plan</div>
+            ${vis.filter((i) => i.project_type === t).map(itemRow).join("")}
+          </div>`).join("")
+      : vis.map(itemRow).join("");
+    const arch = isArchived(e.key);
     return `
-      <p class="pc-kicker">${mf ? "Multifamily site" : "Development site"} · ${esc(e.county)} County</p>
+      <p class="pc-kicker">${mf ? "Multifamily site" : "Development site"} · ${esc(e.county)} County${arch ? " · <b class='pc-arch-flag'>Archived</b>" : ""}</p>
       <h2 class="pc-title">${esc(e.address || (e.parcel ? "Parcel " + e.parcel : e.jurisdiction))}</h2>
       <p class="pc-sub">${esc(e.jurisdiction)}${facts ? ` · ${facts}` : ""}</p>
+      <button class="pc-archive" id="pcArchive" data-key="${esc(e.key)}">${arch ? "⤴ Restore to map" : "🗂 Archive this site"}</button>
       <div class="pc-items">${rows}</div>`;
+  }
+  function wireCard() {
+    const b = $("pcArchive");
+    if (b) b.onclick = () => toggleArchive(b.dataset.key);
   }
 
   function selectEntity(key, fly) {
@@ -179,6 +249,7 @@
     if (prev && state.markerByKey[prev]) state.markerByKey[prev].setIcon(pinIcon(state.entities[prev], false));
     if (state.markerByKey[key]) state.markerByKey[key].setIcon(pinIcon(e, true));
     $("pcBody").innerHTML = cardHTML(e);
+    wireCard();
     $("propCard").hidden = false;
     if (fly) map.setView([e.lat, e.lon], Math.max(map.getZoom(), 15), { animate: true });
   }
@@ -252,7 +323,7 @@
     if (openDrawer === "projects") {
       const seen = new Set();
       const ranked = state.features.map((f) => f.properties)
-        .filter((p) => matches(p))
+        .filter(listable)
         .sort((a, b) => (b.score || 0) - (a.score || 0) || (b.meeting_date || "").localeCompare(a.meeting_date || ""))
         .filter((p) => {
           const k = state.entityByItemId[p.id];
@@ -269,7 +340,7 @@
       const horizon = new Date(); horizon.setDate(horizon.getDate() + 14);
       const hz = horizon.toISOString().slice(0, 10);
       const up = state.features.map((f) => f.properties)
-        .filter((p) => matches(p) && p.meeting_date >= today && p.meeting_date <= hz)
+        .filter((p) => listable(p) && p.meeting_date >= today && p.meeting_date <= hz)
         .sort((a, b) => a.meeting_date.localeCompare(b.meeting_date) || (b.score || 0) - (a.score || 0));
       d.innerHTML = up.length ? up.map((p) => `
         <div class="u-item p-item" data-key="${state.entityByItemId[p.id] || ""}">
@@ -314,6 +385,7 @@
   $("mfOnly").addEventListener("change", (e) => { state.mfOnly = e.target.checked; render(); });
   $("newOnly").addEventListener("change", (e) => { state.newOnly = e.target.checked; render(); });
   $("statusSel").addEventListener("change", (e) => { state.status = e.target.value; render(); });
+  $("showArchived").addEventListener("change", (e) => { state.showArchived = e.target.checked; render(); });
 
   function exportCSV() {
     const cols = ["id","score","multifamily","units","acres","project_type","status","meeting_date",
@@ -357,6 +429,7 @@
     buildEntities();
     buildCountyChips();
     buildTypeChecks();
+    updateArchCount();
     render();
     const today = new Date().toISOString().slice(0, 10);
     const nHear = state.features.filter((f) => f.properties.meeting_date >= today).length;
