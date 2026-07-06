@@ -12,33 +12,49 @@
 </head>
 <body>
 
-<nav class="nav">
-  <a class="nav-brand" href="index.html">
-    <img src="logo.svg" alt="">
-    <span>Morgan&nbsp;Group</span>
-  </a>
-  <span class="nav-spacer"></span>
-  <a class="nav-link nav-link-solid" href="map.html">Open map →</a>
-</nav>
-
-<header class="hero">
-  <p class="hero-eyebrow">Morgan Group · Acquisitions Intelligence</p>
-  <h1 class="hero-h1">Florida Development<br>Radar</h1>
-  <p class="hero-lede">Every rezoning, land-use change, and site plan moving through
-  public hearing pipelines across eleven counties — refreshed nightly,
-  traced to the source, focused on multifamily opportunity.</p>
-  <div class="hero-stats" id="heroStats">
-    <div><b id="hsProjects">–</b><span>active projects</span></div>
-    <div class="hs-mf"><b id="hsMF">–</b><span>multifamily</span></div>
-    <div><b id="hsUpcoming">–</b><span>upcoming hearings</span></div>
-    <div><b id="hsSources">–</b><span>public sources</span></div>
+<div class="hero-wrap">
+  <div class="hero-arches" aria-hidden="true">
+    <span></span><span></span><span></span>
   </div>
-</header>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html">
+      <span class="nav-logo"><img src="logo.svg" alt=""></span>
+      <span>Morgan&nbsp;Group</span>
+    </a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="map.html">Open map →</a>
+  </nav>
+
+  <header class="hero">
+    <p class="hero-eyebrow">Acquisitions Intelligence</p>
+    <h1 class="hero-h1">Florida Development<br><em>Radar</em></h1>
+    <p class="hero-lede">Every rezoning, land-use change, and site plan moving through
+    public hearing pipelines across eleven counties — refreshed nightly, traced to the
+    source, ranked for multifamily opportunity.</p>
+
+    <div class="hero-stats" id="heroStats">
+      <div><b id="hsProjects">–</b><span>active projects</span></div>
+      <div class="hs-mf"><b id="hsMF">–</b><span>multifamily</span></div>
+      <div><b id="hsUpcoming">–</b><span>upcoming hearings</span></div>
+      <div><b id="hsSources">–</b><span>public sources</span></div>
+    </div>
+
+    <div class="hero-ctas">
+      <a class="cta cta-gold" href="#regions">Choose a market ↓</a>
+      <a class="cta cta-line" href="map.html">Full map</a>
+    </div>
+  </header>
+
+  <div class="ticker" aria-label="Upcoming multifamily hearings">
+    <div class="ticker-track" id="ticker"></div>
+  </div>
+</div>
 
 <main>
-  <section class="regions-section">
+  <section class="regions-section" id="regions">
     <h2 class="section-title">Choose a market</h2>
-    <div class="regions" id="regions"></div>
+    <div class="regions" id="regionsGrid"></div>
   </section>
 
   <section class="counties-section" id="countiesSection" hidden>
@@ -50,15 +66,23 @@
     <h2 class="section-title">Top opportunities <span class="section-sub" id="oppsSub"></span></h2>
     <ol class="opps" id="opps"></ol>
   </section>
-
-  <section class="all-link">
-    <a href="map.html" class="view-all">Open the full map — all regions →</a>
-  </section>
 </main>
 
 <footer class="foot">
-  <span id="footUpdated"></span>
-  <span>Built from public records · every project links to its source</span>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <img src="logo.svg" alt="">
+      <div>
+        <b>Morgan Group</b>
+        <span>Florida Development Radar</span>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <span id="footUpdated"></span>
+      <span>Built from public records — every project links to its source document.</span>
+    </div>
+    <a class="cta cta-navy" href="map.html">Open the full map →</a>
+  </div>
 </footer>
 
 <script src="landing.js"></script>

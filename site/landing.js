@@ -33,8 +33,29 @@
       if (p.meeting_date >= today) a.upcoming++;
     }
 
+    /* ticker: upcoming multifamily hearings, soonest first */
+    const tseen = new Set();
+    const tickerItems = all
+      .filter((p) => p.multifamily && p.meeting_date >= today)
+      .sort((a, b) => a.meeting_date.localeCompare(b.meeting_date))
+      .filter((p) => {
+        const k = p.plain || p.title;
+        if (tseen.has(k)) return false;
+        tseen.add(k);
+        return true;
+      })
+      .slice(0, 18);
+    if (tickerItems.length) {
+      const half = tickerItems.map((p) =>
+        `<span class="tick-item"><span class="tick-date">${esc(p.meeting_date)}</span> · ${esc((p.plain || p.title).slice(0, 92))} <b>★${p.score || 0}</b></span>`
+      ).join("");
+      $("ticker").innerHTML = half + half; // duplicated for a seamless loop
+    } else {
+      document.querySelector(".ticker").style.display = "none";
+    }
+
     /* region portal cards */
-    const regionsEl = $("regions");
+    const regionsEl = $("regionsGrid");
     for (const [key, r] of Object.entries(REGIONS)) {
       const counties = r.counties.filter((c) => agg[c]);
       const total = counties.reduce((s, c) => s + agg[c].total, 0);
