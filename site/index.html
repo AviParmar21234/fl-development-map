@@ -6,75 +6,57 @@
 <title>Morgan Group · Florida Development Radar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="vendor/leaflet.css">
-<link rel="stylesheet" href="vendor/MarkerCluster.css">
-<link rel="stylesheet" href="vendor/MarkerCluster.Default.css">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23c9a227'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,550;9..144,650&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="landing.css">
+<link rel="icon" href="logo.svg">
 </head>
 <body>
-<div id="map" aria-label="Development projects map"></div>
 
-<aside class="panel" id="panel">
-  <header class="brand">
-    <div class="brand-mark">MG</div>
-    <div class="brand-text">
-      <h1>Morgan&nbsp;Group</h1>
-      <p>Florida Development Radar</p>
+<header class="hero">
+  <div class="hero-inner">
+    <img class="hero-logo" src="logo.svg" alt="Morgan Group">
+    <div class="hero-word">
+      <h1>Morgan Group</h1>
+      <p class="hero-sub">Florida Development Radar</p>
     </div>
-    <button class="panel-collapse" id="collapseBtn" title="Collapse panel" aria-label="Collapse panel">‹</button>
-  </header>
+  </div>
+  <p class="hero-lede">Every rezoning, land-use change, and site plan moving through
+  <span id="ledeCounties">Florida's</span> public hearing pipelines — refreshed nightly,
+  traced to the source, focused on multifamily opportunity.</p>
+  <div class="hero-stats" id="heroStats">
+    <div><b id="hsProjects">–</b><span>active projects</span></div>
+    <div class="hs-mf"><b id="hsMF">–</b><span>multifamily</span></div>
+    <div><b id="hsUpcoming">–</b><span>upcoming hearings</span></div>
+    <div><b id="hsSources">–</b><span>public sources</span></div>
+  </div>
+</header>
 
-  <section class="stats" id="stats">
-    <div class="stat"><b id="statMapped">–</b><span>on map</span></div>
-    <div class="stat stat-mf"><b id="statMF">–</b><span>multifamily</span></div>
-    <div class="stat"><b id="statUpcoming">–</b><span>upcoming</span></div>
-    <div class="stat"><b id="statSources">–</b><span>sources</span></div>
+<main>
+  <section class="regions-section">
+    <h2 class="section-title">Choose a market</h2>
+    <div class="regions" id="regions"></div>
   </section>
 
-  <section class="filters">
-    <input type="search" id="search" placeholder="Search projects, addresses…" autocomplete="off">
-
-    <div class="filter-row">
-      <label class="mf-toggle">
-        <input type="checkbox" id="mfOnly">
-        <span class="mf-slider"></span>
-        Multifamily only
-      </label>
-      <label class="mf-toggle new-toggle">
-        <input type="checkbox" id="newOnly">
-        <span class="mf-slider"></span>
-        New
-      </label>
-      <select id="statusSel" aria-label="Hearing status">
-        <option value="all">All hearings</option>
-        <option value="upcoming">Upcoming</option>
-        <option value="heard">Recently heard</option>
-      </select>
-    </div>
-
-    <div class="chips" id="countyChips" aria-label="County filters"></div>
-    <div class="types" id="typeChecks" aria-label="Project type filters"></div>
+  <section class="counties-section" id="countiesSection" hidden>
+    <h2 class="section-title" id="countiesTitle">Counties</h2>
+    <div class="counties" id="counties"></div>
   </section>
 
-  <nav class="drawer-tabs">
-    <button data-drawer="hearings" id="hearingsTab">Hearings <span id="hearingsCount"></span></button>
-    <button data-drawer="unmapped" id="unmappedTab">Unmapped <span id="unmappedCount"></span></button>
-    <button data-drawer="coverage" id="coverageTab">Coverage <span id="coverageCount"></span></button>
-  </nav>
-  <section class="drawer" id="drawer" hidden></section>
+  <section class="opps-section" id="oppsSection" hidden>
+    <h2 class="section-title">Top opportunities <span class="section-sub" id="oppsSub"></span></h2>
+    <ol class="opps" id="opps"></ol>
+  </section>
 
-  <footer class="panel-foot">
-    <span id="updatedAt"></span>
-    <button id="csvBtn" class="csv-btn" title="Export the currently filtered projects as CSV">⤓ CSV</button>
-  </footer>
-</aside>
+  <section class="all-link">
+    <a href="map.html" class="view-all">Open the full map — all regions →</a>
+  </section>
+</main>
 
-<button class="panel-expand" id="expandBtn" hidden title="Show panel">›</button>
+<footer class="foot">
+  <span id="footUpdated"></span>
+  <span>Built from public records · every project links to its source</span>
+</footer>
 
-<script src="vendor/leaflet.js"></script>
-<script src="vendor/leaflet.markercluster.js"></script>
-<script src="app.js"></script>
+<script src="landing.js"></script>
 </body>
 </html>

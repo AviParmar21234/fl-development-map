@@ -46,6 +46,21 @@ def test_city_hint():
     assert city_hint("Doral") == "Doral"
 
 
+def test_plain_summary():
+    from scraper.build import plain_summary
+    it = {"project_type": "rezoning", "multifamily": True, "units": 250, "acres": 4.5,
+          "address": "1200 NW 7th Ave", "jurisdiction": "City of Fort Lauderdale"}
+    assert plain_summary(it) == "Multifamily rezoning · 250 units · 4.5 ac — at 1200 NW 7th Ave, Fort Lauderdale"
+    thin = {"project_type": "variance", "multifamily": False, "jurisdiction": "Doral", "parcel": "01-1"}
+    assert plain_summary(thin) == "Variance — parcel 01-1, Doral"
+
+
+def test_finalize_sets_plain():
+    out = finalize([_item()], today="2026-07-06")
+    assert "Multifamily rezoning" in out[0]["plain"]
+    assert "1 Main St" in out[0]["plain"]
+
+
 def test_polish_promotes_header_titles():
     from scraper.build import polish
     items = [_item(title="NEW BUSINESS", summary="Rezoning of 361 Los Pinos Blvd for townhomes")]

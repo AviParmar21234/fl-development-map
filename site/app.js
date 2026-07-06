@@ -14,6 +14,12 @@
   };
   const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
+  const REGIONS = {
+    south: { name: "South Florida", counties: ["Miami-Dade", "Broward", "Palm Beach"] },
+    central: { name: "Central Florida", counties: ["Orange", "Osceola", "Seminole", "Lake", "Hillsborough", "Pinellas", "Polk"] },
+  };
+  const params = new URLSearchParams(location.search);
+
   const map = L.map("map", { zoomControl: false }).setView([27.2, -81.6], 7);
   L.control.zoom({ position: "bottomright" }).addTo(map);
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
@@ -63,9 +69,8 @@
     ].filter(Boolean).join(" · ");
     return `
       <div class="pp-chips">${chips}</div>
-      <div class="pp-title">${esc(p.title)}</div>
-      ${p.summary && p.summary !== p.title && !p.title.startsWith(p.summary.slice(0, 40))
-        ? `<div class="pp-summary">${esc(p.summary.slice(0, 220))}${p.summary.length > 220 ? "…" : ""}</div>` : ""}
+      <div class="pp-title">${esc(p.plain || p.title)}</div>
+      ${p.plain ? `<div class="pp-summary">${esc(p.title.slice(0, 200))}${p.title.length > 200 ? "…" : ""}</div>` : ""}
       <div class="pp-meta">
         <b>${esc(p.jurisdiction)}</b> · ${esc(p.county)} County<br>
         ${esc(p.meeting_body)}${p.meeting_date ? ` · <b>${esc(p.meeting_date)}</b>` : ""}<br>
@@ -148,7 +153,7 @@
     el.innerHTML = "";
     Object.keys(counts).sort().forEach((c) => {
       const b = document.createElement("button");
-      b.className = "chip";
+      b.className = "chip" + (state.counties.has(c) ? " on" : "");
       b.textContent = `${c} · ${counts[c]}`;
       b.onclick = () => {
         state.counties.has(c) ? state.counties.delete(c) : state.counties.add(c);
@@ -192,8 +197,8 @@
       d.innerHTML = up.length ? up.map((p) => `
         <div class="u-item h-item" data-id="${p.id}">
           <div class="h-date">${esc(p.meeting_date)}${isNew(p) ? ' <span class="pp-chip pp-chip-new">New</span>' : ""}${p.score >= 5 ? ' <span class="pp-hot">★' + p.score + "</span>" : ""}</div>
-          <a href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.title.slice(0, 110))}${p.title.length > 110 ? "…" : ""}</a>
-          <div class="u-meta">${esc(p.jurisdiction)} · ${esc(p.meeting_body)}${p.units ? ` · ${p.units} units` : ""}</div>
+          <a href="${esc(p.link)}" target="_blank" rel="noopener">${esc((p.plain || p.title).slice(0, 110))}</a>
+          <div class="u-meta">${esc(p.jurisdiction)} · ${esc(p.meeting_body)}</div>
         </div>`).join("")
         : '<div class="u-meta" style="padding:12px 0">No hearings in the next 14 days match the current filters.</div>';
       d.querySelectorAll(".h-item").forEach((el) => {
@@ -207,7 +212,7 @@
       d.innerHTML = state.unmapped.length
         ? state.unmapped.map((u) => `
           <div class="u-item">
-            <a href="${esc(u.link)}" target="_blank" rel="noopener">${esc(u.title.slice(0, 130))}${u.title.length > 130 ? "…" : ""}</a>
+            <a href="${esc(u.link)}" target="_blank" rel="noopener">${esc((u.plain || u.title).slice(0, 130))}</a>
             <div class="u-meta">${esc(u.jurisdiction)} · ${esc(u.meeting_date || "no date")} · no mappable address</div>
           </div>`).join("")
         : '<div class="u-meta" style="padding:12px 0">Every development item has a mapped location. 🎯</div>';
@@ -250,6 +255,16 @@
     state.unmapped = unmapped;
     state.coverage = coverage;
     state.newCutoff = computeNewCutoff(meta);
+    // entry filters from the landing page: ?county=Broward or ?region=south
+    const wantCounty = params.get("county");
+    const wantRegion = params.get("region");
+    if (wantCounty) {
+      wantCounty.split(",").forEach((c) => state.counties.add(c));
+      $("brandSub").textContent = wantCounty.replace(",", " · ") + " County";
+    } else if (wantRegion && REGIONS[wantRegion]) {
+      REGIONS[wantRegion].counties.forEach((c) => state.counties.add(c));
+      $("brandSub").textContent = REGIONS[wantRegion].name;
+    }
     buildCountyChips();
     buildTypeChecks();
     render();
@@ -260,8 +275,9 @@
     $("coverageCount").textContent = coverage.length ? `(${coverage.length})` : "";
     $("statSources").textContent = coverage.filter((c) => c.ok).length || "–";
     if (meta) $("updatedAt").textContent = `Updated ${meta.generated_at.slice(0, 16).replace("T", " ")} UTC · public-record sources`;
-    if (state.features.length) {
-      const b = L.geoJSON(fc).getBounds();
+    const visible = state.features.filter((f) => matches(f.properties));
+    if (visible.length) {
+      const b = L.geoJSON({ type: "FeatureCollection", features: visible }).getBounds();
       if (b.isValid()) map.fitBounds(b.pad(0.08));
     }
   }).catch((err) => {

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Morgan Group nested arches -->
+  <path d="M96 422 V276 A187 187 0 0 1 470 276 V422 Z" fill="#14334D"/>
+  <path d="M34 422 V312 A150 150 0 0 1 334 312 V422 Z" fill="#FFFFFF"/>
+  <path d="M48 422 V314 A136 136 0 0 1 320 314 V422 Z" fill="#5A6871"/>
+  <path d="M42 422 V346 A74 74 0 0 1 190 346 V422 Z" fill="#FFFFFF"/>
+  <path d="M55 422 V350 A61 61 0 0 1 177 350 V422 Z" fill="#C4CDD9"/>
+</svg>

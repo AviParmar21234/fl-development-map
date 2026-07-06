@@ -39,8 +39,37 @@ def polish(items: list[dict]) -> None:
                             i["lat"] = i["lon"] = None
 
 SCHEMA_KEYS = ["id", "source", "jurisdiction", "county", "meeting_body", "meeting_date",
-               "title", "summary", "link", "project_type", "multifamily", "address",
+               "title", "summary", "plain", "link", "project_type", "multifamily", "address",
                "parcel", "lat", "lon", "status", "first_seen", "units", "acres", "score"]
+
+_TYPE_LABELS = {
+    "rezoning": "Rezoning", "land-use": "Land-use change", "site-plan": "Site plan",
+    "pud": "Planned development (PUD)", "plat": "Plat / subdivision", "variance": "Variance",
+    "special-exception": "Special exception", "development-agreement": "Development agreement",
+    "annexation": "Annexation", "other-development": "Development item",
+}
+_JURIS_PREFIX = re.compile(r"^(City of|Town of|Village of)\s+", re.I)
+
+
+def plain_summary(it: dict) -> str:
+    """One-line developer-friendly description built from extracted facts."""
+    label = _TYPE_LABELS.get(it.get("project_type"), "Development item")
+    lead = f"Multifamily {label[0].lower()}{label[1:]}" if it.get("multifamily") else label
+    facts = []
+    if it.get("units"):
+        facts.append(f"{it['units']} units")
+    if it.get("acres"):
+        acres = it["acres"]
+        facts.append(f"{acres:g} ac")
+    if it.get("address"):
+        loc = f"at {it['address']}"
+    elif it.get("parcel"):
+        loc = f"parcel {it['parcel']}"
+    else:
+        loc = "location not stated in item"
+    place = _JURIS_PREFIX.sub("", it.get("jurisdiction") or "").strip()
+    head = lead + (" · " + " · ".join(facts) if facts else "")
+    return f"{head} — {loc}, {place}"
 
 
 def load_first_seen(out_dir: str) -> dict:
@@ -79,6 +108,7 @@ def finalize(items: list[dict], today: str | None = None, first_seen: dict | Non
         it["id"] = iid
         it["status"] = "upcoming" if (it.get("meeting_date") or "") >= today else "heard"
         it["first_seen"] = first_seen.get(iid, today)
+        it["plain"] = plain_summary(it)
         out.append({k: it.get(k) for k in SCHEMA_KEYS})
     return out
 
