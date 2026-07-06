@@ -8,8 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,550;9..144,650&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="vendor/leaflet.css">
-<link rel="stylesheet" href="vendor/MarkerCluster.css">
-<link rel="stylesheet" href="vendor/MarkerCluster.Default.css">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="logo.svg">
 </head>
@@ -25,13 +23,13 @@
   <span class="tb-spacer"></span>
   <span class="tb-updated" id="updatedAt"></span>
   <button id="csvBtn" class="tb-btn" title="Export the currently filtered projects as CSV">⤓ Export CSV</button>
-  <a class="tb-btn tb-btn-ghost" href="index.html">Overview</a>
+  <a class="tb-btn tb-btn-solid" href="index.html">Overview</a>
 </nav>
 
 <div class="content">
   <aside class="sidebar" id="panel">
     <section class="stats" id="stats">
-      <div class="stat"><b id="statMapped">–</b><span>on map</span></div>
+      <div class="stat"><b id="statMapped">–</b><span>sites</span></div>
       <div class="stat stat-mf"><b id="statMF">–</b><span>multifamily</span></div>
       <div class="stat"><b id="statUpcoming">–</b><span>upcoming</span></div>
       <div class="stat"><b id="statSources">–</b><span>sources</span></div>
@@ -74,11 +72,15 @@
   </aside>
 
   <button class="panel-toggle" id="collapseBtn" title="Toggle panel" aria-label="Toggle panel">‹</button>
-  <div id="map" aria-label="Development projects map"></div>
+  <div id="map" aria-label="Development sites map"></div>
+
+  <article class="prop-card" id="propCard" hidden>
+    <button class="pc-close" id="pcClose" aria-label="Close">×</button>
+    <div id="pcBody"></div>
+  </article>
 </div>
 
 <script src="vendor/leaflet.js"></script>
-<script src="vendor/leaflet.markercluster.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
