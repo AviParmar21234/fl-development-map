@@ -176,12 +176,12 @@ body.panel-hidden .panel-toggle { left: 0; }
 }
 .type-check input { display: none; }
 .type-dot {
-  width: 8px; height: 8px; border-radius: 50%; flex: none;
-  border: 1.5px solid var(--text-sec); background: transparent;
+  width: 9px; height: 9px; border-radius: 50%; flex: none;
+  border: 1.5px solid var(--tc, var(--text-sec)); background: transparent;
   transition: all .15s;
 }
 .type-check.on { color: var(--char); }
-.type-check.on .type-dot { background: var(--char); border-color: var(--char); }
+.type-check.on .type-dot { background: var(--tc, var(--char)); }
 
 /* ============ drawers ============ */
 .drawer-tabs { display: flex; border-bottom: 1px solid var(--line); flex: none; }
@@ -293,10 +293,12 @@ body.panel-hidden .panel-toggle { left: 0; }
 .pc-item { padding: 14px 0; border-top: 1px solid var(--gray-soft); }
 .pc-item-head { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .pc-type {
+  display: inline-flex; align-items: center; gap: 5px;
   font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
   padding: 3px 8px; border-radius: 4px;
   background: var(--gray-soft); color: var(--char);
 }
+.pc-type-dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
 .pc-type-mf { background: var(--char); color: var(--white); }
 .pc-type-new { background: var(--green); color: var(--white); }
 .pc-date { margin-left: auto; font-size: 11px; font-weight: 600; color: var(--text-sec); }

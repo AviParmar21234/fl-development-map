@@ -1,17 +1,19 @@
 /* Morgan Group · Florida Development Radar — map */
 (() => {
   const TYPE_META = {
-    "rezoning": "Rezoning",
-    "land-use": "Land Use",
-    "site-plan": "Site Plan",
-    "pud": "PUD",
-    "plat": "Plat",
-    "variance": "Variance",
-    "special-exception": "Special Exception",
-    "development-agreement": "Dev Agreement",
-    "annexation": "Annexation",
-    "other-development": "Other",
+    "rezoning": ["Rezoning", "#d4593c"],
+    "land-use": ["Land Use", "#2a8f83"],
+    "site-plan": ["Site Plan", "#3b6fb3"],
+    "pud": ["PUD", "#7a5cad"],
+    "plat": ["Plat", "#4d9455"],
+    "variance": ["Variance", "#8a8f96"],
+    "special-exception": ["Special Exception", "#c78f2c"],
+    "development-agreement": ["Dev Agreement", "#b8547e"],
+    "annexation": ["Annexation", "#7d8a3d"],
+    "other-development": ["Other", "#6d7278"],
   };
+  const typeLabel = (t) => (TYPE_META[t] || ["Development"])[0];
+  const typeColor = (t) => (TYPE_META[t] || [null, "#6d7278"])[1];
 
   const REGIONS = {
     south: { name: "South Florida", counties: ["Miami-Dade", "Broward", "Palm Beach"] },
@@ -94,15 +96,17 @@
     const vis = visibleItems(e);
     const mf = vis.some((i) => i.multifamily);
     const fresh = vis.some((i) => isNew(i));
+    const best = [...vis].sort((a, b) => (b.score || 0) - (a.score || 0))[0] || e.best;
+    const color = typeColor(best && best.project_type);
     const w = mf ? 30 : 24, h = mf ? 40 : 32;
-    const fill = active ? "#0f1113" : (mf ? "#26282c" : "#ffffff");
-    const inner = mf || active ? "#ffffff" : "#26282c";
+    // fill = project type color; multifamily/selected pins get a charcoal outline and white core
+    const stroke = active ? "#1a1c1f" : (mf ? "#26282c" : "#ffffff");
     return L.divIcon({
       className: "pin-wrap" + (active ? " pin-active" : ""),
       html: `<svg width="${w}" height="${h}" viewBox="0 0 30 40">
         <path d="M15 1 C7 1 1.5 7 1.5 14.5 C1.5 24 15 39 15 39 C15 39 28.5 24 28.5 14.5 C28.5 7 23 1 15 1 Z"
-              fill="${fill}" stroke="${mf || active ? "#ffffff" : "#26282c"}" stroke-width="1.6"/>
-        <circle cx="15" cy="14.5" r="5" fill="${inner}"/>
+              fill="${color}" stroke="${stroke}" stroke-width="${active ? 2.6 : (mf ? 2.2 : 1.6)}"/>
+        <circle cx="15" cy="14.5" r="5" fill="#ffffff"/>
         ${fresh ? '<circle cx="25" cy="6" r="4.4" fill="#3e9e5c" stroke="#fff" stroke-width="1.4"/>' : ""}
       </svg>`,
       iconSize: [w, h],
@@ -152,7 +156,7 @@
     const rows = vis.map((i) => `
       <div class="pc-item">
         <div class="pc-item-head">
-          <span class="pc-type">${TYPE_META[i.project_type] || "Development"}</span>
+          <span class="pc-type"><i class="pc-type-dot" style="background:${typeColor(i.project_type)}"></i>${typeLabel(i.project_type)}</span>
           ${i.multifamily ? '<span class="pc-type pc-type-mf">Multifamily</span>' : ""}
           ${isNew(i) ? '<span class="pc-type pc-type-new">New</span>' : ""}
           <span class="pc-date">${esc(i.meeting_date || "")}${i.status === "upcoming" ? " · upcoming" : ""}</span>
@@ -210,10 +214,10 @@
   function buildTypeChecks() {
     const el = $("typeChecks");
     el.innerHTML = "";
-    for (const [key, label] of Object.entries(TYPE_META)) {
+    for (const [key, [label, color]] of Object.entries(TYPE_META)) {
       const lab = document.createElement("label");
       lab.className = "type-check on";
-      lab.innerHTML = `<input type="checkbox" checked><span class="type-dot"></span>${label}`;
+      lab.innerHTML = `<input type="checkbox" checked><span class="type-dot" style="--tc:${color}"></span>${label}`;
       lab.querySelector("input").onchange = (ev) => {
         ev.target.checked ? state.types.add(key) : state.types.delete(key);
         lab.classList.toggle("on", ev.target.checked);
