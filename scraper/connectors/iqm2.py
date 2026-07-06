@@ -46,6 +46,16 @@ def parse_meeting(html: str, base_url: str) -> tuple[str, list[tuple[str, str]]]
     return body_name, items
 
 
+def fetch_detail(link: str) -> str:
+    """Full text of a Detail_LegiFile item page (for address enrichment)."""
+    try:
+        soup = BeautifulSoup(http.get(link).text, "html.parser")
+        main = soup.find(id="MainContentHolder") or soup.body or soup
+        return main.get_text(" ", strip=True)[:4000]
+    except Exception:
+        return ""
+
+
 def fetch(source: dict) -> list[RawItem]:
     base = source["url"].rstrip("/")
     if base.endswith("/Citizens") or "/Citizens/" in base:

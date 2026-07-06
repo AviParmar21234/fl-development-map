@@ -45,3 +45,25 @@ def test_multiword_street_name():
 def test_all_caps_miami_style():
     r = extract_location("LOCATED AT APPROXIMATELY 5135 NW 7 STREET, MIAMI, FLORIDA")
     assert r["address"] == "5135 NW 7 STREET"
+
+
+def test_intel_units_acres_applicant():
+    from scraper.extract import extract_intel
+    r = extract_intel("rezoning of a 4.5-acre site for a 250-unit multifamily development, Applicant: Brickell Holdings LLC")
+    assert r["units"] == 250
+    assert r["acres"] == 4.5
+    assert r["applicant"] == "Brickell Holdings LLC"
+
+
+def test_intel_absent():
+    from scraper.extract import extract_intel
+    r = extract_intel("Approval of a development agreement generally")
+    assert r == {"units": None, "acres": None, "applicant": None}
+
+
+def test_opportunity_score():
+    from scraper.extract import opportunity_score
+    hot = {"multifamily": True, "units": 300, "acres": 5.0, "project_type": "rezoning", "status": "upcoming"}
+    cold = {"multifamily": False, "units": None, "acres": None, "project_type": "variance", "status": "heard"}
+    assert opportunity_score(hot) == 8
+    assert opportunity_score(cold) == 0

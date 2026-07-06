@@ -44,3 +44,14 @@ def test_city_hint():
     assert city_hint("City of Miami") == "Miami"
     assert city_hint("Broward County") == ""
     assert city_hint("Doral") == "Doral"
+
+
+def test_first_seen_carries_forward(tmp_path):
+    from scraper.build import load_first_seen
+    old = finalize([_item()], today="2026-07-01")
+    write_outputs(old, [], str(tmp_path))
+    prev = load_first_seen(str(tmp_path))
+    out = finalize([_item(), _item(link="https://x/new")], today="2026-07-06", first_seen=prev)
+    by_link = {o["link"]: o for o in out}
+    assert by_link["https://x/1"]["first_seen"] == "2026-07-01"  # kept from previous run
+    assert by_link["https://x/new"]["first_seen"] == "2026-07-06"  # new item stamped today

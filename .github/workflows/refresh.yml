@@ -1,0 +1,37 @@
+name: Nightly data refresh
+
+on:
+  schedule:
+    - cron: "15 9 * * *"   # 09:15 UTC = 4:15/5:15 AM ET, before the workday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Scrape, geocode, build
+        run: python -m scraper.run
+      - name: Commit and push new data
+        run: |
+          git config user.name "morgan-map-bot"
+          git config user.email "actions@github.com"
+          git add site/data geocache.json parcelcache.json 2>/dev/null || git add site/data
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "data: nightly refresh $(date -u +%F)"
+            git push
+          fi

@@ -9,10 +9,12 @@ import re
 import sys
 import traceback
 
-from scraper.build import finalize, write_outputs
-from scraper.extract import extract_location
+from scraper.build import finalize, load_first_seen, write_outputs
+from scraper.extract import extract_intel, extract_location, opportunity_score
 from scraper.filter import classify
 from scraper.geocode import geocode_all
+
+ENRICH_CAP = 40  # max detail-page fetches per source for items missing a location
 
 CONNECTORS = {
     "legistar": "scraper.connectors.legistar",
@@ -44,18 +46,33 @@ def scrape_source(source: dict) -> tuple[list[dict], dict]:
         else:
             pairs = [(ri, None) for ri in mod.fetch(source)]
         cov["items_raw"] = len(pairs)
+        enrich = getattr(mod, "fetch_detail", None)
+        enriched = 0
         for ri, coords in pairs:
             cls = classify(ri.title, ri.body_text)
             if not cls:
                 continue
-            loc = extract_location(f"{ri.title} {ri.body_text}")
+            text = f"{ri.title} {ri.body_text}"
+            loc = extract_location(text)
+            intel = extract_intel(text)
+            summary = (ri.body_text or "")[:400]
+            if enrich and not loc["address"] and not loc["parcel"] and not coords and enriched < ENRICH_CAP:
+                enriched += 1
+                detail = enrich(ri.link)
+                if detail:
+                    loc = extract_location(detail)
+                    more = extract_intel(detail)
+                    intel = {k: intel[k] or more[k] for k in intel}
+                    if not summary:
+                        summary = detail[:400]
             it = {
                 "source": ri.source_id, "jurisdiction": ri.jurisdiction, "county": ri.county,
                 "meeting_body": ri.meeting_body, "meeting_date": ri.meeting_date,
-                "title": ri.title[:400], "summary": (ri.body_text or "")[:400],
+                "title": ri.title[:400], "summary": summary,
                 "link": ri.link, "project_type": cls["project_type"],
                 "multifamily": cls["multifamily"], "address": loc["address"],
                 "parcel": loc["parcel"], "lat": None, "lon": None,
+                "units": intel["units"], "acres": intel["acres"],
                 "city_hint": city_hint(ri.jurisdiction),
             }
             if coords:
@@ -96,9 +113,18 @@ def main(argv=None) -> int:
 
     print(f"geocoding {sum(1 for i in all_items if i['address'] and i['lat'] is None)} addresses...", flush=True)
     geocode_all(all_items)
+    try:
+        from scraper.parcels import resolve_parcels
+        n = sum(1 for i in all_items if i["lat"] is None and i.get("parcel"))
+        print(f"resolving {n} parcels via county GIS...", flush=True)
+        resolve_parcels(all_items)
+    except ImportError:
+        pass
     for it in all_items:
         it.pop("city_hint", None)
-    final = finalize(all_items)
+    final = finalize(all_items, first_seen=load_first_seen(args.out_dir))
+    for it in final:
+        it["score"] = opportunity_score(it)
     meta = write_outputs(final, coverage, args.out_dir)
     print(json.dumps(meta["totals"], indent=1))
     return 0

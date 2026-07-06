@@ -6,16 +6,36 @@ from datetime import date, datetime, timezone
 
 SCHEMA_KEYS = ["id", "source", "jurisdiction", "county", "meeting_body", "meeting_date",
                "title", "summary", "link", "project_type", "multifamily", "address",
-               "parcel", "lat", "lon", "status"]
+               "parcel", "lat", "lon", "status", "first_seen", "units", "acres", "score"]
+
+
+def load_first_seen(out_dir: str) -> dict:
+    """Map of item id -> first_seen date from the previous build's outputs."""
+    seen: dict[str, str] = {}
+    for fname in ("projects.geojson", "unmapped.json"):
+        path = os.path.join(out_dir, fname)
+        if not os.path.exists(path):
+            continue
+        try:
+            with open(path) as f:
+                data = json.load(f)
+        except Exception:
+            continue
+        records = [ft["properties"] for ft in data.get("features", [])] if isinstance(data, dict) else data
+        for rec in records:
+            if rec.get("id") and rec.get("first_seen"):
+                seen[rec["id"]] = rec["first_seen"]
+    return seen
 
 
 def item_id(source_id: str, link: str, title: str) -> str:
     return hashlib.sha1(f"{source_id}|{link}|{title}".encode()).hexdigest()[:16]
 
 
-def finalize(items: list[dict], today: str | None = None) -> list[dict]:
-    """Dedup by id, set status, clip to schema keys."""
+def finalize(items: list[dict], today: str | None = None, first_seen: dict | None = None) -> list[dict]:
+    """Dedup by id, set status and first_seen, clip to schema keys."""
     today = today or date.today().isoformat()
+    first_seen = first_seen or {}
     seen, out = set(), []
     for it in items:
         iid = item_id(it["source"], it["link"], it["title"])
@@ -24,6 +44,7 @@ def finalize(items: list[dict], today: str | None = None) -> list[dict]:
         seen.add(iid)
         it["id"] = iid
         it["status"] = "upcoming" if (it.get("meeting_date") or "") >= today else "heard"
+        it["first_seen"] = first_seen.get(iid, today)
         out.append({k: it.get(k) for k in SCHEMA_KEYS})
     return out
 

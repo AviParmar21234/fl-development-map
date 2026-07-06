@@ -51,6 +51,24 @@ def map_items(source: dict, events: list[dict], items_by_event) -> list[RawItem]
     return out
 
 
+def fetch_detail(link: str) -> str:
+    """Matter text via the API, derived from a LegislationDetail link (for enrichment)."""
+    import re as _re
+    m = _re.match(r"https://([^.]+)\.legistar\.com/LegislationDetail\.aspx\?ID=(\d+)", link)
+    if not m:
+        return ""
+    client, matter_id = m.group(1), m.group(2)
+    try:
+        versions = http.get(f"{API}/{client}/Matters/{matter_id}/Texts").json()
+        if not versions:
+            return ""
+        text_id = versions[-1].get("TextId")
+        body = http.get(f"{API}/{client}/Matters/{matter_id}/Texts/{text_id}").json()
+        return ((body.get("TextPlain") or body.get("TextBody") or ""))[:4000]
+    except Exception:
+        return ""
+
+
 def fetch(source: dict) -> list[RawItem]:
     client = source["legistar_client"]
     events = _events(client)
