@@ -88,10 +88,14 @@ def test_parse_agenda_text():
         "Historic Preservation Month.",
         "Update on Ongoing Scams in the County - Palm Beach County Clerk of Court and Comptroller, Mike Caruso.",  # wrapped line joined
         "Drop Savers Poster Contest Awards.",
+        "CONSENT AGENDA",
+        "Approval of Minutes - June 16, 2026",  # sub-item split from parent, kissimmee style
+        "Award of Contract for Road Resurfacing",
     ]
     assert items[0]["section"] == "PROCLAMATION"
     assert items[2]["section"] == "PRESENTATION"
     assert items[0]["number"] == "1"
+    assert items[5]["number"] == "5.A"
     # section headers and boilerplate prose are not items
     assert all("CITIZEN" not in t for t in titles)
 
@@ -99,7 +103,7 @@ def test_parse_agenda_text():
 def test_map_event_item_level():
     items = parse_agenda_text(AGENDA_TEXT)
     out = map_event(SOURCE, "jupiterfl", EVENT, items)
-    assert len(out) == 4
+    assert len(out) == 7
     first = out[0]
     assert first.source_id == "jupiter"
     assert first.jurisdiction == "Jupiter"
