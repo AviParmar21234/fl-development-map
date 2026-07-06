@@ -1,0 +1,335 @@
+[
+ {
+  "source_id": "miami",
+  "name": "City of Miami",
+  "county": "Miami-Dade",
+  "ok": true,
+  "items_raw": 393,
+  "items_dev": 34,
+  "error": null
+ },
+ {
+  "source_id": "coral-gables",
+  "name": "Coral Gables",
+  "county": "Miami-Dade",
+  "ok": true,
+  "items_raw": 2119,
+  "items_dev": 63,
+  "error": null
+ },
+ {
+  "source_id": "doral",
+  "name": "Doral",
+  "county": "Miami-Dade",
+  "ok": true,
+  "items_raw": 451,
+  "items_dev": 23,
+  "error": null
+ },
+ {
+  "source_id": "cutler-bay",
+  "name": "Cutler Bay",
+  "county": "Miami-Dade",
+  "ok": true,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": null
+ },
+ {
+  "source_id": "miami-beach",
+  "name": "Miami Beach",
+  "county": "Miami-Dade",
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
+ },
+ {
+  "source_id": "broward-county",
+  "name": "Broward County",
+  "county": "Broward",
+  "ok": true,
+  "items_raw": 1112,
+  "items_dev": 49,
+  "error": null
+ },
+ {
+  "source_id": "fort-lauderdale",
+  "name": "Fort Lauderdale",
+  "county": "Broward",
+  "ok": true,
+  "items_raw": 1072,
+  "items_dev": 29,
+  "error": null
+ },
+ {
+  "source_id": "hollywood",
+  "name": "Hollywood",
+  "county": "Broward",
+  "ok": true,
+  "items_raw": 1396,
+  "items_dev": 33,
+  "error": null
+ },
+ {
+  "source_id": "pembroke-pines",
+  "name": "Pembroke Pines",
+  "county": "Broward",
+  "ok": true,
+  "items_raw": 1536,
+  "items_dev": 22,
+  "error": null
+ },
+ {
+  "source_id": "miramar",
+  "name": "Miramar",
+  "county": "Broward",
+  "ok": true,
+  "items_raw": 649,
+  "items_dev": 2,
+  "error": null
+ },
+ {
+  "source_id": "pompano-beach",
+  "name": "Pompano Beach",
+  "county": "Broward",
+  "ok": true,
+  "items_raw": 990,
+  "items_dev": 46,
+  "error": null
+ },
+ {
+  "source_id": "coral-springs",
+  "name": "Coral Springs",
+  "county": "Broward",
+  "ok": true,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": null
+ },
+ {
+  "source_id": "davie",
+  "name": "Davie",
+  "county": "Broward",
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
+ },
+ {
+  "source_id": "sunrise",
+  "name": "Sunrise",
+  "county": "Broward",
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
+ },
+ {
+  "source_id": "plantation",
+  "name": "Plantation",
+  "county": "Broward",
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
+ },
+ {
+  "source_id": "deerfield-beach",
+  "name": "Deerfield Beach",
+  "county": "Broward",
+  "ok": true,
+  "items_raw": 186,
+  "items_dev": 5,
+  "error": null
+ },
+ {
+  "source_id": "broward-dev-tracker",
+  "name": "Broward County LPA Applications",
+  "county": "Broward",
+  "ok": true,
+  "items_raw": 3,
+  "items_dev": 1,
+  "error": null
+ },
+ {
+  "source_id": "palm-beach-county",
+  "name": "Palm Beach County",
+  "county": "Palm Beach",
+  "ok": true,
+  "items_raw": 105,
+  "items_dev": 0,
+  "error": null
+ },
+ {
+  "source_id": "delray-beach",
+  "name": "Delray Beach",
+  "county": "Palm Beach",
+  "ok": true,
+  "items_raw": 2250,
+  "items_dev": 62,
+  "error": null
+ },
+ {
+  "source_id": "wellington",
+  "name": "Wellington",
+  "county": "Palm Beach",
+  "ok": true,
+  "items_raw": 1051,
+  "items_dev": 79,
+  "error": null
+ },
+ {
+  "source_id": "jupiter",
+  "name": "Jupiter",
+  "county": "Palm Beach",
+  "ok": true,
+  "items_raw": 229,
+  "items_dev": 13,
+  "error": null
+ },
+ {
+  "source_id": "orange-county",
+  "name": "Orange County",
+  "county": "Orange",
+  "ok": true,
+  "items_raw": 1492,
+  "items_dev": 82,
+  "error": null
+ },
+ {
+  "source_id": "seminole-county",
+  "name": "Seminole County",
+  "county": "Seminole",
+  "ok": true,
+  "items_raw": 1311,
+  "items_dev": 197,
+  "error": null
+ },
+ {
+  "source_id": "winter-park",
+  "name": "Winter Park",
+  "county": "Orange",
+  "ok": true,
+  "items_raw": 285,
+  "items_dev": 0,
+  "error": null
+ },
+ {
+  "source_id": "apopka",
+  "name": "Apopka",
+  "county": "Orange",
+  "ok": true,
+  "items_raw": 283,
+  "items_dev": 84,
+  "error": null
+ },
+ {
+  "source_id": "kissimmee",
+  "name": "Kissimmee",
+  "county": "Osceola",
+  "ok": true,
+  "items_raw": 636,
+  "items_dev": 29,
+  "error": null
+ },
+ {
+  "source_id": "st-cloud",
+  "name": "St. Cloud",
+  "county": "Osceola",
+  "ok": true,
+  "items_raw": 160,
+  "items_dev": 43,
+  "error": null
+ },
+ {
+  "source_id": "lake-county",
+  "name": "Lake County",
+  "county": "Lake",
+  "ok": true,
+  "items_raw": 228,
+  "items_dev": 3,
+  "error": null
+ },
+ {
+  "source_id": "clermont",
+  "name": "Clermont",
+  "county": "Lake",
+  "ok": true,
+  "items_raw": 62,
+  "items_dev": 0,
+  "error": null
+ },
+ {
+  "source_id": "sanford",
+  "name": "Sanford",
+  "county": "Seminole",
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
+ },
+ {
+  "source_id": "hillsborough-county",
+  "name": "Hillsborough County",
+  "county": "Hillsborough",
+  "ok": true,
+  "items_raw": 823,
+  "items_dev": 344,
+  "error": null
+ },
+ {
+  "source_id": "pinellas-county",
+  "name": "Pinellas County",
+  "county": "Pinellas",
+  "ok": true,
+  "items_raw": 936,
+  "items_dev": 27,
+  "error": null
+ },
+ {
+  "source_id": "clearwater",
+  "name": "Clearwater",
+  "county": "Pinellas",
+  "ok": true,
+  "items_raw": 1577,
+  "items_dev": 86,
+  "error": null
+ },
+ {
+  "source_id": "pinellas-park",
+  "name": "Pinellas Park",
+  "county": "Pinellas",
+  "ok": true,
+  "items_raw": 584,
+  "items_dev": 44,
+  "error": null
+ },
+ {
+  "source_id": "polk-county",
+  "name": "Polk County",
+  "county": "Polk",
+  "ok": true,
+  "items_raw": 2115,
+  "items_dev": 103,
+  "error": null
+ },
+ {
+  "source_id": "temple-terrace",
+  "name": "Temple Terrace",
+  "county": "Hillsborough",
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ModuleNotFoundError: No module named 'scraper.connectors.novus'"
+ },
+ {
+  "source_id": "hillsborough-dev-tracker",
+  "name": "Hillsborough County Zoning Applications",
+  "county": "Hillsborough",
+  "ok": true,
+  "items_raw": 134,
+  "items_dev": 78,
+  "error": null
+ }
+]
