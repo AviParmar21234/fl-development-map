@@ -377,7 +377,8 @@
         .sort((a, b) => b.firstSeen.localeCompare(a.firstSeen))
         .slice(0, 80);
       d.innerHTML = fresh.length
-        ? fresh.map((e) => entityRow(e, ` · added ${esc(e.firstSeen)}`)).join("")
+        ? '<div class="d-hint">First discovered in the last 7 days — their hearings may be past or future.</div>'
+          + fresh.map((e) => entityRow(e, ` · added ${esc(e.firstSeen)}`)).join("")
         : '<div class="u-meta" style="padding:12px 0">Nothing new in the last 7 days for these filters. The radar re-scans nightly around 4–5 AM ET.</div>';
       wireRows(d);
     } else if (openDrawer === "saved") {
@@ -394,7 +395,7 @@
       const up = state.features.map((f) => f.properties)
         .filter((p) => listable(p) && p.meeting_date >= today && p.meeting_date <= hz)
         .sort((a, b) => a.meeting_date.localeCompare(b.meeting_date) || (b.score || 0) - (a.score || 0));
-      d.innerHTML = up.length ? up.map((p) => `
+      d.innerHTML = up.length ? '<div class="d-hint">Hearings on the calendar in the next 14 days.</div>' + up.map((p) => `
         <div class="u-item p-item" data-key="${state.entityByItemId[p.id] || ""}">
           <div class="h-date">${esc(p.meeting_date)}</div>
           <a href="${esc(p.link)}" target="_blank" rel="noopener">${esc((p.plain || p.title).slice(0, 110))}</a>
