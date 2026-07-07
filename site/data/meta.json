@@ -5,6 +5,56 @@
   "sources_ok": 44,
   "projects_mapped": 817,
   "projects_unmapped": 943,
-  "multifamily": 271
+  "multifamily": 271,
+  "sites": 656,
+  "mf_sites": 85,
+  "upcoming_sites": 106
+ },
+ "counties": {
+  "Miami-Dade": {
+   "sites": 87,
+   "mf": 19,
+   "upcoming": 10
+  },
+  "Broward": {
+   "sites": 93,
+   "mf": 27,
+   "upcoming": 3
+  },
+  "Palm Beach": {
+   "sites": 43,
+   "mf": 12,
+   "upcoming": 0
+  },
+  "Orange": {
+   "sites": 49,
+   "mf": 8,
+   "upcoming": 6
+  },
+  "Seminole": {
+   "sites": 99,
+   "mf": 3,
+   "upcoming": 8
+  },
+  "Osceola": {
+   "sites": 3,
+   "mf": 0,
+   "upcoming": 0
+  },
+  "Hillsborough": {
+   "sites": 225,
+   "mf": 10,
+   "upcoming": 77
+  },
+  "Pinellas": {
+   "sites": 39,
+   "mf": 4,
+   "upcoming": 0
+  },
+  "Polk": {
+   "sites": 18,
+   "mf": 2,
+   "upcoming": 2
+  }
  }
 }

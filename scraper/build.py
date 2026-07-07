@@ -136,6 +136,57 @@ def finalize(items: list[dict], today: str | None = None, first_seen: dict | Non
     return out
 
 
+# mirror of the map UI's address normalization (site/app.js normAddr) — the two
+# MUST stay in sync so pipeline site counts equal what the map renders
+_ADDR_ABBR = [
+    (re.compile(r"\bSTREET\b"), "ST"), (re.compile(r"\bAVENUE\b"), "AVE"),
+    (re.compile(r"\bBOULEVARD\b"), "BLVD"), (re.compile(r"\bROAD\b"), "RD"),
+    (re.compile(r"\bDRIVE\b"), "DR"), (re.compile(r"\bCOURT\b"), "CT"),
+    (re.compile(r"\bTERRACE\b"), "TER"), (re.compile(r"\bPLACE\b"), "PL"),
+    (re.compile(r"\bLANE\b"), "LN"), (re.compile(r"\bHIGHWAY\b"), "HWY"),
+    (re.compile(r"\bPARKWAY\b"), "PKWY"), (re.compile(r"\bCIRCLE\b"), "CIR"),
+    (re.compile(r"\bTRAIL\b"), "TRL"), (re.compile(r"\bNORTHWEST\b"), "NW"),
+    (re.compile(r"\bNORTHEAST\b"), "NE"), (re.compile(r"\bSOUTHWEST\b"), "SW"),
+    (re.compile(r"\bSOUTHEAST\b"), "SE"),
+]
+
+
+def norm_addr(a: str) -> str:
+    s = re.sub(r"\s+", " ", re.sub(r"[.,#]", " ", a.upper())).strip()
+    for rx, to in _ADDR_ABBR:
+        s = rx.sub(to, s)
+    return s
+
+
+def site_key(it: dict) -> str:
+    if it.get("address"):
+        return f"a:{it['jurisdiction']}|{norm_addr(it['address'])}"
+    if it.get("parcel"):
+        return f"p:{it['county']}|{it['parcel']}"
+    return f"c:{it['lat']:.5f},{it['lon']:.5f}"
+
+
+def site_stats(mapped: list[dict], today: str | None = None) -> dict:
+    """Site-level aggregates — the numbers every page shows, in one place."""
+    today = today or date.today().isoformat()
+    sites: dict[str, list[dict]] = {}
+    for it in mapped:
+        sites.setdefault(site_key(it), []).append(it)
+    counties: dict[str, dict] = {}
+    mf_total = upcoming_total = 0
+    for items in sites.values():
+        mf = any(i.get("multifamily") for i in items)
+        up = any((i.get("meeting_date") or "") >= today for i in items)
+        mf_total += mf
+        upcoming_total += up
+        c = counties.setdefault(items[0]["county"], {"sites": 0, "mf": 0, "upcoming": 0})
+        c["sites"] += 1
+        c["mf"] += mf
+        c["upcoming"] += up
+    return {"sites": len(sites), "mf_sites": mf_total, "upcoming_sites": upcoming_total,
+            "counties": counties}
+
+
 def write_outputs(items: list[dict], coverage: list[dict], out_dir: str) -> dict:
     os.makedirs(out_dir, exist_ok=True)
     mapped = [it for it in items if it.get("lat") is not None and it.get("lon") is not None]
@@ -153,6 +204,7 @@ def write_outputs(items: list[dict], coverage: list[dict], out_dir: str) -> dict
         json.dump(unmapped, f)
     with open(os.path.join(out_dir, "coverage.json"), "w") as f:
         json.dump(coverage, f, indent=1)
+    stats = site_stats(mapped)
     meta = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "totals": {
@@ -161,7 +213,11 @@ def write_outputs(items: list[dict], coverage: list[dict], out_dir: str) -> dict
             "projects_mapped": len(mapped),
             "projects_unmapped": len(unmapped),
             "multifamily": sum(1 for it in items if it.get("multifamily")),
+            "sites": stats["sites"],
+            "mf_sites": stats["mf_sites"],
+            "upcoming_sites": stats["upcoming_sites"],
         },
+        "counties": stats["counties"],
     }
     with open(os.path.join(out_dir, "meta.json"), "w") as f:
         json.dump(meta, f, indent=1)

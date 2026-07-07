@@ -41,11 +41,12 @@
   bg.on("moveend", () => setTimeout(drift, 1800));
 
   /* ---------- data ---------- */
+  const grab = (u) => fetch(u, { cache: "no-cache" });  // always revalidate data
   Promise.all([
-    fetch("data/projects.geojson").then((r) => r.json()),
-    fetch("data/unmapped.json").then((r) => r.json()).catch(() => []),
-    fetch("data/coverage.json").then((r) => r.json()).catch(() => []),
-    fetch("data/meta.json").then((r) => r.json()).catch(() => null),
+    grab("data/projects.geojson").then((r) => r.json()),
+    grab("data/unmapped.json").then((r) => r.json()).catch(() => []),
+    grab("data/coverage.json").then((r) => r.json()).catch(() => []),
+    grab("data/meta.json").then((r) => r.json()).catch(() => null),
   ]).then(([fc, unmapped, coverage, meta]) => {
     const mapped = (fc.features || []).map((f) => f.properties);
     const all = [...mapped, ...unmapped];
@@ -64,31 +65,25 @@
       }).addTo(bg);
     }
 
-    /* one quiet stats line */
-    const mf = all.filter((p) => p.multifamily).length;
-    const up = all.filter((p) => p.meeting_date >= today).length;
+    /* one quiet stats line — same site-level numbers the map shows (from meta.json) */
+    const t = (meta && meta.totals) || {};
     const srcs = coverage.filter((c) => c.ok).length;
     $("statline").innerHTML =
-      `<b>${all.length.toLocaleString()}</b> active projects · <b>${mf.toLocaleString()}</b> multifamily · ` +
-      `<b>${up.toLocaleString()}</b> upcoming hearings — updated nightly from ${srcs} public sources`;
+      `<b>${(t.sites ?? 0).toLocaleString()}</b> sites on the radar · <b>${(t.mf_sites ?? 0).toLocaleString()}</b> multifamily · ` +
+      `<b>${(t.upcoming_sites ?? 0).toLocaleString()}</b> with hearings ahead — updated nightly from ${srcs} public sources`;
 
-    /* county directory */
-    const agg = {};
-    for (const p of all) {
-      const a = (agg[p.county] = agg[p.county] || { total: 0, mf: 0 });
-      a.total++;
-      if (p.multifamily) a.mf++;
-    }
+    /* county directory — pipeline-computed, guaranteed to match the map */
+    const agg = (meta && meta.counties) || {};
     function fill(elId, counties) {
       const el = $(elId);
       counties
         .filter((c) => agg[c])
-        .sort((a, b) => agg[b].total - agg[a].total)
+        .sort((a, b) => agg[b].sites - agg[a].sites)
         .forEach((c) => {
           const a = document.createElement("a");
           a.href = `map.html?county=${encodeURIComponent(c)}`;
           a.innerHTML = `<span class="d-n">${esc(c)}</span>` +
-            `<span class="d-c">${agg[c].total.toLocaleString()}</span>` +
+            `<span class="d-c">${agg[c].sites.toLocaleString()}</span>` +
             (agg[c].mf ? `<span class="d-mf">${agg[c].mf} MF</span>` : "");
           el.appendChild(a);
         });

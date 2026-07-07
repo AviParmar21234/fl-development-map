@@ -96,6 +96,28 @@ def test_polish_keeps_parcel_coords_when_venue_dropped():
     assert all(i["address"] is None and i["lat"] == 25.7 for i in items)
 
 
+def test_site_stats_groups_by_normalized_address():
+    from scraper.build import site_stats
+    items = [
+        _item(address="110 Phoenetia Avenue", jurisdiction="Coral Gables", meeting_date="2026-08-01"),
+        _item(link="https://x/2", address="110 PHOENETIA AVE.", jurisdiction="Coral Gables",
+              multifamily=False, meeting_date="2026-01-01"),
+        _item(link="https://x/3", address="500 Ocean Dr", jurisdiction="Miami Beach", multifamily=False,
+              meeting_date="2026-01-01"),
+    ]
+    s = site_stats(items, today="2026-07-07")
+    assert s["sites"] == 2              # the two Phoenetia spellings are one site
+    assert s["mf_sites"] == 1
+    assert s["upcoming_sites"] == 1
+    assert s["counties"]["Miami-Dade"] == {"sites": 2, "mf": 1, "upcoming": 1}
+
+
+def test_norm_addr_matches_js_rules():
+    from scraper.build import norm_addr
+    assert norm_addr("1890 NE 146th Street") == "1890 NE 146TH ST"
+    assert norm_addr("110  Phoenetia Avenue.") == "110 PHOENETIA AVE"
+
+
 def test_first_seen_carries_forward(tmp_path):
     from scraper.build import load_first_seen
     old = finalize([_item()], today="2026-07-01")

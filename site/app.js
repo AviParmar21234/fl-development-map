@@ -195,8 +195,22 @@
     $("statMapped").textContent = sites;
     $("statMF").textContent = mf;
     $("statUpcoming").textContent = upcoming;
+    updateBadges();
     if (state.selectedKey && !state.markerByKey[state.selectedKey] && !isArchived(state.selectedKey)) closeCard();
     if (openDrawer) renderDrawer();
+  }
+
+  /* tab badges always count exactly what their lists show, filters included */
+  function updateBadges() {
+    const today = new Date().toISOString().slice(0, 10);
+    const hz = new Date(); hz.setDate(hz.getDate() + 14);
+    const hzs = hz.toISOString().slice(0, 10);
+    const nHear = state.features.map((f) => f.properties)
+      .filter((p) => listable(p) && p.meeting_date >= today && p.meeting_date <= hzs).length;
+    $("hearingsCount").textContent = nHear ? `(${nHear})` : "";
+    const nFresh = state.newCutoff
+      ? visibleEntities().filter((e) => entityIsNew(e)).length : 0;
+    $("latestCount").textContent = nFresh ? `(${nFresh})` : "";
   }
 
   /* ---------- property card ---------- */
@@ -442,11 +456,12 @@
   $("csvBtn").addEventListener("click", exportCSV);
 
   /* ---------- load ---------- */
+  const grab = (u) => fetch(u, { cache: "no-cache" });  // always revalidate data
   Promise.all([
-    fetch("data/projects.geojson").then((r) => r.json()),
-    fetch("data/unmapped.json").then((r) => r.json()).catch(() => []),
-    fetch("data/coverage.json").then((r) => r.json()).catch(() => []),
-    fetch("data/meta.json").then((r) => r.json()).catch(() => null),
+    grab("data/projects.geojson").then((r) => r.json()),
+    grab("data/unmapped.json").then((r) => r.json()).catch(() => []),
+    grab("data/coverage.json").then((r) => r.json()).catch(() => []),
+    grab("data/meta.json").then((r) => r.json()).catch(() => null),
   ]).then(([fc, unmapped, coverage, meta]) => {
     state.features = fc.features || [];
     state.unmapped = unmapped;
@@ -466,14 +481,9 @@
     buildTypeChecks();
     updateCounts();
     render();
-    const today = new Date().toISOString().slice(0, 10);
-    const nHear = state.features.filter((f) => f.properties.meeting_date >= today).length;
-    $("hearingsCount").textContent = nHear ? `(${nHear})` : "";
     $("unmappedCount").textContent = unmapped.length ? `(${unmapped.length})` : "";
     $("coverageCount").textContent = coverage.length ? `(${coverage.length})` : "";
-    const nFresh = state.newCutoff
-      ? Object.values(state.entities).filter((e) => entityIsNew(e) && !isArchived(e.key)).length : 0;
-    $("latestCount").textContent = nFresh ? `(${nFresh})` : "";
+    updateBadges();
     if (meta) $("updatedAt").textContent = `Updated ${meta.generated_at.slice(0, 16).replace("T", " ")} UTC · public-record sources`;
     const visible = visibleEntities();
     if (visible.length) {
