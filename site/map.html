@@ -32,48 +32,42 @@
       <div class="stat"><b id="statMapped">–</b><span>sites</span></div>
       <div class="stat stat-mf"><b id="statMF">–</b><span>multifamily</span></div>
       <div class="stat"><b id="statUpcoming">–</b><span>upcoming</span></div>
-      <div class="stat"><b id="statSources">–</b><span>sources</span></div>
     </section>
 
     <section class="filters">
       <input type="search" id="search" placeholder="Search projects, addresses…" autocomplete="off">
 
-      <div class="filter-row">
-        <label class="mf-toggle">
-          <input type="checkbox" id="mfOnly">
-          <span class="mf-slider"></span>
-          Multifamily
-        </label>
-        <label class="mf-toggle new-toggle">
-          <input type="checkbox" id="newOnly">
-          <span class="mf-slider"></span>
-          New
-        </label>
-        <select id="statusSel" aria-label="Hearing status">
-          <option value="all">All hearings</option>
-          <option value="upcoming">Upcoming</option>
-          <option value="heard">Recently heard</option>
-        </select>
+      <div class="seg" id="seg" role="tablist" aria-label="Quick filter">
+        <button data-seg="all" class="on">All</button>
+        <button data-seg="mf">Multifamily</button>
+        <button data-seg="upcoming">Upcoming</button>
       </div>
-
-      <label class="arch-line">
-        <input type="checkbox" id="showArchived">
-        Show archived sites <span id="archCount"></span>
-      </label>
 
       <div class="f-label">Counties</div>
       <div class="chips" id="countyChips" aria-label="County filters"></div>
-      <div class="f-label">Project types</div>
-      <div class="types" id="typeChecks" aria-label="Project type filters"></div>
+
+      <details class="more" id="moreFilters">
+        <summary>Filters</summary>
+        <div class="f-label">Project categories</div>
+        <div class="types" id="typeChecks" aria-label="Project category filters"></div>
+        <label class="arch-line">
+          <input type="checkbox" id="showArchived">
+          Show archived sites <span id="archCount"></span>
+        </label>
+      </details>
     </section>
 
     <nav class="drawer-tabs">
-      <button data-drawer="projects" id="projectsTab">Ranked</button>
-      <button data-drawer="hearings" id="hearingsTab">Hearings <span id="hearingsCount"></span></button>
-      <button data-drawer="unmapped" id="unmappedTab">Unmapped <span id="unmappedCount"></span></button>
-      <button data-drawer="coverage" id="coverageTab">Sources <span id="coverageCount"></span></button>
+      <button data-drawer="projects" id="projectsTab">List</button>
+      <button data-drawer="latest" id="latestTab">New <span id="latestCount"></span></button>
+      <button data-drawer="saved" id="savedTab">♥ Saved <span id="savedCount"></span></button>
     </nav>
     <section class="drawer" id="drawer" hidden></section>
+    <footer class="drawer-foot">
+      <button data-drawer="hearings">Hearings <span id="hearingsCount"></span></button>
+      <button data-drawer="unmapped">Unmapped <span id="unmappedCount"></span></button>
+      <button data-drawer="coverage">Sources <span id="coverageCount"></span></button>
+    </footer>
   </aside>
 
   <button class="panel-toggle" id="collapseBtn" title="Toggle panel" aria-label="Toggle panel">‹</button>

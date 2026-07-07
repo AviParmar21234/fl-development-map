@@ -1,19 +1,20 @@
 /* Morgan Group · Florida Development Radar — map */
 (() => {
-  const TYPE_META = {
-    "rezoning": ["Rezoning", "#d4593c"],
-    "land-use": ["Land Use", "#2a8f83"],
-    "site-plan": ["Site Plan", "#3b6fb3"],
-    "pud": ["PUD", "#7a5cad"],
-    "plat": ["Plat", "#4d9455"],
-    "variance": ["Variance", "#8a8f96"],
-    "special-exception": ["Special Exception", "#c78f2c"],
-    "development-agreement": ["Dev Agreement", "#b8547e"],
-    "annexation": ["Annexation", "#7d8a3d"],
-    "other-development": ["Other", "#6d7278"],
+  /* 4 calm categories instead of 10 colors */
+  const BUCKETS = {
+    land: { label: "Rezoning & Land Use", color: "#d4593c", types: ["rezoning", "land-use", "annexation", "development-agreement"] },
+    plans: { label: "Site Plans & PUD", color: "#3b6fb3", types: ["site-plan", "pud", "plat"] },
+    minor: { label: "Variances & Exceptions", color: "#8a8f96", types: ["variance", "special-exception"] },
+    other: { label: "Other", color: "#6d7278", types: ["other-development"] },
   };
-  const typeLabel = (t) => (TYPE_META[t] || ["Development"])[0];
-  const typeColor = (t) => (TYPE_META[t] || [null, "#6d7278"])[1];
+  const TYPE_LABELS = {
+    "rezoning": "Rezoning", "land-use": "Land Use", "site-plan": "Site Plan", "pud": "PUD",
+    "plat": "Plat", "variance": "Variance", "special-exception": "Special Exception",
+    "development-agreement": "Dev Agreement", "annexation": "Annexation", "other-development": "Other",
+  };
+  const bucketOf = (t) => Object.keys(BUCKETS).find((k) => BUCKETS[k].types.includes(t)) || "other";
+  const typeLabel = (t) => TYPE_LABELS[t] || "Development";
+  const typeColor = (t) => BUCKETS[bucketOf(t)].color;
 
   const REGIONS = {
     south: { name: "South Florida", counties: ["Miami-Dade", "Broward", "Palm Beach"] },
@@ -30,44 +31,52 @@
   const pinLayer = L.layerGroup().addTo(map);
 
   const state = {
-    q: "", mfOnly: false, newOnly: false, status: "all", showArchived: false,
-    counties: new Set(), types: new Set(Object.keys(TYPE_META)),
+    q: "", seg: "all", showArchived: false,
+    counties: new Set(), buckets: new Set(Object.keys(BUCKETS)),
     features: [], unmapped: [], coverage: [],
     newCutoff: null,
-    entities: {},          // key -> entity (all, unfiltered)
-    markerByKey: {},       // key -> marker (currently rendered)
-    entityByItemId: {},    // item id -> entity key
+    entities: {}, markerByKey: {}, entityByItemId: {},
     selectedKey: null,
   };
 
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  /* ---------- archive (persisted locally per browser) ---------- */
-  const ARCH_KEY = "mgRadarArchived";
-  function loadArchive() {
-    try { return new Set(JSON.parse(localStorage.getItem(ARCH_KEY) || "[]")); }
+  /* ---------- local collections (persist per browser) ---------- */
+  function loadSet(key) {
+    try { return new Set(JSON.parse(localStorage.getItem(key) || "[]")); }
     catch { return new Set(); }
   }
-  const archived = loadArchive();
-  const saveArchive = () => localStorage.setItem(ARCH_KEY, JSON.stringify([...archived]));
+  const archived = loadSet("mgRadarArchived");
+  const saved = loadSet("mgRadarSaved");
+  const persist = (key, set) => localStorage.setItem(key, JSON.stringify([...set]));
   const isArchived = (key) => archived.has(key);
+  const isSaved = (key) => saved.has(key);
+
   function toggleArchive(key) {
     archived.has(key) ? archived.delete(key) : archived.add(key);
-    saveArchive();
-    updateArchCount();
+    persist("mgRadarArchived", archived);
+    refreshAfterCollectionChange(key);
+  }
+  function toggleSave(key) {
+    saved.has(key) ? saved.delete(key) : saved.add(key);
+    persist("mgRadarSaved", saved);
+    refreshAfterCollectionChange(key);
+  }
+  function refreshAfterCollectionChange(key) {
+    updateCounts();
     render();
     if (state.selectedKey === key && state.entities[key]) {
-      // keep the card open so the user sees the state change / can undo
       $("pcBody").innerHTML = cardHTML(state.entities[key]);
       wireCard();
     }
   }
-  function updateArchCount() {
+  function updateCounts() {
     $("archCount").textContent = archived.size ? `(${archived.size})` : "";
+    $("savedCount").textContent = saved.size ? `(${saved.size})` : "";
   }
 
-  /* one address = one site: normalize so formatting quirks can't split it */
+  /* one address = one site */
   const ADDR_ABBR = [
     [/\bSTREET\b/g, "ST"], [/\bAVENUE\b/g, "AVE"], [/\bBOULEVARD\b/g, "BLVD"],
     [/\bROAD\b/g, "RD"], [/\bDRIVE\b/g, "DR"], [/\bCOURT\b/g, "CT"],
@@ -90,23 +99,19 @@
     return d.toISOString().slice(0, 10);
   }
   const isNew = (p) => state.newCutoff && p.first_seen && p.first_seen >= state.newCutoff;
+  const entityIsNew = (e) => state.newCutoff && e.firstSeen >= state.newCutoff;
 
-  /* ---------- property entities: one site = one pin, never grouped ---------- */
   function buildEntities() {
     state.entities = {};
     state.entityByItemId = {};
     for (const f of state.features) {
       const p = f.properties;
       const [lon, lat] = f.geometry.coordinates;
-      // one site = one entity: same normalized address (or parcel) always merges,
-      // regardless of small geocode differences; coords only when nothing better
       const key = p.address ? `a:${p.jurisdiction}|${normAddr(p.address)}`
         : p.parcel ? `p:${p.county}|${p.parcel}`
         : `c:${lat.toFixed(5)},${lon.toFixed(5)}`;
       let e = state.entities[key];
-      if (!e) {
-        e = state.entities[key] = { key, lat, lon, items: [] };
-      }
+      if (!e) e = state.entities[key] = { key, lat, lon, items: [] };
       e.items.push(p);
       state.entityByItemId[p.id] = key;
     }
@@ -117,16 +122,15 @@
       e.jurisdiction = e.items[0].jurisdiction;
       e.county = e.items[0].county;
       e.best = [...e.items].sort((a, b) => (b.score || 0) - (a.score || 0))[0];
-      e.planTypes = [...new Set(e.items.map((i) => i.project_type))];
+      e.firstSeen = e.items.reduce((m, i) => (i.first_seen && i.first_seen < m ? i.first_seen : m), "9999");
     }
   }
 
   function matches(p) {
-    if (state.mfOnly && !p.multifamily) return false;
-    if (state.newOnly && !isNew(p)) return false;
-    if (state.status !== "all" && p.status !== state.status) return false;
+    if (state.seg === "mf" && !p.multifamily) return false;
+    if (state.seg === "upcoming" && p.status !== "upcoming") return false;
     if (state.counties.size && !state.counties.has(p.county)) return false;
-    if (!state.types.has(p.project_type)) return false;
+    if (!state.buckets.has(bucketOf(p.project_type))) return false;
     if (state.q) {
       const hay = `${p.title} ${p.plain || ""} ${p.address || ""} ${p.jurisdiction} ${p.meeting_body}`.toLowerCase();
       if (!hay.includes(state.q)) return false;
@@ -134,7 +138,6 @@
     return true;
   }
   const visibleItems = (e) => e.items.filter(matches);
-  // archived sites drop out of lists/stats too (drawer rows check the entity)
   const listable = (p) => {
     const k = state.entityByItemId[p.id];
     return matches(p) && (!k || !isArchived(k) || state.showArchived);
@@ -145,10 +148,10 @@
     const vis = visibleItems(e);
     const mf = vis.some((i) => i.multifamily);
     const fresh = vis.some((i) => isNew(i));
+    const heart = isSaved(e.key);
     const best = [...vis].sort((a, b) => (b.score || 0) - (a.score || 0))[0] || e.best;
     const color = typeColor(best && best.project_type);
     const w = mf ? 30 : 24, h = mf ? 40 : 32;
-    // fill = project type color; multifamily/selected pins get a charcoal outline and white core
     const stroke = active ? "#1a1c1f" : (mf ? "#26282c" : "#ffffff");
     return L.divIcon({
       className: "pin-wrap" + (active ? " pin-active" : ""),
@@ -156,6 +159,7 @@
         <path d="M15 1 C7 1 1.5 7 1.5 14.5 C1.5 24 15 39 15 39 C15 39 28.5 24 28.5 14.5 C28.5 7 23 1 15 1 Z"
               fill="${color}" stroke="${stroke}" stroke-width="${active ? 2.6 : (mf ? 2.2 : 1.6)}"/>
         <circle cx="15" cy="14.5" r="5" fill="#ffffff"/>
+        ${heart ? '<path transform="translate(1,1) scale(0.62)" d="M8 4 C6 1.6 2.6 2 1.6 4.4 C.6 6.8 2.4 9 8 13 C13.6 9 15.4 6.8 14.4 4.4 C13.4 2 10 1.6 8 4 Z" fill="#c0392b" stroke="#fff" stroke-width="1.6"/>' : ""}
         ${fresh ? '<circle cx="25" cy="6" r="4.4" fill="#3e9e5c" stroke="#fff" stroke-width="1.4"/>' : ""}
       </svg>`,
       iconSize: [w, h],
@@ -191,12 +195,11 @@
     $("statMapped").textContent = sites;
     $("statMF").textContent = mf;
     $("statUpcoming").textContent = upcoming;
-    // keep the card open when its site was just archived (undo affordance)
     if (state.selectedKey && !state.markerByKey[state.selectedKey] && !isArchived(state.selectedKey)) closeCard();
-    if (openDrawer === "hearings" || openDrawer === "projects") renderDrawer();
+    if (openDrawer) renderDrawer();
   }
 
-  /* ---------- property card (its own entity, news-style) ---------- */
+  /* ---------- property card ---------- */
   function cardHTML(e) {
     const vis = visibleItems(e);
     const mf = vis.some((i) => i.multifamily);
@@ -217,10 +220,8 @@
           <span class="pc-date">${esc(i.meeting_date || "")}${i.status === "upcoming" ? " · upcoming" : ""}</span>
         </div>
         <p class="pc-plain">${esc(i.plain || i.title)}</p>
-        <p class="pc-legal">${esc(i.title.slice(0, 170))}${i.title.length > 170 ? "…" : ""}</p>
         <div class="pc-meta">${esc(i.meeting_body)} · <a href="${esc(i.link)}" target="_blank" rel="noopener">View source →</a></div>
       </div>`;
-    // one site, one card — but distinct plans at this address get their own sections
     const types = [...new Set(vis.map((i) => i.project_type))];
     const rows = types.length > 1
       ? types.map((t) => `
@@ -230,16 +231,22 @@
           </div>`).join("")
       : vis.map(itemRow).join("");
     const arch = isArchived(e.key);
+    const sv = isSaved(e.key);
     return `
       <p class="pc-kicker">${mf ? "Multifamily site" : "Development site"} · ${esc(e.county)} County${arch ? " · <b class='pc-arch-flag'>Archived</b>" : ""}</p>
       <h2 class="pc-title">${esc(e.address || (e.parcel ? "Parcel " + e.parcel : e.jurisdiction))}</h2>
       <p class="pc-sub">${esc(e.jurisdiction)}${facts ? ` · ${facts}` : ""}</p>
-      <button class="pc-archive" id="pcArchive" data-key="${esc(e.key)}">${arch ? "⤴ Restore to map" : "🗂 Archive this site"}</button>
+      <div class="pc-actions">
+        <button class="pc-btn ${sv ? "pc-btn-saved" : ""}" id="pcSave" data-key="${esc(e.key)}">${sv ? "♥ Saved" : "♡ Save"}</button>
+        <button class="pc-btn" id="pcArchive" data-key="${esc(e.key)}">${arch ? "⤴ Restore" : "🗂 Archive"}</button>
+      </div>
       <div class="pc-items">${rows}</div>`;
   }
   function wireCard() {
-    const b = $("pcArchive");
-    if (b) b.onclick = () => toggleArchive(b.dataset.key);
+    const a = $("pcArchive");
+    if (a) a.onclick = () => toggleArchive(a.dataset.key);
+    const s = $("pcSave");
+    if (s) s.onclick = () => toggleSave(s.dataset.key);
   }
 
   function selectEntity(key, fly) {
@@ -264,6 +271,14 @@
   map.on("click", closeCard);
 
   /* ---------- filters UI ---------- */
+  document.querySelectorAll("#seg button").forEach((b) => {
+    b.onclick = () => {
+      state.seg = b.dataset.seg;
+      document.querySelectorAll("#seg button").forEach((x) => x.classList.toggle("on", x === b));
+      render();
+    };
+  });
+
   function buildCountyChips() {
     const counts = {};
     for (const f of state.features) counts[f.properties.county] = (counts[f.properties.county] || 0) + 1;
@@ -285,12 +300,12 @@
   function buildTypeChecks() {
     const el = $("typeChecks");
     el.innerHTML = "";
-    for (const [key, [label, color]] of Object.entries(TYPE_META)) {
+    for (const [key, b] of Object.entries(BUCKETS)) {
       const lab = document.createElement("label");
       lab.className = "type-check on";
-      lab.innerHTML = `<input type="checkbox" checked><span class="type-dot" style="--tc:${color}"></span>${label}`;
+      lab.innerHTML = `<input type="checkbox" checked><span class="type-dot" style="--tc:${b.color}"></span>${b.label}`;
       lab.querySelector("input").onchange = (ev) => {
-        ev.target.checked ? state.types.add(key) : state.types.delete(key);
+        ev.target.checked ? state.buckets.add(key) : state.buckets.delete(key);
         lab.classList.toggle("on", ev.target.checked);
         render();
       };
@@ -300,12 +315,12 @@
 
   /* ---------- drawers ---------- */
   let openDrawer = null;
-  function drawerRow(p, i) {
-    const key = state.entityByItemId[p.id];
+  function entityRow(e, extra) {
+    const best = visibleItems(e)[0] ? [...visibleItems(e)].sort((a, b) => (b.score || 0) - (a.score || 0))[0] : e.best;
     return `
-      <div class="u-item p-item" data-key="${key || ""}">
-        ${i != null ? `<span class="p-rank">${i + 1}</span>` : ""}<a href="${esc(p.link)}" target="_blank" rel="noopener">${esc((p.plain || p.title).slice(0, 110))}</a>
-        <div class="u-meta">${esc(p.jurisdiction)}${p.meeting_date ? ` · ${esc(p.meeting_date)}` : ""} · ★ ${p.score || 0}${isNew(p) ? ' · <b class="u-new">new</b>' : ""}</div>
+      <div class="u-item p-item" data-key="${esc(e.key)}">
+        ${isSaved(e.key) ? '<span class="u-heart">♥</span> ' : ""}<a href="${esc(best.link)}" target="_blank" rel="noopener">${esc((best.plain || best.title).slice(0, 110))}</a>
+        <div class="u-meta">${esc(e.jurisdiction)}${extra || ""} · ★ ${best.score || 0}</div>
       </div>`;
   }
   function wireRows(d) {
@@ -316,24 +331,47 @@
       });
     });
   }
+  function visibleEntities() {
+    return Object.values(state.entities).filter((e) =>
+      visibleItems(e).length && (!isArchived(e.key) || state.showArchived));
+  }
   function renderDrawer() {
     const d = $("drawer");
     if (!openDrawer) { d.hidden = true; return; }
     d.hidden = false;
     if (openDrawer === "projects") {
-      const seen = new Set();
-      const ranked = state.features.map((f) => f.properties)
-        .filter(listable)
-        .sort((a, b) => (b.score || 0) - (a.score || 0) || (b.meeting_date || "").localeCompare(a.meeting_date || ""))
-        .filter((p) => {
-          const k = state.entityByItemId[p.id];
-          if (seen.has(k)) return false;
-          seen.add(k);
-          return true;
-        })
+      const ranked = visibleEntities()
+        .sort((a, b) => (b.best.score || 0) - (a.best.score || 0) || (b.best.meeting_date || "").localeCompare(a.best.meeting_date || ""))
         .slice(0, 60);
-      d.innerHTML = ranked.length ? ranked.map((p, i) => drawerRow(p, i)).join("")
+      d.innerHTML = ranked.length ? ranked.map((e) => entityRow(e)).join("")
         : '<div class="u-meta" style="padding:12px 0">No sites match the current filters.</div>';
+      wireRows(d);
+    } else if (openDrawer === "latest") {
+      if (!state.newCutoff) {
+        d.innerHTML = `<div class="u-note">
+          <b>How “New” works</b><br>
+          The radar re-scans all ${state.coverage.length || 44} public sources every night around 4–5 AM ET.
+          Any site it has never seen before lands here the next morning, newest first, and its pin
+          gets a green dot for a week. Cities publish agendas on their own cycles — most boards post
+          3–7 days before a hearing — so expect a fresh batch most weekday mornings.<br><br>
+          <span>This dataset is from the first scan, so everything is technically “new.” Check back after tomorrow's refresh.</span>
+        </div>`;
+        return;
+      }
+      const fresh = visibleEntities()
+        .filter((e) => entityIsNew(e))
+        .sort((a, b) => b.firstSeen.localeCompare(a.firstSeen))
+        .slice(0, 80);
+      d.innerHTML = fresh.length
+        ? fresh.map((e) => entityRow(e, ` · added ${esc(e.firstSeen)}`)).join("")
+        : '<div class="u-meta" style="padding:12px 0">Nothing new in the last 7 days for these filters. The radar re-scans nightly around 4–5 AM ET.</div>';
+      wireRows(d);
+    } else if (openDrawer === "saved") {
+      const rows = Object.values(state.entities)
+        .filter((e) => isSaved(e.key))
+        .sort((a, b) => (b.best.meeting_date || "").localeCompare(a.best.meeting_date || ""));
+      d.innerHTML = rows.length ? rows.map((e) => entityRow(e)).join("")
+        : '<div class="u-meta" style="padding:12px 0">No saved sites yet — open a pin and tap ♡ Save to track it here.</div>';
       wireRows(d);
     } else if (openDrawer === "hearings") {
       const today = new Date().toISOString().slice(0, 10);
@@ -366,10 +404,10 @@
         </div>`).join("");
     }
   }
-  document.querySelectorAll(".drawer-tabs button").forEach((btn) => {
+  document.querySelectorAll(".drawer-tabs button, .drawer-foot button").forEach((btn) => {
     btn.onclick = () => {
       openDrawer = openDrawer === btn.dataset.drawer ? null : btn.dataset.drawer;
-      document.querySelectorAll(".drawer-tabs button").forEach((b) =>
+      document.querySelectorAll(".drawer-tabs button, .drawer-foot button").forEach((b) =>
         b.classList.toggle("active", b.dataset.drawer === openDrawer));
       renderDrawer();
     };
@@ -382,9 +420,6 @@
     setTimeout(() => map.invalidateSize(), 300);
   };
   $("search").addEventListener("input", (e) => { state.q = e.target.value.trim().toLowerCase(); render(); });
-  $("mfOnly").addEventListener("change", (e) => { state.mfOnly = e.target.checked; render(); });
-  $("newOnly").addEventListener("change", (e) => { state.newOnly = e.target.checked; render(); });
-  $("statusSel").addEventListener("change", (e) => { state.status = e.target.value; render(); });
   $("showArchived").addEventListener("change", (e) => { state.showArchived = e.target.checked; render(); });
 
   function exportCSV() {
@@ -429,16 +464,18 @@
     buildEntities();
     buildCountyChips();
     buildTypeChecks();
-    updateArchCount();
+    updateCounts();
     render();
     const today = new Date().toISOString().slice(0, 10);
     const nHear = state.features.filter((f) => f.properties.meeting_date >= today).length;
     $("hearingsCount").textContent = nHear ? `(${nHear})` : "";
     $("unmappedCount").textContent = unmapped.length ? `(${unmapped.length})` : "";
     $("coverageCount").textContent = coverage.length ? `(${coverage.length})` : "";
-    $("statSources").textContent = coverage.filter((c) => c.ok).length || "–";
+    const nFresh = state.newCutoff
+      ? Object.values(state.entities).filter((e) => entityIsNew(e) && !isArchived(e.key)).length : 0;
+    $("latestCount").textContent = nFresh ? `(${nFresh})` : "";
     if (meta) $("updatedAt").textContent = `Updated ${meta.generated_at.slice(0, 16).replace("T", " ")} UTC · public-record sources`;
-    const visible = Object.values(state.entities).filter((e) => visibleItems(e).length);
+    const visible = visibleEntities();
     if (visible.length) {
       const b = L.latLngBounds(visible.map((e) => [e.lat, e.lon]));
       if (b.isValid()) map.fitBounds(b.pad(0.08));
