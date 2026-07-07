@@ -1,13 +1,46 @@
-/* Morgan Group · Florida Development Radar — landing */
+/* Morgan Group · Florida Development Radar — home */
 (() => {
   const REGIONS = {
     south: { name: "South Florida", counties: ["Miami-Dade", "Broward", "Palm Beach"] },
     central: { name: "Central Florida", counties: ["Orange", "Osceola", "Seminole", "Lake", "Hillsborough", "Pinellas", "Polk"] },
   };
+  const BUCKET_COLORS = {
+    "rezoning": "#d4593c", "land-use": "#d4593c", "annexation": "#d4593c", "development-agreement": "#d4593c",
+    "site-plan": "#3b6fb3", "pud": "#3b6fb3", "plat": "#3b6fb3",
+    "variance": "#8a8f96", "special-exception": "#8a8f96",
+    "other-development": "#6d7278",
+  };
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const today = new Date().toISOString().slice(0, 10);
 
+  /* ---------- the cinematic backdrop: the real data, slowly drifting ---------- */
+  const bg = L.map("bgmap", {
+    zoomControl: false, dragging: false, scrollWheelZoom: false,
+    doubleClickZoom: false, boxZoom: false, keyboard: false, touchZoom: false,
+    attributionControl: false,
+  }).setView([25.85, -80.25], 10);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    subdomains: "abcd", maxZoom: 19,
+  }).addTo(bg);
+
+  const TOUR = [
+    [25.82, -80.22, 11],  // Miami
+    [26.10, -80.16, 11],  // Fort Lauderdale
+    [26.66, -80.09, 11],  // West Palm Beach
+    [28.02, -82.50, 10],  // Tampa Bay
+    [28.50, -81.38, 10],  // Orlando
+  ];
+  let leg = 0;
+  function drift() {
+    leg = (leg + 1) % TOUR.length;
+    const [lat, lon, z] = TOUR[leg];
+    bg.flyTo([lat, lon], z, { duration: 26, easeLinearity: 0.12 });
+  }
+  bg.whenReady(() => setTimeout(drift, 2500));
+  bg.on("moveend", () => setTimeout(drift, 1800));
+
+  /* ---------- data ---------- */
   Promise.all([
     fetch("data/projects.geojson").then((r) => r.json()),
     fetch("data/unmapped.json").then((r) => r.json()).catch(() => []),
@@ -17,135 +50,53 @@
     const mapped = (fc.features || []).map((f) => f.properties);
     const all = [...mapped, ...unmapped];
 
-    /* hero stats */
-    $("hsProjects").textContent = all.length.toLocaleString();
-    $("hsMF").textContent = all.filter((p) => p.multifamily).length.toLocaleString();
-    $("hsUpcoming").textContent = all.filter((p) => p.meeting_date >= today).length.toLocaleString();
-    $("hsSources").textContent = coverage.filter((c) => c.ok).length;
-    if (meta) $("footUpdated").textContent = `Data refreshed ${meta.generated_at.slice(0, 16).replace("T", " ")} UTC`;
+    /* pins on the backdrop (canvas for perf, tiny and quiet) */
+    const canvas = L.canvas({ padding: 0.4 });
+    for (const f of fc.features || []) {
+      const [lon, lat] = f.geometry.coordinates;
+      const p = f.properties;
+      L.circleMarker([lat, lon], {
+        renderer: canvas,
+        radius: p.multifamily ? 4.5 : 3,
+        color: "#ffffff", weight: 1,
+        fillColor: BUCKET_COLORS[p.project_type] || "#6d7278",
+        fillOpacity: 0.85,
+      }).addTo(bg);
+    }
 
-    /* per-county aggregates */
+    /* one quiet stats line */
+    const mf = all.filter((p) => p.multifamily).length;
+    const up = all.filter((p) => p.meeting_date >= today).length;
+    const srcs = coverage.filter((c) => c.ok).length;
+    $("statline").innerHTML =
+      `<b>${all.length.toLocaleString()}</b> active projects · <b>${mf.toLocaleString()}</b> multifamily · ` +
+      `<b>${up.toLocaleString()}</b> upcoming hearings — updated nightly from ${srcs} public sources`;
+
+    /* county directory */
     const agg = {};
     for (const p of all) {
-      const a = (agg[p.county] = agg[p.county] || { total: 0, mf: 0, upcoming: 0 });
+      const a = (agg[p.county] = agg[p.county] || { total: 0, mf: 0 });
       a.total++;
       if (p.multifamily) a.mf++;
-      if (p.meeting_date >= today) a.upcoming++;
     }
-
-    /* ticker: upcoming multifamily hearings, soonest first */
-    const tseen = new Set();
-    const tickerItems = all
-      .filter((p) => p.multifamily && p.meeting_date >= today)
-      .sort((a, b) => a.meeting_date.localeCompare(b.meeting_date))
-      .filter((p) => {
-        const k = p.plain || p.title;
-        if (tseen.has(k)) return false;
-        tseen.add(k);
-        return true;
-      })
-      .slice(0, 18);
-    if (tickerItems.length) {
-      const half = tickerItems.map((p) =>
-        `<span class="tick-item"><span class="tick-date">${esc(p.meeting_date)}</span> · ${esc((p.plain || p.title).slice(0, 92))} <b>★${p.score || 0}</b></span>`
-      ).join("");
-      $("ticker").innerHTML = half + half; // duplicated for a seamless loop
-    } else {
-      document.querySelector(".ticker").style.display = "none";
-    }
-
-    /* region portal cards */
-    const regionsEl = $("regionsGrid");
-    for (const [key, r] of Object.entries(REGIONS)) {
-      const counties = r.counties.filter((c) => agg[c]);
-      const total = counties.reduce((s, c) => s + agg[c].total, 0);
-      const mf = counties.reduce((s, c) => s + agg[c].mf, 0);
-      const up = counties.reduce((s, c) => s + agg[c].upcoming, 0);
-      const idx = Object.keys(REGIONS).indexOf(key) + 1;
-      const btn = document.createElement("button");
-      btn.className = "region";
-      btn.innerHTML = `
-        <div class="r-main">
-          <p class="r-kicker">Market ${String(idx).padStart(2, "0")}</p>
-          <h3>${r.name}</h3>
-          <div class="r-counties">${counties.map((c) => `<span>${c}</span>`).join("")}</div>
-          <div class="r-nums">
-            <div><b>${total.toLocaleString()}</b><i>projects</i></div>
-            <div><b>${up.toLocaleString()}</b><i>upcoming</i></div>
-          </div>
-          <span class="r-go">Explore market →</span>
-        </div>
-        <div class="r-arch" aria-hidden="true">
-          <span class="r-arch-ring"></span>
-          <b>${mf.toLocaleString()}</b>
-          <i>multifamily</i>
-        </div>`;
-      btn.onclick = () => selectRegion(key, btn);
-      regionsEl.appendChild(btn);
-    }
-
-    function selectRegion(key, btn) {
-      document.querySelectorAll(".region").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const r = REGIONS[key];
-
-      /* county tiles */
-      const counties = r.counties.filter((c) => agg[c]);
-      $("countiesTitle").textContent = `${r.name} counties`;
-      const el = $("counties");
-      el.innerHTML = "";
+    function fill(elId, counties) {
+      const el = $(elId);
       counties
+        .filter((c) => agg[c])
         .sort((a, b) => agg[b].total - agg[a].total)
-        .forEach((c, i) => {
-          const a = agg[c];
-          const card = document.createElement("a");
-          card.className = "county";
-          card.href = `map.html?county=${encodeURIComponent(c)}`;
-          card.style.animationDelay = `${i * 45}ms`;
-          card.innerHTML = `
-            <h4>${esc(c)}</h4>
-            <div class="c-total">${a.total.toLocaleString()}</div>
-            <div class="c-label">projects</div>
-            <div class="c-sub"><b>${a.mf}</b> multifamily · ${a.upcoming} upcoming</div>`;
-          el.appendChild(card);
+        .forEach((c) => {
+          const a = document.createElement("a");
+          a.href = `map.html?county=${encodeURIComponent(c)}`;
+          a.innerHTML = `<span class="d-n">${esc(c)}</span>` +
+            `<span class="d-c">${agg[c].total.toLocaleString()}</span>` +
+            (agg[c].mf ? `<span class="d-mf">${agg[c].mf} MF</span>` : "");
+          el.appendChild(a);
         });
-      $("countiesSection").hidden = false;
-
-      /* top opportunities in region */
-      const rc = new Set(r.counties);
-      const seen = new Set();
-      const top = mapped
-        .filter((p) => rc.has(p.county))
-        .sort((a, b) => (b.score || 0) - (a.score || 0) || (b.meeting_date >= today) - (a.meeting_date >= today))
-        .filter((p) => {
-          const key = p.plain || p.title;  // same project at multiple hearings → one row
-          if (seen.has(key)) return false;
-          seen.add(key);
-          return true;
-        })
-        .slice(0, 8);
-      $("oppsSub").textContent = `${r.name} · ranked by multifamily signal`;
-      const ol = $("opps");
-      ol.innerHTML = "";
-      top.forEach((p, i) => {
-        const li = document.createElement("li");
-        li.style.animationDelay = `${i * 40}ms`;
-        li.innerHTML = `
-          <a class="opp" href="map.html?county=${encodeURIComponent(p.county)}">
-            <span class="o-num"></span>
-            <span class="o-body">
-              <span class="o-plain">${esc(p.plain || p.title)}</span>
-              <span class="o-meta">${esc(p.jurisdiction)} · ${esc(p.meeting_body)}${p.meeting_date ? ` · hearing <b>${esc(p.meeting_date)}</b>` : ""}</span>
-            </span>
-            <span class="o-score">★ ${p.score || 0}</span>
-          </a>`;
-        ol.appendChild(li);
-      });
-      $("oppsSection").hidden = false;
-      $("countiesSection").scrollIntoView({ behavior: "smooth", block: "start" });
     }
+    fill("southList", REGIONS.south.counties);
+    fill("centralList", REGIONS.central.counties);
   }).catch((err) => {
-    $("footUpdated").textContent = "Data failed to load — run ./refresh.sh";
+    $("statline").textContent = "Data failed to load — run ./refresh.sh";
     console.error(err);
   });
 })();

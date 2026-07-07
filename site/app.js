@@ -480,9 +480,10 @@
       const b = L.latLngBounds(visible.map((e) => [e.lat, e.lon]));
       if (b.isValid()) map.fitBounds(b.pad(0.08));
     }
-    openDrawer = "projects";
-    document.querySelectorAll(".drawer-tabs button").forEach((b) =>
-      b.classList.toggle("active", b.dataset.drawer === "projects"));
+    const wantTab = params.get("tab");
+    openDrawer = ["latest", "hearings", "saved", "projects"].includes(wantTab) ? wantTab : "projects";
+    document.querySelectorAll(".drawer-tabs button, .drawer-foot button").forEach((b) =>
+      b.classList.toggle("active", b.dataset.drawer === openDrawer));
     renderDrawer();
   }).catch((err) => {
     $("updatedAt").textContent = "Data failed to load — run ./refresh.sh";

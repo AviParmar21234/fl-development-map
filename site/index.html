@@ -7,84 +7,51 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,550;9..144,650&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="landing.css">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="landing.css?v=8">
 <link rel="icon" href="logo.svg">
 </head>
 <body>
 
-<div class="hero-wrap">
-  <div class="hero-arches" aria-hidden="true">
-    <span></span><span></span><span></span>
-  </div>
+<div class="stage">
+  <div id="bgmap" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
 
-  <nav class="nav">
-    <a class="nav-brand" href="index.html">
-      <span class="nav-logo"><img src="logo.svg" alt=""></span>
+  <main class="overlay">
+    <header class="brand-row">
+      <img src="logo.svg" alt="">
       <span>Morgan&nbsp;Group</span>
-    </a>
-    <span class="nav-spacer"></span>
-    <a class="nav-link" href="map.html">Open map →</a>
-  </nav>
+    </header>
 
-  <header class="hero">
-    <p class="hero-eyebrow">Acquisitions Intelligence</p>
-    <h1 class="hero-h1">Florida Development<br><em>Radar</em></h1>
-    <p class="hero-lede">Every rezoning, land-use change, and site plan moving through
-    public hearing pipelines across eleven counties — refreshed nightly, traced to the
-    source, ranked for multifamily opportunity.</p>
+    <h1 class="title">Florida<br>Development<br><em>Radar</em></h1>
 
-    <div class="hero-stats" id="heroStats">
-      <div><b id="hsProjects">–</b><span>active projects</span></div>
-      <div class="hs-mf"><b id="hsMF">–</b><span>multifamily</span></div>
-      <div><b id="hsUpcoming">–</b><span>upcoming hearings</span></div>
-      <div><b id="hsSources">–</b><span>public sources</span></div>
+    <p class="lede">Every rezoning, land-use change, and site plan moving through
+    public hearing pipelines across eleven counties — traced to the source,
+    ranked for multifamily.</p>
+
+    <p class="statline" id="statline">Loading the latest scan…</p>
+
+    <div class="quick">
+      <a class="q-chip" href="map.html?tab=latest"><i class="q-dot"></i>New this week</a>
+      <a class="q-chip" href="map.html?tab=hearings">Upcoming hearings</a>
     </div>
 
-    <div class="hero-ctas">
-      <a class="cta cta-gold" href="#regions">Choose a market ↓</a>
-      <a class="cta cta-line" href="map.html">Full map</a>
+    <div class="dirs">
+      <section>
+        <h2>South Florida</h2>
+        <div class="dir" id="southList"></div>
+      </section>
+      <section>
+        <h2>Central Florida</h2>
+        <div class="dir" id="centralList"></div>
+      </section>
     </div>
-  </header>
 
-  <div class="ticker" aria-label="Upcoming multifamily hearings">
-    <div class="ticker-track" id="ticker"></div>
-  </div>
+    <a class="open-map" href="map.html">Open the full map →</a>
+  </main>
 </div>
 
-<main>
-  <section class="regions-section" id="regions">
-    <h2 class="section-title">Choose a market</h2>
-    <div class="regions" id="regionsGrid"></div>
-  </section>
-
-  <section class="counties-section" id="countiesSection" hidden>
-    <h2 class="section-title" id="countiesTitle">Counties</h2>
-    <div class="counties" id="counties"></div>
-  </section>
-
-  <section class="opps-section" id="oppsSection" hidden>
-    <h2 class="section-title">Top opportunities <span class="section-sub" id="oppsSub"></span></h2>
-    <ol class="opps" id="opps"></ol>
-  </section>
-</main>
-
-<footer class="foot">
-  <div class="foot-inner">
-    <div class="foot-brand">
-      <img src="logo.svg" alt="">
-      <div>
-        <b>Morgan Group</b>
-        <span>Florida Development Radar</span>
-      </div>
-    </div>
-    <div class="foot-meta">
-      <span id="footUpdated"></span>
-      <span>Built from public records — every project links to its source document.</span>
-    </div>
-    <a class="cta cta-navy" href="map.html">Open the full map →</a>
-  </div>
-</footer>
-
-<script src="landing.js"></script>
+<script src="vendor/leaflet.js"></script>
+<script src="landing.js?v=8"></script>
 </body>
 </html>
