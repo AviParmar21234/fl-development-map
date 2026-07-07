@@ -42,6 +42,15 @@
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+  const SCORE_TIP = "Opportunity score (0–8): multifamily signal + unit count + acreage + rezoning/PUD-type + hearing still ahead";
+  const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  function fmtDate(iso) {
+    if (!iso || iso.length < 10) return iso || "";
+    const [y, m, d] = iso.split("-").map(Number);
+    const thisYear = new Date().getFullYear();
+    return `${MONTHS[m - 1]} ${d}${y === thisYear ? "" : ", " + y}`;
+  }
+
   /* ---------- local collections (persist per browser) ---------- */
   function loadSet(key) {
     try { return new Set(JSON.parse(localStorage.getItem(key) || "[]")); }
@@ -223,7 +232,7 @@
     const facts = [
       units ? `${units} units` : "",
       acres ? `${acres} ac` : "",
-      score ? `★ ${score}/8` : "",
+      score ? `<span title="${SCORE_TIP}">★ ${score}/8</span>` : "",
     ].filter(Boolean).join(" · ");
     const itemRow = (i) => `
       <div class="pc-item">
@@ -231,7 +240,7 @@
           <span class="pc-type"><i class="pc-type-dot" style="background:${typeColor(i.project_type)}"></i>${typeLabel(i.project_type)}</span>
           ${i.multifamily ? '<span class="pc-type pc-type-mf">Multifamily</span>' : ""}
           ${isNew(i) ? '<span class="pc-type pc-type-new">New</span>' : ""}
-          <span class="pc-date">${esc(i.meeting_date || "")}${i.status === "upcoming" ? " · upcoming" : ""}</span>
+          <span class="pc-date">${fmtDate(i.meeting_date)}${i.status === "upcoming" ? " · upcoming" : ""}</span>
         </div>
         <p class="pc-plain">${esc(i.plain || i.title)}</p>
         <div class="pc-meta">${esc(i.meeting_body)} · <a href="${esc(i.link)}" target="_blank" rel="noopener">View source →</a></div>
@@ -293,11 +302,35 @@
     };
   });
 
+  function updateContext() {
+    const sel = [...state.counties];
+    for (const r of Object.values(REGIONS)) {
+      if (sel.length === r.counties.length && r.counties.every((c) => state.counties.has(c))) {
+        $("brandSub").textContent = r.name;
+        return;
+      }
+    }
+    $("brandSub").textContent =
+      sel.length === 0 ? "Florida Development Radar"
+      : sel.length === 1 ? `${sel[0]} County`
+      : `${sel.length} counties`;
+  }
+
   function buildCountyChips() {
     const counts = {};
     for (const f of state.features) counts[f.properties.county] = (counts[f.properties.county] || 0) + 1;
     const el = $("countyChips");
     el.innerHTML = "";
+    const reset = document.createElement("button");
+    reset.className = "chip chip-reset";
+    reset.textContent = "✕ All counties";
+    reset.title = "Clear the county filter";
+    reset.onclick = () => {
+      state.counties.clear();
+      buildCountyChips();
+      updateContext();
+      render();
+    };
     Object.keys(counts).sort().forEach((c) => {
       const b = document.createElement("button");
       b.className = "chip" + (state.counties.has(c) ? " on" : "");
@@ -305,10 +338,14 @@
       b.onclick = () => {
         state.counties.has(c) ? state.counties.delete(c) : state.counties.add(c);
         b.classList.toggle("on");
+        reset.style.display = state.counties.size ? "" : "none";
+        updateContext();
         render();
       };
       el.appendChild(b);
     });
+    reset.style.display = state.counties.size ? "" : "none";
+    el.appendChild(reset);
   }
 
   function buildTypeChecks() {
@@ -334,7 +371,7 @@
     return `
       <div class="u-item p-item" data-key="${esc(e.key)}">
         ${isSaved(e.key) ? '<span class="u-heart">♥</span> ' : ""}<a href="${esc(best.link)}" target="_blank" rel="noopener">${esc((best.plain || best.title).slice(0, 110))}</a>
-        <div class="u-meta">${esc(e.jurisdiction)}${extra || ""} · ★ ${best.score || 0}</div>
+        <div class="u-meta">${esc(e.jurisdiction)}${extra || ""} · <span title="${SCORE_TIP}">★ ${best.score || 0}</span></div>
       </div>`;
   }
   function wireRows(d) {
@@ -378,7 +415,7 @@
         .slice(0, 80);
       d.innerHTML = fresh.length
         ? '<div class="d-hint">First discovered in the last 7 days — their hearings may be past or future.</div>'
-          + fresh.map((e) => entityRow(e, ` · added ${esc(e.firstSeen)}`)).join("")
+          + fresh.map((e) => entityRow(e, ` · added ${fmtDate(e.firstSeen)}`)).join("")
         : '<div class="u-meta" style="padding:12px 0">Nothing new in the last 7 days for these filters. The radar re-scans nightly around 4–5 AM ET.</div>';
       wireRows(d);
     } else if (openDrawer === "saved") {
@@ -397,7 +434,7 @@
         .sort((a, b) => a.meeting_date.localeCompare(b.meeting_date) || (b.score || 0) - (a.score || 0));
       d.innerHTML = up.length ? '<div class="d-hint">Hearings on the calendar in the next 14 days.</div>' + up.map((p) => `
         <div class="u-item p-item" data-key="${state.entityByItemId[p.id] || ""}">
-          <div class="h-date">${esc(p.meeting_date)}</div>
+          <div class="h-date">${fmtDate(p.meeting_date)}</div>
           <a href="${esc(p.link)}" target="_blank" rel="noopener">${esc((p.plain || p.title).slice(0, 110))}</a>
           <div class="u-meta">${esc(p.jurisdiction)} · ${esc(p.meeting_body)}</div>
         </div>`).join("")
@@ -408,14 +445,15 @@
         ? state.unmapped.map((u) => `
           <div class="u-item">
             <a href="${esc(u.link)}" target="_blank" rel="noopener">${esc((u.plain || u.title).slice(0, 130))}</a>
-            <div class="u-meta">${esc(u.jurisdiction)} · ${esc(u.meeting_date || "no date")} · no mappable address</div>
+            <div class="u-meta">${esc(u.jurisdiction)} · ${u.meeting_date ? fmtDate(u.meeting_date) : "no date"} · no mappable address</div>
           </div>`).join("")
         : '<div class="u-meta" style="padding:12px 0">Every development item has a mapped location.</div>';
     } else {
-      d.innerHTML = state.coverage.map((c) => `
+      d.innerHTML = '<div class="d-hint">Every public portal scanned nightly — kept = items classified as real development activity.</div>'
+        + state.coverage.map((c) => `
         <div class="cov-row">
           <b>${esc(c.name)}</b>
-          <span>${c.ok ? `<span class="cov-ok">${c.items_dev} dev / ${c.items_raw} raw</span>` : `<span class="cov-err" title="${esc(c.error || "")}">failed</span>`}</span>
+          <span>${c.ok ? `<span class="cov-ok">${c.items_dev} kept · ${c.items_raw} scanned</span>` : `<span class="cov-err" title="${esc(c.error || "")}">failed</span>`}</span>
         </div>`).join("");
     }
   }
@@ -472,11 +510,10 @@
     const wantRegion = params.get("region");
     if (wantCounty) {
       wantCounty.split(",").forEach((c) => state.counties.add(c));
-      $("brandSub").textContent = wantCounty.replace(",", " · ") + " County";
     } else if (wantRegion && REGIONS[wantRegion]) {
       REGIONS[wantRegion].counties.forEach((c) => state.counties.add(c));
-      $("brandSub").textContent = REGIONS[wantRegion].name;
     }
+    updateContext();
     buildEntities();
     buildCountyChips();
     buildTypeChecks();

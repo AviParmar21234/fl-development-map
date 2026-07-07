@@ -35,6 +35,20 @@ body { font-family: var(--sans); color: var(--char); background: var(--gray-bg);
   pointer-events: none;
 }
 
+/* the drifting map is a real invitation, not a dead image */
+.bg-link { position: absolute; inset: 0; z-index: 550; cursor: pointer; }
+.bg-link span {
+  position: absolute; right: 22px; bottom: 22px;
+  font: 700 12.5px var(--sans); color: var(--char);
+  background: rgba(255,255,255,.92);
+  border: 1px solid var(--line); border-radius: 18px;
+  padding: 8px 16px;
+  box-shadow: 0 4px 14px rgba(26,28,31,.10);
+  opacity: .75;
+  transition: opacity .2s, transform .2s;
+}
+.bg-link:hover span { opacity: 1; transform: translateY(-2px); }
+
 /* ---------- overlay content ---------- */
 .overlay {
   position: relative; z-index: 600;

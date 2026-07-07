@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,550;9..144,650&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="vendor/leaflet.css">
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css?v=11">
 <link rel="icon" href="logo.svg">
 </head>
 <body>
@@ -73,6 +73,14 @@
   <button class="panel-toggle" id="collapseBtn" title="Toggle panel" aria-label="Toggle panel">‹</button>
   <div id="map" aria-label="Development sites map"></div>
 
+  <div class="legend" aria-label="Map key">
+    <span><i style="background:#d4593c"></i>Rezoning &amp; Land Use</span>
+    <span><i style="background:#3b6fb3"></i>Site Plans &amp; PUD</span>
+    <span><i style="background:#8a8f96"></i>Variances &amp; Exceptions</span>
+    <span><i style="background:#6d7278"></i>Other</span>
+    <span class="lg-mf" title="Multifamily sites are drawn larger with a dark outline"><i class="lg-ring"></i>Multifamily</span>
+  </div>
+
   <article class="prop-card" id="propCard" hidden>
     <button class="pc-close" id="pcClose" aria-label="Close">×</button>
     <div id="pcBody"></div>
@@ -80,6 +88,6 @@
 </div>
 
 <script src="vendor/leaflet.js"></script>
-<script src="app.js?v=10"></script>
+<script src="app.js?v=11"></script>
 </body>
 </html>

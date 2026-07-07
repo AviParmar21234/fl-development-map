@@ -181,6 +181,7 @@ body.panel-hidden .panel-toggle { left: 0; }
 }
 .chip.on { color: var(--white); background: var(--char); border-color: var(--char); }
 .chip:hover:not(.on) { color: var(--char); border-color: var(--char); }
+.chip-reset { border-style: dashed; color: var(--char); }
 
 .types { display: grid; grid-template-columns: 1fr; gap: 1px; }
 .type-check {
@@ -292,6 +293,29 @@ body.panel-hidden .panel-toggle { left: 0; }
   background: var(--white) !important; color: var(--char) !important;
   border-color: var(--line) !important;
 }
+
+/* ============ legend ============ */
+.legend {
+  position: absolute; bottom: 14px; z-index: 1050;
+  left: calc(372px + 16px);
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  background: rgba(255,255,255,.92);
+  border: 1px solid var(--line); border-radius: 10px;
+  padding: 7px 13px;
+  font-size: 10.5px; font-weight: 600; color: var(--text-sec);
+  box-shadow: 0 4px 14px rgba(26,28,31,.10);
+  backdrop-filter: blur(4px);
+  transition: left .28s cubic-bezier(.2,.8,.3,1);
+  pointer-events: auto;
+}
+body.panel-hidden .legend { left: 16px; }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend i { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.lg-ring {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--white); border: 2.5px solid var(--char);
+}
+@media (max-width: 900px) { .legend { display: none; } }
 
 /* ============ property card ============ */
 .prop-card {
