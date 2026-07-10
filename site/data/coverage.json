@@ -40,8 +40,8 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1557,
-  "items_dev": 71,
+  "items_raw": 1618,
+  "items_dev": 70,
   "error": null
  },
  {
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1045,
+  "items_raw": 1054,
   "items_dev": 49,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2272,
+  "items_raw": 2289,
   "items_dev": 66,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 1015,
+  "items_raw": 1014,
   "items_dev": 74,
   "error": null
  },
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1588,
+  "items_raw": 1641,
   "items_dev": 85,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 291,
-  "items_dev": 81,
+  "items_raw": 295,
+  "items_dev": 85,
   "error": null
  },
  {
@@ -274,8 +274,8 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 627,
-  "items_dev": 29,
+  "items_raw": 619,
+  "items_dev": 25,
   "error": null
  },
  {
@@ -283,7 +283,7 @@
   "name": "St. Cloud",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 160,
+  "items_raw": 164,
   "items_dev": 43,
   "error": null
  },
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 855,
-  "items_dev": 356,
+  "items_dev": 355,
   "error": null
  },
  {
@@ -337,8 +337,8 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 936,
-  "items_dev": 27,
+  "items_raw": 1065,
+  "items_dev": 28,
   "error": null
  },
  {
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1580,
-  "items_dev": 86,
+  "items_raw": 1665,
+  "items_dev": 94,
   "error": null
  },
  {
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2119,
+  "items_raw": 2105,
   "items_dev": 108,
   "error": null
  },
@@ -372,18 +372,18 @@
   "source_id": "hillsborough-dev-tracker",
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
-  "ok": true,
-  "items_raw": 136,
-  "items_dev": 80,
-  "error": null
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ReadTimeout: HTTPSConnectionPool(host='maps.hillsboroughcounty.org', port=443): Read timed out. (read timeout=20)"
  },
  {
   "source_id": "tampa",
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 639,
-  "items_dev": 68,
+  "items_raw": 626,
+  "items_dev": 65,
   "error": null
  },
  {
