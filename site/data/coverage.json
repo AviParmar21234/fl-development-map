@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 1014,
-  "items_dev": 74,
+  "items_raw": 975,
+  "items_dev": 69,
   "error": null
  },
  {
@@ -310,8 +310,8 @@
   "name": "City of Orlando",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1212,
-  "items_dev": 31,
+  "items_raw": 1088,
+  "items_dev": 28,
   "error": null
  },
  {
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 855,
-  "items_dev": 355,
+  "items_raw": 820,
+  "items_dev": 336,
   "error": null
  },
  {
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1665,
-  "items_dev": 94,
+  "items_raw": 1581,
+  "items_dev": 91,
   "error": null
  },
  {

@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-07-11T11:04:17+00:00",
+ "generated_at": "2026-07-12T11:14:12+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 44,
-  "projects_mapped": 854,
-  "projects_unmapped": 990,
-  "multifamily": 291,
-  "sites": 679,
+  "projects_mapped": 844,
+  "projects_unmapped": 975,
+  "multifamily": 288,
+  "sites": 669,
   "mf_sites": 90,
   "upcoming_sites": 125
  },
@@ -42,7 +42,7 @@
    "upcoming": 1
   },
   "Hillsborough": {
-   "sites": 232,
+   "sites": 222,
    "mf": 7,
    "upcoming": 102
   },
