@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 382,
-  "items_dev": 34,
+  "items_raw": 0,
+  "items_dev": 0,
   "error": null
  },
  {
@@ -103,7 +103,7 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1075,
+  "items_raw": 1068,
   "items_dev": 29,
   "error": null
  },
@@ -112,8 +112,8 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1398,
-  "items_dev": 32,
+  "items_raw": 1382,
+  "items_dev": 31,
   "error": null
  },
  {
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1054,
+  "items_raw": 1003,
   "items_dev": 49,
   "error": null
  },
@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 187,
+  "items_raw": 186,
   "items_dev": 5,
   "error": null
  },
@@ -165,10 +165,10 @@
   "source_id": "broward-dev-tracker",
   "name": "Broward County LPA Applications",
   "county": "Broward",
-  "ok": true,
-  "items_raw": 3,
-  "items_dev": 1,
-  "error": null
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ReadTimeout: HTTPSConnectionPool(host='www.broward.org', port=443): Read timed out. (read timeout=20)"
  },
  {
   "source_id": "palm-beach-county",
@@ -238,8 +238,8 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1641,
-  "items_dev": 85,
+  "items_raw": 1486,
+  "items_dev": 66,
   "error": null
  },
  {
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1286,
-  "items_dev": 197,
+  "items_raw": 1209,
+  "items_dev": 195,
   "error": null
  },
  {
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 68,
+  "items_raw": 66,
   "items_dev": 0,
   "error": null
  },
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 820,
-  "items_dev": 336,
+  "items_raw": 761,
+  "items_dev": 319,
   "error": null
  },
  {
@@ -337,7 +337,7 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1065,
+  "items_raw": 1066,
   "items_dev": 28,
   "error": null
  },
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2179,
+  "items_raw": 2178,
   "items_dev": 108,
   "error": null
  },
