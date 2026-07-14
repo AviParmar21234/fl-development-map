@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 0,
-  "items_dev": 0,
+  "items_raw": 366,
+  "items_dev": 32,
   "error": null
  },
  {
@@ -13,8 +13,8 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2257,
-  "items_dev": 64,
+  "items_raw": 2271,
+  "items_dev": 71,
   "error": null
  },
  {
@@ -40,7 +40,7 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1461,
+  "items_raw": 1462,
   "items_dev": 66,
   "error": null
  },
@@ -67,8 +67,8 @@
   "name": "North Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 439,
-  "items_dev": 80,
+  "items_raw": 460,
+  "items_dev": 91,
   "error": null
  },
  {
@@ -165,10 +165,10 @@
   "source_id": "broward-dev-tracker",
   "name": "Broward County LPA Applications",
   "county": "Broward",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='www.broward.org', port=443): Read timed out. (read timeout=20)"
+  "ok": true,
+  "items_raw": 3,
+  "items_dev": 1,
+  "error": null
  },
  {
   "source_id": "palm-beach-county",
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2310,
+  "items_raw": 2325,
   "items_dev": 68,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 975,
+  "items_raw": 982,
   "items_dev": 69,
   "error": null
  },
@@ -202,8 +202,8 @@
   "name": "Jupiter",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 231,
-  "items_dev": 14,
+  "items_raw": 220,
+  "items_dev": 13,
   "error": null
  },
  {
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1209,
-  "items_dev": 195,
+  "items_raw": 1227,
+  "items_dev": 203,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 270,
+  "items_raw": 278,
   "items_dev": 0,
   "error": null
  },
@@ -274,7 +274,7 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 628,
+  "items_raw": 576,
   "items_dev": 26,
   "error": null
  },
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 761,
-  "items_dev": 319,
+  "items_dev": 315,
   "error": null
  },
  {
@@ -337,7 +337,7 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1066,
+  "items_raw": 1067,
   "items_dev": 28,
   "error": null
  },
@@ -364,8 +364,8 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2178,
-  "items_dev": 108,
+  "items_raw": 2240,
+  "items_dev": 116,
   "error": null
  },
  {
@@ -373,7 +373,7 @@
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 140,
+  "items_raw": 141,
   "items_dev": 83,
   "error": null
  },
