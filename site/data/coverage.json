@@ -40,8 +40,8 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1463,
-  "items_dev": 66,
+  "items_raw": 1617,
+  "items_dev": 77,
   "error": null
  },
  {
@@ -49,7 +49,7 @@
   "name": "Hialeah",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 342,
+  "items_raw": 332,
   "items_dev": 56,
   "error": null
  },
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 990,
+  "items_raw": 1003,
   "items_dev": 46,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 957,
+  "items_raw": 956,
   "items_dev": 69,
   "error": null
  },
@@ -203,7 +203,7 @@
   "county": "Palm Beach",
   "ok": true,
   "items_raw": 231,
-  "items_dev": 15,
+  "items_dev": 14,
   "error": null
  },
  {
@@ -229,8 +229,8 @@
   "name": "Royal Palm Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 102,
-  "items_dev": 3,
+  "items_raw": 101,
+  "items_dev": 2,
   "error": null
  },
  {
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1486,
+  "items_raw": 1491,
   "items_dev": 66,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1227,
-  "items_dev": 203,
+  "items_raw": 1228,
+  "items_dev": 204,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 269,
+  "items_raw": 266,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 275,
-  "items_dev": 82,
+  "items_raw": 273,
+  "items_dev": 79,
   "error": null
  },
  {
@@ -274,8 +274,8 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 576,
-  "items_dev": 26,
+  "items_raw": 584,
+  "items_dev": 28,
   "error": null
  },
  {
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 66,
+  "items_raw": 67,
   "items_dev": 0,
   "error": null
  },
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 799,
-  "items_dev": 330,
+  "items_raw": 860,
+  "items_dev": 349,
   "error": null
  },
  {
@@ -364,8 +364,8 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2241,
-  "items_dev": 116,
+  "items_raw": 2244,
+  "items_dev": 118,
   "error": null
  },
  {
@@ -374,7 +374,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 141,
-  "items_dev": 83,
+  "items_dev": 80,
   "error": null
  },
  {
@@ -382,7 +382,7 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 712,
+  "items_raw": 713,
   "items_dev": 58,
   "error": null
  },
