@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 392,
-  "items_dev": 30,
+  "items_raw": 394,
+  "items_dev": 29,
   "error": null
  },
  {
@@ -85,8 +85,8 @@
   "name": "Aventura",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1925,
-  "items_dev": 196,
+  "items_raw": 2045,
+  "items_dev": 181,
   "error": null
  },
  {
@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 186,
+  "items_raw": 188,
   "items_dev": 5,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2411,
+  "items_raw": 2420,
   "items_dev": 71,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 957,
+  "items_raw": 958,
   "items_dev": 69,
   "error": null
  },
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1495,
+  "items_raw": 1494,
   "items_dev": 66,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1227,
-  "items_dev": 204,
+  "items_raw": 1237,
+  "items_dev": 209,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 291,
+  "items_raw": 283,
   "items_dev": 0,
   "error": null
  },
@@ -346,7 +346,7 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1573,
+  "items_raw": 1621,
   "items_dev": 96,
   "error": null
  },
@@ -373,8 +373,8 @@
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 141,
-  "items_dev": 80,
+  "items_raw": 146,
+  "items_dev": 81,
   "error": null
  },
  {
@@ -382,8 +382,8 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 625,
-  "items_dev": 56,
+  "items_raw": 652,
+  "items_dev": 71,
   "error": null
  },
  {
