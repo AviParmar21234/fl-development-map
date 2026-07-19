@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2247,
+  "items_raw": 2248,
   "items_dev": 66,
   "error": null
  },
@@ -165,10 +165,10 @@
   "source_id": "broward-dev-tracker",
   "name": "Broward County LPA Applications",
   "county": "Broward",
-  "ok": true,
-  "items_raw": 3,
-  "items_dev": 1,
-  "error": null
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.broward.org', port=443): Max retries exceeded with url: /Planning/Pages/LPA.aspx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.broward.org', port=443) at 0x7f4e2f616c10>, 'Connection to www.broward.org timed out. (connect timeout=20)'))"
  },
  {
   "source_id": "palm-beach-county",
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 283,
+  "items_raw": 273,
   "items_dev": 0,
   "error": null
  },
