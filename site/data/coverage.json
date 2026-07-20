@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 394,
-  "items_dev": 29,
+  "items_raw": 0,
+  "items_dev": 0,
   "error": null
  },
  {
@@ -103,8 +103,8 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1068,
-  "items_dev": 29,
+  "items_raw": 986,
+  "items_dev": 27,
   "error": null
  },
  {
@@ -157,18 +157,18 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 188,
-  "items_dev": 5,
+  "items_raw": 179,
+  "items_dev": 4,
   "error": null
  },
  {
   "source_id": "broward-dev-tracker",
   "name": "Broward County LPA Applications",
   "county": "Broward",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.broward.org', port=443): Max retries exceeded with url: /Planning/Pages/LPA.aspx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.broward.org', port=443) at 0x7f4e2f616c10>, 'Connection to www.broward.org timed out. (connect timeout=20)'))"
+  "ok": true,
+  "items_raw": 3,
+  "items_dev": 1,
+  "error": null
  },
  {
   "source_id": "palm-beach-county",
@@ -184,8 +184,8 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2420,
-  "items_dev": 71,
+  "items_raw": 2365,
+  "items_dev": 70,
   "error": null
  },
  {
@@ -211,7 +211,7 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 441,
+  "items_raw": 416,
   "items_dev": 10,
   "error": null
  },
@@ -337,8 +337,8 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1060,
-  "items_dev": 28,
+  "items_raw": 940,
+  "items_dev": 17,
   "error": null
  },
  {
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1621,
-  "items_dev": 96,
+  "items_raw": 1600,
+  "items_dev": 94,
   "error": null
  },
  {
@@ -355,8 +355,8 @@
   "name": "Pinellas Park",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 575,
-  "items_dev": 41,
+  "items_raw": 546,
+  "items_dev": 40,
   "error": null
  },
  {
@@ -364,8 +364,8 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2264,
-  "items_dev": 118,
+  "items_raw": 2134,
+  "items_dev": 112,
   "error": null
  },
  {
