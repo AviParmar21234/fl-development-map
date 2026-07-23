@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2235,
+  "items_raw": 2234,
   "items_dev": 66,
   "error": null
  },
@@ -22,7 +22,7 @@
   "name": "Doral",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 389,
+  "items_raw": 398,
   "items_dev": 17,
   "error": null
  },
@@ -113,7 +113,7 @@
   "county": "Broward",
   "ok": true,
   "items_raw": 1293,
-  "items_dev": 34,
+  "items_dev": 35,
   "error": null
  },
  {
@@ -139,8 +139,8 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1029,
-  "items_dev": 44,
+  "items_raw": 1077,
+  "items_dev": 45,
   "error": null
  },
  {
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2323,
+  "items_raw": 2338,
   "items_dev": 70,
   "error": null
  },
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 935,
-  "items_dev": 62,
+  "items_raw": 990,
+  "items_dev": 68,
   "error": null
  },
  {
@@ -247,7 +247,7 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1281,
+  "items_raw": 1284,
   "items_dev": 200,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 289,
+  "items_raw": 271,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 253,
-  "items_dev": 71,
+  "items_raw": 226,
+  "items_dev": 65,
   "error": null
  },
  {
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 861,
-  "items_dev": 349,
+  "items_dev": 357,
   "error": null
  },
  {
@@ -337,7 +337,7 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 940,
+  "items_raw": 949,
   "items_dev": 17,
   "error": null
  },
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2102,
+  "items_raw": 2100,
   "items_dev": 106,
   "error": null
  },
@@ -373,8 +373,8 @@
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 149,
-  "items_dev": 84,
+  "items_raw": 150,
+  "items_dev": 83,
   "error": null
  },
  {
