@@ -112,7 +112,7 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1293,
+  "items_raw": 1295,
   "items_dev": 35,
   "error": null
  },
@@ -121,7 +121,7 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1299,
+  "items_raw": 1365,
   "items_dev": 15,
   "error": null
  },
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1077,
+  "items_raw": 1078,
   "items_dev": 45,
   "error": null
  },
@@ -157,8 +157,8 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 179,
-  "items_dev": 4,
+  "items_raw": 183,
+  "items_dev": 7,
   "error": null
  },
  {
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 990,
+  "items_raw": 1010,
   "items_dev": 68,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 226,
-  "items_dev": 65,
+  "items_raw": 236,
+  "items_dev": 71,
   "error": null
  },
  {
@@ -274,8 +274,8 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 605,
-  "items_dev": 27,
+  "items_raw": 530,
+  "items_dev": 25,
   "error": null
  },
  {
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 68,
+  "items_raw": 69,
   "items_dev": 0,
   "error": null
  },
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 861,
-  "items_dev": 357,
+  "items_dev": 390,
   "error": null
  },
  {
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2100,
+  "items_raw": 2101,
   "items_dev": 106,
   "error": null
  },
@@ -372,10 +372,10 @@
   "source_id": "hillsborough-dev-tracker",
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
-  "ok": true,
-  "items_raw": 150,
-  "items_dev": 83,
-  "error": null
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ReadTimeout: HTTPSConnectionPool(host='maps.hillsboroughcounty.org', port=443): Read timed out. (read timeout=20)"
  },
  {
   "source_id": "tampa",
