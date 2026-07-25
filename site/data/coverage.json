@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 0,
-  "items_dev": 0,
+  "items_raw": 380,
+  "items_dev": 29,
   "error": null
  },
  {
@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2234,
+  "items_raw": 2241,
   "items_dev": 66,
   "error": null
  },
@@ -103,7 +103,7 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 990,
+  "items_raw": 993,
   "items_dev": 27,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2338,
+  "items_raw": 2351,
   "items_dev": 70,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 271,
+  "items_raw": 281,
   "items_dev": 0,
   "error": null
  },
@@ -292,7 +292,7 @@
   "name": "Lake County",
   "county": "Lake",
   "ok": true,
-  "items_raw": 234,
+  "items_raw": 258,
   "items_dev": 1,
   "error": null
  },
@@ -364,26 +364,26 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2101,
-  "items_dev": 106,
+  "items_raw": 2172,
+  "items_dev": 105,
   "error": null
  },
  {
   "source_id": "hillsborough-dev-tracker",
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='maps.hillsboroughcounty.org', port=443): Read timed out. (read timeout=20)"
+  "ok": true,
+  "items_raw": 150,
+  "items_dev": 83,
+  "error": null
  },
  {
   "source_id": "tampa",
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 652,
-  "items_dev": 71,
+  "items_raw": 677,
+  "items_dev": 67,
   "error": null
  },
  {
