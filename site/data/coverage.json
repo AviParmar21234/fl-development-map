@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2246,
+  "items_raw": 2256,
   "items_dev": 65,
   "error": null
  },
@@ -103,8 +103,8 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 993,
-  "items_dev": 27,
+  "items_raw": 1006,
+  "items_dev": 29,
   "error": null
  },
  {
@@ -121,8 +121,8 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1367,
-  "items_dev": 15,
+  "items_raw": 1481,
+  "items_dev": 19,
   "error": null
  },
  {
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1045,
+  "items_raw": 1046,
   "items_dev": 44,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 975,
+  "items_raw": 981,
   "items_dev": 67,
   "error": null
  },
@@ -202,7 +202,7 @@
   "name": "Jupiter",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 230,
+  "items_raw": 239,
   "items_dev": 13,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1210,
-  "items_dev": 189,
+  "items_raw": 1227,
+  "items_dev": 191,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 277,
+  "items_raw": 286,
   "items_dev": 0,
   "error": null
  },
@@ -274,8 +274,8 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 541,
-  "items_dev": 23,
+  "items_raw": 578,
+  "items_dev": 25,
   "error": null
  },
  {
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 816,
-  "items_dev": 353,
+  "items_dev": 348,
   "error": null
  },
  {
@@ -337,7 +337,7 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 949,
+  "items_raw": 1048,
   "items_dev": 17,
   "error": null
  },
@@ -346,7 +346,7 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1553,
+  "items_raw": 1568,
   "items_dev": 94,
   "error": null
  },
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2245,
+  "items_raw": 2252,
   "items_dev": 111,
   "error": null
  },

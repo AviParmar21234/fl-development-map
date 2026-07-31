@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-07-30T11:51:19+00:00",
+ "generated_at": "2026-07-31T12:07:29+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 43,
-  "projects_mapped": 705,
-  "projects_unmapped": 909,
-  "multifamily": 249,
-  "sites": 559,
+  "projects_mapped": 704,
+  "projects_unmapped": 919,
+  "multifamily": 252,
+  "sites": 558,
   "mf_sites": 80,
   "upcoming_sites": 12
  },
@@ -32,7 +32,7 @@
    "upcoming": 2
   },
   "Seminole": {
-   "sites": 95,
+   "sites": 94,
    "mf": 4,
    "upcoming": 0
   },
