@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 0,
-  "items_dev": 0,
+  "items_raw": 334,
+  "items_dev": 24,
   "error": null
  },
  {
@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2256,
+  "items_raw": 2261,
   "items_dev": 65,
   "error": null
  },
@@ -67,34 +67,34 @@
   "name": "North Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 460,
-  "items_dev": 91,
+  "items_raw": 393,
+  "items_dev": 87,
   "error": null
  },
  {
   "source_id": "miami-gardens",
   "name": "Miami Gardens",
   "county": "Miami-Dade",
-  "ok": true,
+  "ok": false,
   "items_raw": 0,
   "items_dev": 0,
-  "error": null
+  "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://www.miamigardens-fl.gov/AgendaCenter"
  },
  {
   "source_id": "aventura",
   "name": "Aventura",
   "county": "Miami-Dade",
-  "ok": true,
-  "items_raw": 2045,
-  "items_dev": 181,
-  "error": null
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://www.cityofaventura.com/AgendaCenter"
  },
  {
   "source_id": "broward-county",
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1012,
+  "items_raw": 1074,
   "items_dev": 41,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2268,
+  "items_raw": 2266,
   "items_dev": 63,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1227,
-  "items_dev": 191,
+  "items_raw": 1241,
+  "items_dev": 200,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 286,
+  "items_raw": 267,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 247,
-  "items_dev": 74,
+  "items_raw": 253,
+  "items_dev": 78,
   "error": null
  },
  {
@@ -283,8 +283,8 @@
   "name": "St. Cloud",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 200,
-  "items_dev": 53,
+  "items_raw": 205,
+  "items_dev": 57,
   "error": null
  },
  {
@@ -292,8 +292,8 @@
   "name": "Lake County",
   "county": "Lake",
   "ok": true,
-  "items_raw": 254,
-  "items_dev": 1,
+  "items_raw": 285,
+  "items_dev": 2,
   "error": null
  },
  {
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 816,
-  "items_dev": 348,
+  "items_dev": 347,
   "error": null
  },
  {
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1568,
-  "items_dev": 94,
+  "items_raw": 1646,
+  "items_dev": 97,
   "error": null
  },
  {
@@ -372,18 +372,18 @@
   "source_id": "hillsborough-dev-tracker",
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='maps.hillsboroughcounty.org', port=443): Read timed out. (read timeout=20)"
+  "ok": true,
+  "items_raw": 128,
+  "items_dev": 71,
+  "error": null
  },
  {
   "source_id": "tampa",
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 676,
-  "items_dev": 63,
+  "items_raw": 719,
+  "items_dev": 64,
   "error": null
  },
  {
