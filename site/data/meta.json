@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-08-01T11:18:06+00:00",
+ "generated_at": "2026-08-02T11:22:33+00:00",
  "totals": {
   "sources_attempted": 44,
-  "sources_ok": 42,
-  "projects_mapped": 786,
-  "projects_unmapped": 824,
-  "multifamily": 253,
-  "sites": 640,
-  "mf_sites": 84,
+  "sources_ok": 44,
+  "projects_mapped": 800,
+  "projects_unmapped": 938,
+  "multifamily": 271,
+  "sites": 644,
+  "mf_sites": 86,
   "upcoming_sites": 90
  },
  "counties": {
   "Miami-Dade": {
-   "sites": 91,
-   "mf": 20,
+   "sites": 95,
+   "mf": 22,
    "upcoming": 0
   },
   "Broward": {

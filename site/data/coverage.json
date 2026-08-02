@@ -67,27 +67,27 @@
   "name": "North Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 393,
-  "items_dev": 87,
+  "items_raw": 460,
+  "items_dev": 91,
   "error": null
  },
  {
   "source_id": "miami-gardens",
   "name": "Miami Gardens",
   "county": "Miami-Dade",
-  "ok": false,
+  "ok": true,
   "items_raw": 0,
   "items_dev": 0,
-  "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://www.miamigardens-fl.gov/AgendaCenter"
+  "error": null
  },
  {
   "source_id": "aventura",
   "name": "Aventura",
   "county": "Miami-Dade",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://www.cityofaventura.com/AgendaCenter"
+  "ok": true,
+  "items_raw": 2045,
+  "items_dev": 181,
+  "error": null
  },
  {
   "source_id": "broward-county",
@@ -121,7 +121,7 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1481,
+  "items_raw": 1473,
   "items_dev": 19,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2266,
+  "items_raw": 2252,
   "items_dev": 63,
   "error": null
  },
@@ -274,7 +274,7 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 578,
+  "items_raw": 573,
   "items_dev": 25,
   "error": null
  },
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1646,
-  "items_dev": 97,
+  "items_raw": 1586,
+  "items_dev": 91,
   "error": null
  },
  {
