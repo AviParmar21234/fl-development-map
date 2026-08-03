@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 334,
-  "items_dev": 24,
+  "items_raw": 0,
+  "items_dev": 0,
   "error": null
  },
  {
@@ -94,8 +94,8 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1074,
-  "items_dev": 41,
+  "items_raw": 1003,
+  "items_dev": 38,
   "error": null
  },
  {
@@ -103,7 +103,7 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1006,
+  "items_raw": 916,
   "items_dev": 29,
   "error": null
  },
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1046,
+  "items_raw": 1031,
   "items_dev": 44,
   "error": null
  },
@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 200,
+  "items_raw": 192,
   "items_dev": 7,
   "error": null
  },
@@ -184,8 +184,8 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2252,
-  "items_dev": 63,
+  "items_raw": 2192,
+  "items_dev": 59,
   "error": null
  },
  {
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 981,
+  "items_raw": 965,
   "items_dev": 67,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 70,
+  "items_raw": 69,
   "items_dev": 0,
   "error": null
  },
@@ -337,7 +337,7 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1048,
+  "items_raw": 1002,
   "items_dev": 17,
   "error": null
  },
@@ -364,8 +364,8 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2252,
-  "items_dev": 111,
+  "items_raw": 2137,
+  "items_dev": 106,
   "error": null
  },
  {
@@ -373,8 +373,8 @@
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 128,
-  "items_dev": 71,
+  "items_raw": 127,
+  "items_dev": 70,
   "error": null
  },
  {
