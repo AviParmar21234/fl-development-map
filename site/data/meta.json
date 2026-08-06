@@ -1,20 +1,20 @@
 {
- "generated_at": "2026-08-05T11:56:31+00:00",
+ "generated_at": "2026-08-06T12:04:15+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 43,
-  "projects_mapped": 696,
-  "projects_unmapped": 931,
-  "multifamily": 260,
-  "sites": 554,
-  "mf_sites": 81,
-  "upcoming_sites": 30
+  "projects_mapped": 689,
+  "projects_unmapped": 926,
+  "multifamily": 256,
+  "sites": 546,
+  "mf_sites": 80,
+  "upcoming_sites": 28
  },
  "counties": {
   "Miami-Dade": {
-   "sites": 80,
+   "sites": 84,
    "mf": 17,
-   "upcoming": 0
+   "upcoming": 7
   },
   "Broward": {
    "sites": 81,
@@ -24,17 +24,17 @@
   "Palm Beach": {
    "sites": 37,
    "mf": 11,
-   "upcoming": 2
+   "upcoming": 0
   },
   "Orange": {
-   "sites": 51,
-   "mf": 9,
-   "upcoming": 5
+   "sites": 47,
+   "mf": 8,
+   "upcoming": 0
   },
   "Seminole": {
    "sites": 95,
    "mf": 4,
-   "upcoming": 3
+   "upcoming": 1
   },
   "Osceola": {
    "sites": 3,
@@ -42,7 +42,7 @@
    "upcoming": 0
   },
   "Hillsborough": {
-   "sites": 153,
+   "sites": 145,
    "mf": 7,
    "upcoming": 13
   },
