@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 0,
-  "items_dev": 0,
+  "items_raw": 329,
+  "items_dev": 24,
   "error": null
  },
  {
@@ -13,8 +13,8 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2130,
-  "items_dev": 63,
+  "items_raw": 2137,
+  "items_dev": 66,
   "error": null
  },
  {
@@ -40,7 +40,7 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1579,
+  "items_raw": 1575,
   "items_dev": 78,
   "error": null
  },
@@ -94,8 +94,8 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1002,
-  "items_dev": 38,
+  "items_raw": 1089,
+  "items_dev": 48,
   "error": null
  },
  {
@@ -112,7 +112,7 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1258,
+  "items_raw": 1259,
   "items_dev": 35,
   "error": null
  },
@@ -121,8 +121,8 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1410,
-  "items_dev": 20,
+  "items_raw": 1449,
+  "items_dev": 29,
   "error": null
  },
  {
@@ -165,10 +165,10 @@
   "source_id": "broward-dev-tracker",
   "name": "Broward County LPA Applications",
   "county": "Broward",
-  "ok": true,
-  "items_raw": 3,
-  "items_dev": 1,
-  "error": null
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.broward.org', port=443): Max retries exceeded with url: /Planning/Pages/LPA.aspx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.broward.org', port=443) at 0x7fc6150a2ad0>, 'Connection to www.broward.org timed out. (connect timeout=20)'))"
  },
  {
   "source_id": "palm-beach-county",
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2197,
+  "items_raw": 2207,
   "items_dev": 55,
   "error": null
  },
@@ -202,8 +202,8 @@
   "name": "Jupiter",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 239,
-  "items_dev": 13,
+  "items_raw": 225,
+  "items_dev": 12,
   "error": null
  },
  {
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1483,
+  "items_raw": 1503,
   "items_dev": 60,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 269,
+  "items_raw": 302,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 249,
-  "items_dev": 74,
+  "items_raw": 260,
+  "items_dev": 79,
   "error": null
  },
  {
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 69,
+  "items_raw": 72,
   "items_dev": 0,
   "error": null
  },
@@ -310,7 +310,7 @@
   "name": "City of Orlando",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1128,
+  "items_raw": 1129,
   "items_dev": 32,
   "error": null
  },
@@ -337,7 +337,7 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 997,
+  "items_raw": 1000,
   "items_dev": 17,
   "error": null
  },
@@ -382,7 +382,7 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 710,
+  "items_raw": 709,
   "items_dev": 53,
   "error": null
  },

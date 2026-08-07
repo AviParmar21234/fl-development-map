@@ -93,9 +93,17 @@
 28.153896607501,
 -82.351364863095
 ],
+"1056 Bailey Hill Road, Apopka, FL": [
+28.7174983,
+-81.5584749
+],
 "1065 SW 15th Avenue, Delray Beach, FL": [
 26.445894544451,
 -80.088129506531
+],
+"107 N. Central Avenue, Apopka, FL": [
+28.679427,
+-81.5113329
 ],
 "107 North Central Avenue, Apopka, FL": [
 28.679320658871,
@@ -136,6 +144,10 @@
 "1104 5685 Alton Rd, Miami Beach, FL": [
 25.836434830341,
 -80.130244202315
+],
+"111 Terrace, , FL": [
+29.5040731,
+-82.9585665
 ],
 "1110 E Cass Street, Tampa, FL": [
 27.953084909987,
@@ -376,6 +388,7 @@
 27.4534633,
 -82.5779752
 ],
+"13 acres between Andrews Avenue, , FL": null,
 "130-136 SE 1st Avenue, Delray Beach, FL": [
 26.459653597526,
 -80.072113147615
@@ -664,6 +677,7 @@
 26.458621218024,
 -80.072092704486
 ],
+"1700 NW 98 Avenue, Pembroke Pines, FL": null,
 "1701 East 2nd Avenue, Tampa, FL": [
 27.956628529683,
 -82.440404237811
@@ -898,6 +912,10 @@
 -82.515861
 ],
 "2 mile east of Oregon St, , FL": null,
+"20 Avenue, , FL": [
+29.2405204,
+-82.7355051
+],
 "200 Hibiscus Street, Jupiter, FL": [
 26.935111057483,
 -80.095984955976
@@ -1011,6 +1029,10 @@
 "20807 BISCAYNE BOULEVARD, Aventura, FL": [
 25.96837543884,
 -80.144760268967
+],
+"21 Avenue, , FL": [
+29.4991966,
+-82.866908
 ],
 "2101 S. Congress Avenue, Delray Beach, FL": [
 26.433543945647,
@@ -1472,6 +1494,11 @@
 27.4937009,
 -80.3536966
 ],
+"3 SW 129 Avenue, Pembroke Pines, FL": null,
+"3 Street, , FL": [
+29.335859,
+-82.5098444
+],
 "30 SANDY LANE, , FL": [
 28.0596688,
 -81.8004549
@@ -1483,6 +1510,10 @@
 "300 NW 27TH AVENUE, Pompano Beach, FL": [
 26.234098492176,
 -80.159351442045
+],
+"300 S Bradshaw Road, Apopka, FL": [
+28.6744117,
+-81.5218102
 ],
 "300 S South Bradshaw Road, Apopka, FL": [
 28.674316731606,
@@ -1645,6 +1676,10 @@
 "3550 West State Road 46, , FL": [
 28.7341464,
 -81.1159972
+],
+"36 Street, , FL": [
+29.7255526,
+-82.2796571
 ],
 "3600 34 th Street South, , FL": [
 27.735138928358,
@@ -1899,6 +1934,10 @@
 "4290 East 4th Avenue, Hialeah, FL": [
 25.861491463523,
 -80.274697243385
+],
+"43 Avenue, , FL": [
+29.8587548,
+-82.1167894
 ],
 "43 and the abutting Bayview Terrace, Clearwater, FL": null,
 "4304 North 26th Street, Tampa, FL": [
@@ -2697,6 +2736,10 @@
 26.220176689549,
 -80.104600872528
 ],
+"8579 Pines Boulevard, Pembroke Pines, FL": [
+26.0090698,
+-80.2575754
+],
 "88 Avenue, , FL": null,
 "8800 Old Culter Rd. 1, Coral Gables, FL": [
 25.690120480493,
@@ -2705,6 +2748,10 @@
 "89 Street, , FL": [
 27.4534633,
 -82.5779752
+],
+"90 Terrace, , FL": [
+29.0171108,
+-82.0024569
 ],
 "9010 Causeway Blvd, , FL": [
 27.922735363066,
