@@ -4,7 +4,7 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 321,
+  "items_raw": 302,
   "items_dev": 22,
   "error": null
  },
@@ -165,10 +165,10 @@
   "source_id": "broward-dev-tracker",
   "name": "Broward County LPA Applications",
   "county": "Broward",
-  "ok": true,
-  "items_raw": 3,
-  "items_dev": 1,
-  "error": null
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.broward.org', port=443): Max retries exceeded with url: /Planning/Pages/LPA.aspx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.broward.org', port=443) at 0x7f28d1a4a350>, 'Connection to www.broward.org timed out. (connect timeout=20)'))"
  },
  {
   "source_id": "palm-beach-county",
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 1012,
-  "items_dev": 69,
+  "items_raw": 982,
+  "items_dev": 61,
   "error": null
  },
  {
@@ -211,7 +211,7 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 468,
+  "items_raw": 441,
   "items_dev": 11,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 302,
+  "items_raw": 294,
   "items_dev": 0,
   "error": null
  },
@@ -310,8 +310,8 @@
   "name": "City of Orlando",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1129,
-  "items_dev": 32,
+  "items_raw": 1025,
+  "items_dev": 31,
   "error": null
  },
  {
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 902,
-  "items_dev": 361,
+  "items_raw": 868,
+  "items_dev": 345,
   "error": null
  },
  {
@@ -346,7 +346,7 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1593,
+  "items_raw": 1600,
   "items_dev": 87,
   "error": null
  },
