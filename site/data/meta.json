@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-08-09T10:29:56+00:00",
+ "generated_at": "2026-08-10T11:06:37+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 43,
-  "projects_mapped": 797,
-  "projects_unmapped": 940,
-  "multifamily": 270,
-  "sites": 641,
-  "mf_sites": 89,
+  "projects_mapped": 792,
+  "projects_unmapped": 919,
+  "multifamily": 263,
+  "sites": 633,
+  "mf_sites": 85,
   "upcoming_sites": 119
  },
  "counties": {
@@ -17,12 +17,12 @@
    "upcoming": 17
   },
   "Broward": {
-   "sites": 87,
-   "mf": 26,
+   "sites": 82,
+   "mf": 22,
    "upcoming": 8
   },
   "Palm Beach": {
-   "sites": 37,
+   "sites": 38,
    "mf": 11,
    "upcoming": 1
   },
@@ -42,7 +42,7 @@
    "upcoming": 0
   },
   "Hillsborough": {
-   "sites": 215,
+   "sites": 211,
    "mf": 7,
    "upcoming": 88
   },

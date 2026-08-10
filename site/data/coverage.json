@@ -112,8 +112,8 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1259,
-  "items_dev": 35,
+  "items_raw": 1215,
+  "items_dev": 30,
   "error": null
  },
  {
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1021,
+  "items_raw": 985,
   "items_dev": 43,
   "error": null
  },
@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 195,
+  "items_raw": 192,
   "items_dev": 7,
   "error": null
  },
@@ -168,7 +168,7 @@
   "ok": false,
   "items_raw": 0,
   "items_dev": 0,
-  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.broward.org', port=443): Max retries exceeded with url: /Planning/Pages/LPA.aspx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.broward.org', port=443) at 0x7f28d1a4a350>, 'Connection to www.broward.org timed out. (connect timeout=20)'))"
+  "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.broward.org/Planning/Pages/LPA.aspx"
  },
  {
   "source_id": "palm-beach-county",
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2230,
+  "items_raw": 2169,
   "items_dev": 56,
   "error": null
  },
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 982,
-  "items_dev": 61,
+  "items_raw": 934,
+  "items_dev": 53,
   "error": null
  },
  {
@@ -211,8 +211,8 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 441,
-  "items_dev": 11,
+  "items_raw": 412,
+  "items_dev": 10,
   "error": null
  },
  {
@@ -238,8 +238,8 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1503,
-  "items_dev": 60,
+  "items_raw": 1383,
+  "items_dev": 59,
   "error": null
  },
  {
@@ -247,7 +247,7 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1276,
+  "items_raw": 1228,
   "items_dev": 196,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 72,
+  "items_raw": 71,
   "items_dev": 0,
   "error": null
  },
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 868,
-  "items_dev": 345,
+  "items_raw": 814,
+  "items_dev": 333,
   "error": null
  },
  {
@@ -355,8 +355,8 @@
   "name": "Pinellas Park",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 548,
-  "items_dev": 44,
+  "items_raw": 518,
+  "items_dev": 42,
   "error": null
  },
  {
