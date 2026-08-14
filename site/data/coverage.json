@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 297,
-  "items_dev": 22,
+  "items_raw": 249,
+  "items_dev": 18,
   "error": null
  },
  {
@@ -13,8 +13,8 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2158,
-  "items_dev": 72,
+  "items_raw": 2140,
+  "items_dev": 68,
   "error": null
  },
  {
@@ -103,8 +103,8 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 922,
-  "items_dev": 29,
+  "items_raw": 1020,
+  "items_dev": 32,
   "error": null
  },
  {
@@ -121,7 +121,7 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1438,
+  "items_raw": 1507,
   "items_dev": 26,
   "error": null
  },
@@ -139,8 +139,8 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 989,
-  "items_dev": 43,
+  "items_raw": 1006,
+  "items_dev": 49,
   "error": null
  },
  {
@@ -184,8 +184,8 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2222,
-  "items_dev": 58,
+  "items_raw": 2223,
+  "items_dev": 59,
   "error": null
  },
  {
@@ -238,8 +238,8 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1383,
-  "items_dev": 59,
+  "items_raw": 1402,
+  "items_dev": 60,
   "error": null
  },
  {
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1245,
-  "items_dev": 196,
+  "items_raw": 1211,
+  "items_dev": 197,
   "error": null
  },
  {
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 268,
-  "items_dev": 83,
+  "items_raw": 271,
+  "items_dev": 87,
   "error": null
  },
  {
@@ -274,8 +274,8 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 478,
-  "items_dev": 21,
+  "items_raw": 576,
+  "items_dev": 36,
   "error": null
  },
  {
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 72,
+  "items_raw": 74,
   "items_dev": 0,
   "error": null
  },
@@ -319,7 +319,7 @@
   "name": "Altamonte Springs",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 148,
+  "items_raw": 154,
   "items_dev": 5,
   "error": null
  },
@@ -328,7 +328,7 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 814,
+  "items_raw": 815,
   "items_dev": 333,
   "error": null
  },
@@ -337,8 +337,8 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1003,
-  "items_dev": 17,
+  "items_raw": 1086,
+  "items_dev": 21,
   "error": null
  },
  {
@@ -373,8 +373,8 @@
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 121,
-  "items_dev": 71,
+  "items_raw": 125,
+  "items_dev": 74,
   "error": null
  },
  {
