@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2140,
+  "items_raw": 2135,
   "items_dev": 68,
   "error": null
  },
@@ -49,8 +49,8 @@
   "name": "Hialeah",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 319,
-  "items_dev": 49,
+  "items_raw": 321,
+  "items_dev": 47,
   "error": null
  },
  {
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1096,
+  "items_raw": 1100,
   "items_dev": 48,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2223,
+  "items_raw": 2294,
   "items_dev": 59,
   "error": null
  },
@@ -229,7 +229,7 @@
   "name": "Royal Palm Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 85,
+  "items_raw": 97,
   "items_dev": 1,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1211,
-  "items_dev": 197,
+  "items_raw": 1241,
+  "items_dev": 214,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 278,
+  "items_raw": 286,
   "items_dev": 0,
   "error": null
  },
@@ -265,7 +265,7 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 271,
+  "items_raw": 308,
   "items_dev": 87,
   "error": null
  },
@@ -274,7 +274,7 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 576,
+  "items_raw": 588,
   "items_dev": 36,
   "error": null
  },
@@ -283,8 +283,8 @@
   "name": "St. Cloud",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 190,
-  "items_dev": 50,
+  "items_raw": 216,
+  "items_dev": 55,
   "error": null
  },
  {
@@ -373,8 +373,8 @@
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 125,
-  "items_dev": 74,
+  "items_raw": 127,
+  "items_dev": 76,
   "error": null
  },
  {
@@ -382,8 +382,8 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 712,
-  "items_dev": 53,
+  "items_raw": 658,
+  "items_dev": 64,
   "error": null
  },
  {
