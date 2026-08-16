@@ -57,28 +57,28 @@
   "source_id": "homestead",
   "name": "Homestead",
   "county": "Miami-Dade",
-  "ok": true,
+  "ok": false,
   "items_raw": 0,
   "items_dev": 0,
-  "error": null
+  "error": "ReadTimeout: HTTPSConnectionPool(host='www.homesteadfl.gov', port=443): Read timed out. (read timeout=20)"
  },
  {
   "source_id": "north-miami",
   "name": "North Miami",
   "county": "Miami-Dade",
-  "ok": true,
-  "items_raw": 460,
-  "items_dev": 91,
-  "error": null
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ReadTimeout: HTTPSConnectionPool(host='www.northmiamifl.gov', port=443): Read timed out. (read timeout=20)"
  },
  {
   "source_id": "miami-gardens",
   "name": "Miami Gardens",
   "county": "Miami-Dade",
-  "ok": true,
+  "ok": false,
   "items_raw": 0,
   "items_dev": 0,
-  "error": null
+  "error": "ReadTimeout: HTTPSConnectionPool(host='www.miamigardens-fl.gov', port=443): Read timed out. (read timeout=20)"
  },
  {
   "source_id": "aventura",
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 286,
+  "items_raw": 276,
   "items_dev": 0,
   "error": null
  },
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1594,
-  "items_dev": 87,
+  "items_raw": 1636,
+  "items_dev": 91,
   "error": null
  },
  {
