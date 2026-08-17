@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2135,
+  "items_raw": 2136,
   "items_dev": 68,
   "error": null
  },
@@ -57,28 +57,28 @@
   "source_id": "homestead",
   "name": "Homestead",
   "county": "Miami-Dade",
-  "ok": false,
+  "ok": true,
   "items_raw": 0,
   "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='www.homesteadfl.gov', port=443): Read timed out. (read timeout=20)"
+  "error": null
  },
  {
   "source_id": "north-miami",
   "name": "North Miami",
   "county": "Miami-Dade",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='www.northmiamifl.gov', port=443): Read timed out. (read timeout=20)"
+  "ok": true,
+  "items_raw": 460,
+  "items_dev": 91,
+  "error": null
  },
  {
   "source_id": "miami-gardens",
   "name": "Miami Gardens",
   "county": "Miami-Dade",
-  "ok": false,
+  "ok": true,
   "items_raw": 0,
   "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='www.miamigardens-fl.gov', port=443): Read timed out. (read timeout=20)"
+  "error": null
  },
  {
   "source_id": "aventura",
@@ -94,8 +94,8 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1100,
-  "items_dev": 48,
+  "items_raw": 1019,
+  "items_dev": 47,
   "error": null
  },
  {
@@ -103,8 +103,8 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1020,
-  "items_dev": 32,
+  "items_raw": 939,
+  "items_dev": 29,
   "error": null
  },
  {
@@ -139,8 +139,8 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1006,
-  "items_dev": 49,
+  "items_raw": 986,
+  "items_dev": 48,
   "error": null
  },
  {
@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 210,
+  "items_raw": 195,
   "items_dev": 7,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 276,
+  "items_raw": 255,
   "items_dev": 0,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 74,
+  "items_raw": 73,
   "items_dev": 0,
   "error": null
  },
@@ -337,8 +337,8 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1086,
-  "items_dev": 21,
+  "items_raw": 1003,
+  "items_dev": 20,
   "error": null
  },
  {
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1636,
-  "items_dev": 91,
+  "items_raw": 1580,
+  "items_dev": 87,
   "error": null
  },
  {
@@ -364,8 +364,8 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2218,
-  "items_dev": 116,
+  "items_raw": 2106,
+  "items_dev": 111,
   "error": null
  },
  {
