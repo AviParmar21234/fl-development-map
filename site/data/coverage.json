@@ -4,7 +4,7 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 231,
+  "items_raw": 230,
   "items_dev": 17,
   "error": null
  },
@@ -13,8 +13,8 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2263,
-  "items_dev": 84,
+  "items_raw": 2160,
+  "items_dev": 73,
   "error": null
  },
  {
@@ -22,7 +22,7 @@
   "name": "Doral",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 444,
+  "items_raw": 453,
   "items_dev": 33,
   "error": null
  },
@@ -49,8 +49,8 @@
   "name": "Hialeah",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 321,
-  "items_dev": 47,
+  "items_raw": 328,
+  "items_dev": 51,
   "error": null
  },
  {
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1027,
+  "items_raw": 1029,
   "items_dev": 47,
   "error": null
  },
@@ -103,7 +103,7 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 942,
+  "items_raw": 949,
   "items_dev": 29,
   "error": null
  },
@@ -121,8 +121,8 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1452,
-  "items_dev": 33,
+  "items_raw": 1449,
+  "items_dev": 26,
   "error": null
  },
  {
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 964,
+  "items_raw": 976,
   "items_dev": 38,
   "error": null
  },
@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 195,
+  "items_raw": 196,
   "items_dev": 7,
   "error": null
  },
@@ -202,7 +202,7 @@
   "name": "Jupiter",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 231,
+  "items_raw": 229,
   "items_dev": 10,
   "error": null
  },
@@ -238,8 +238,8 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1396,
-  "items_dev": 60,
+  "items_raw": 1534,
+  "items_dev": 71,
   "error": null
  },
  {
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 315,
-  "items_dev": 87,
+  "items_raw": 296,
+  "items_dev": 80,
   "error": null
  },
  {
@@ -283,7 +283,7 @@
   "name": "St. Cloud",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 209,
+  "items_raw": 210,
   "items_dev": 55,
   "error": null
  },
@@ -337,7 +337,7 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1003,
+  "items_raw": 1004,
   "items_dev": 20,
   "error": null
  },
@@ -373,8 +373,8 @@
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 124,
-  "items_dev": 73,
+  "items_raw": 128,
+  "items_dev": 77,
   "error": null
  },
  {
