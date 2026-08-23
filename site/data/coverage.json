@@ -112,7 +112,7 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1235,
+  "items_raw": 1226,
   "items_dev": 30,
   "error": null
  },
@@ -130,7 +130,7 @@
   "name": "Miramar",
   "county": "Broward",
   "ok": true,
-  "items_raw": 569,
+  "items_raw": 528,
   "items_dev": 2,
   "error": null
  },
@@ -184,8 +184,8 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2403,
-  "items_dev": 64,
+  "items_raw": 2379,
+  "items_dev": 59,
   "error": null
  },
  {
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 919,
-  "items_dev": 52,
+  "items_raw": 899,
+  "items_dev": 47,
   "error": null
  },
  {
@@ -210,19 +210,19 @@
   "source_id": "boca-raton",
   "name": "Boca Raton",
   "county": "Palm Beach",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='bocaraton.granicus.com', port=443): Read timed out. (read timeout=20)"
+  "ok": true,
+  "items_raw": 391,
+  "items_dev": 9,
+  "error": null
  },
  {
   "source_id": "boynton-beach",
   "name": "Boynton Beach",
   "county": "Palm Beach",
-  "ok": false,
+  "ok": true,
   "items_raw": 0,
   "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='boynton-beach.granicus.com', port=443): Read timed out. (read timeout=20)"
+  "error": null
  },
  {
   "source_id": "royal-palm-beach",
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1292,
-  "items_dev": 211,
+  "items_raw": 1273,
+  "items_dev": 202,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 290,
+  "items_raw": 282,
   "items_dev": 0,
   "error": null
  },
@@ -274,7 +274,7 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 528,
+  "items_raw": 518,
   "items_dev": 31,
   "error": null
  },
@@ -310,8 +310,8 @@
   "name": "City of Orlando",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1025,
-  "items_dev": 31,
+  "items_raw": 909,
+  "items_dev": 26,
   "error": null
  },
  {
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 857,
-  "items_dev": 342,
+  "items_raw": 815,
+  "items_dev": 321,
   "error": null
  },
  {
@@ -390,9 +390,9 @@
   "source_id": "winter-haven",
   "name": "Winter Haven",
   "county": "Polk",
-  "ok": false,
+  "ok": true,
   "items_raw": 0,
   "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='winterhaven-fl.granicus.com', port=443): Read timed out. (read timeout=20)"
+  "error": null
  }
 ]
