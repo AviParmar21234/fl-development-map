@@ -4,7 +4,7 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 230,
+  "items_raw": 229,
   "items_dev": 17,
   "error": null
  },
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1075,
+  "items_raw": 1082,
   "items_dev": 47,
   "error": null
  },
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 981,
+  "items_raw": 941,
   "items_dev": 38,
   "error": null
  },
@@ -184,8 +184,8 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2379,
-  "items_dev": 59,
+  "items_raw": 2324,
+  "items_dev": 58,
   "error": null
  },
  {
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 899,
-  "items_dev": 47,
+  "items_raw": 867,
+  "items_dev": 42,
   "error": null
  },
  {
@@ -211,7 +211,7 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 391,
+  "items_raw": 369,
   "items_dev": 9,
   "error": null
  },
@@ -247,7 +247,7 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1273,
+  "items_raw": 1202,
   "items_dev": 202,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 76,
+  "items_raw": 96,
   "items_dev": 0,
   "error": null
  },
