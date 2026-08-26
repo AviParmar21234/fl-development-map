@@ -4,8 +4,8 @@
   "name": "City of Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 229,
-  "items_dev": 17,
+  "items_raw": 241,
+  "items_dev": 21,
   "error": null
  },
  {
@@ -13,8 +13,8 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2207,
-  "items_dev": 75,
+  "items_raw": 2087,
+  "items_dev": 72,
   "error": null
  },
  {
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1109,
+  "items_raw": 1132,
   "items_dev": 47,
   "error": null
  },
@@ -121,7 +121,7 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1446,
+  "items_raw": 1394,
   "items_dev": 26,
   "error": null
  },
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 922,
+  "items_raw": 943,
   "items_dev": 36,
   "error": null
  },
@@ -157,8 +157,8 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 196,
-  "items_dev": 7,
+  "items_raw": 205,
+  "items_dev": 16,
   "error": null
  },
  {
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2324,
+  "items_raw": 2279,
   "items_dev": 58,
   "error": null
  },
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 857,
-  "items_dev": 41,
+  "items_raw": 892,
+  "items_dev": 42,
   "error": null
  },
  {
@@ -211,8 +211,8 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 398,
-  "items_dev": 10,
+  "items_raw": 422,
+  "items_dev": 11,
   "error": null
  },
  {
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1534,
+  "items_raw": 1544,
   "items_dev": 70,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1202,
-  "items_dev": 202,
+  "items_raw": 1217,
+  "items_dev": 204,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 282,
+  "items_raw": 274,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 298,
-  "items_dev": 82,
+  "items_raw": 296,
+  "items_dev": 80,
   "error": null
  },
  {
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 815,
-  "items_dev": 321,
+  "items_raw": 817,
+  "items_dev": 355,
   "error": null
  },
  {
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1600,
-  "items_dev": 83,
+  "items_raw": 1578,
+  "items_dev": 84,
   "error": null
  },
  {
@@ -355,7 +355,7 @@
   "name": "Pinellas Park",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 567,
+  "items_raw": 540,
   "items_dev": 44,
   "error": null
  },
@@ -364,8 +364,8 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2270,
-  "items_dev": 119,
+  "items_raw": 2258,
+  "items_dev": 114,
   "error": null
  },
  {
@@ -373,8 +373,8 @@
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 128,
-  "items_dev": 77,
+  "items_raw": 126,
+  "items_dev": 76,
   "error": null
  },
  {
@@ -382,8 +382,8 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 742,
-  "items_dev": 66,
+  "items_raw": 741,
+  "items_dev": 57,
   "error": null
  },
  {
