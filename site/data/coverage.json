@@ -67,8 +67,8 @@
   "name": "North Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 460,
-  "items_dev": 91,
+  "items_raw": 475,
+  "items_dev": 92,
   "error": null
  },
  {
@@ -94,8 +94,8 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1117,
-  "items_dev": 47,
+  "items_raw": 1191,
+  "items_dev": 48,
   "error": null
  },
  {
@@ -103,8 +103,8 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1029,
-  "items_dev": 29,
+  "items_raw": 992,
+  "items_dev": 25,
   "error": null
  },
  {
@@ -112,8 +112,8 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1267,
-  "items_dev": 37,
+  "items_raw": 1342,
+  "items_dev": 38,
   "error": null
  },
  {
@@ -130,7 +130,7 @@
   "name": "Miramar",
   "county": "Broward",
   "ok": true,
-  "items_raw": 528,
+  "items_raw": 578,
   "items_dev": 2,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 910,
+  "items_raw": 956,
   "items_dev": 42,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1221,
-  "items_dev": 204,
+  "items_raw": 1246,
+  "items_dev": 211,
   "error": null
  },
  {
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 306,
-  "items_dev": 88,
+  "items_raw": 320,
+  "items_dev": 100,
   "error": null
  },
  {
@@ -274,8 +274,8 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 518,
-  "items_dev": 31,
+  "items_raw": 528,
+  "items_dev": 35,
   "error": null
  },
  {
@@ -319,7 +319,7 @@
   "name": "Altamonte Springs",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 154,
+  "items_raw": 152,
   "items_dev": 5,
   "error": null
  },
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2294,
+  "items_raw": 2292,
   "items_dev": 115,
   "error": null
  },
