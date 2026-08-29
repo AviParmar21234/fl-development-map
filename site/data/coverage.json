@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 283,
+  "items_raw": 275,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 320,
-  "items_dev": 100,
+  "items_raw": 297,
+  "items_dev": 92,
   "error": null
  },
  {
@@ -274,7 +274,7 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 528,
+  "items_raw": 537,
   "items_dev": 35,
   "error": null
  },
@@ -372,18 +372,18 @@
   "source_id": "hillsborough-dev-tracker",
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='maps.hillsboroughcounty.org', port=443): Read timed out. (read timeout=20)"
+  "ok": true,
+  "items_raw": 132,
+  "items_dev": 82,
+  "error": null
  },
  {
   "source_id": "tampa",
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 627,
-  "items_dev": 60,
+  "items_raw": 677,
+  "items_dev": 61,
   "error": null
  },
  {
