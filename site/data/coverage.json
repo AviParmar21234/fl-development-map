@@ -103,7 +103,7 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 992,
+  "items_raw": 997,
   "items_dev": 25,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2326,
+  "items_raw": 2276,
   "items_dev": 63,
   "error": null
  },
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1549,
+  "items_raw": 1542,
   "items_dev": 70,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 275,
+  "items_raw": 266,
   "items_dev": 0,
   "error": null
  },
@@ -283,7 +283,7 @@
   "name": "St. Cloud",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 211,
+  "items_raw": 209,
   "items_dev": 55,
   "error": null
  },
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1659,
-  "items_dev": 84,
+  "items_raw": 1587,
+  "items_dev": 78,
   "error": null
  },
  {
