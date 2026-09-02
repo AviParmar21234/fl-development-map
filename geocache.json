@@ -7,6 +7,10 @@
 "00032 TPD Howard Ave, Tampa, FL": null,
 "01-032 Curry Ford Road, , FL": null,
 "07-038 Oak Ridge Road, , FL": null,
+"1 East 52nd Place, Hialeah, FL": [
+25.870086267851,
+-80.283094538333
+],
 "1 OCEAN DRIVE, Miami Beach, FL": [
 25.768373300509,
 -80.133245756018
@@ -1079,6 +1083,10 @@
 26.347789425235,
 -80.086329284521
 ],
+"201-205 West 22nd Street, Hialeah, FL": [
+25.841873504245,
+-80.28621480661
+],
 "2017 Alhambra Circle, Coral Gables, FL": [
 25.752176634021,
 -80.284868682515
@@ -1749,6 +1757,10 @@
 25.806748462918,
 -80.137954445742
 ],
+"3011 East 8th Avenue, Hialeah, FL": [
+25.849982880319,
+-80.266343221504
+],
 "303 SE 7th Avenue, Delray Beach, FL": [
 26.456096854036,
 -80.065839314472
@@ -2289,6 +2301,10 @@
 28.752714314852,
 -81.550493188057
 ],
+"4698 East 9th Court, Hialeah, FL": [
+25.865487610862,
+-80.264513038693
+],
 "4710 W McElroy Avenue, Tampa, FL": [
 27.89230898463,
 -82.525025938856
@@ -2575,6 +2591,10 @@
 "574 East 21st Street, Hialeah, FL": [
 25.841115611288,
 -80.270504195878
+],
+"5757 ALTON ROAD, Miami Beach, FL": [
+25.837592319493,
+-80.130931795819
 ],
 "5757 WATERFORD DISTRICT DRIVE, North Miami, FL": null,
 "5819 Bear Lake Circle, , FL": [
@@ -3180,6 +3200,10 @@
 "9809 Harold Bedford Rd, , FL": [
 27.830907864566,
 -82.345282895507
+],
+"981 East 13th Street, Hialeah, FL": [
+25.834393938082,
+-80.262080667366
 ],
 "9916 Alafia Vista Dr, , FL": [
 27.853791364137,
