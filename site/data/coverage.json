@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2087,
+  "items_raw": 2076,
   "items_dev": 69,
   "error": null
  },
@@ -22,8 +22,8 @@
   "name": "Doral",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 466,
-  "items_dev": 33,
+  "items_raw": 542,
+  "items_dev": 37,
   "error": null
  },
  {
@@ -40,7 +40,7 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1504,
+  "items_raw": 1520,
   "items_dev": 75,
   "error": null
  },
@@ -67,7 +67,7 @@
   "name": "North Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 475,
+  "items_raw": 478,
   "items_dev": 92,
   "error": null
  },
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1085,
+  "items_raw": 1089,
   "items_dev": 44,
   "error": null
  },
@@ -103,7 +103,7 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 926,
+  "items_raw": 941,
   "items_dev": 24,
   "error": null
  },
@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 209,
+  "items_raw": 211,
   "items_dev": 16,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2248,
+  "items_raw": 2267,
   "items_dev": 63,
   "error": null
  },
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1542,
+  "items_raw": 1550,
   "items_dev": 70,
   "error": null
  },
@@ -247,7 +247,7 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1214,
+  "items_raw": 1224,
   "items_dev": 199,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 253,
+  "items_raw": 246,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 323,
-  "items_dev": 100,
+  "items_raw": 318,
+  "items_dev": 95,
   "error": null
  },
  {
@@ -274,7 +274,7 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 466,
+  "items_raw": 455,
   "items_dev": 36,
   "error": null
  },
@@ -283,7 +283,7 @@
   "name": "St. Cloud",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 209,
+  "items_raw": 211,
   "items_dev": 55,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 79,
+  "items_raw": 81,
   "items_dev": 0,
   "error": null
  },
@@ -364,8 +364,8 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2162,
-  "items_dev": 111,
+  "items_raw": 2169,
+  "items_dev": 112,
   "error": null
  },
  {
@@ -382,7 +382,7 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 677,
+  "items_raw": 679,
   "items_dev": 60,
   "error": null
  },
