@@ -1,35 +1,35 @@
 {
- "generated_at": "2026-09-03T14:05:27+00:00",
+ "generated_at": "2026-09-04T14:13:14+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 43,
-  "projects_mapped": 785,
-  "projects_unmapped": 947,
-  "multifamily": 262,
-  "sites": 644,
-  "mf_sites": 84,
-  "upcoming_sites": 101
+  "projects_mapped": 801,
+  "projects_unmapped": 980,
+  "multifamily": 277,
+  "sites": 649,
+  "mf_sites": 86,
+  "upcoming_sites": 118
  },
  "counties": {
   "Miami-Dade": {
    "sites": 91,
-   "mf": 22,
-   "upcoming": 11
+   "mf": 23,
+   "upcoming": 16
   },
   "Broward": {
-   "sites": 80,
+   "sites": 81,
    "mf": 24,
    "upcoming": 5
   },
   "Palm Beach": {
    "sites": 41,
    "mf": 12,
-   "upcoming": 3
+   "upcoming": 0
   },
   "Orange": {
-   "sites": 51,
-   "mf": 8,
-   "upcoming": 0
+   "sites": 53,
+   "mf": 9,
+   "upcoming": 3
   },
   "Seminole": {
    "sites": 88,
@@ -42,9 +42,9 @@
    "upcoming": 0
   },
   "Hillsborough": {
-   "sites": 230,
+   "sites": 233,
    "mf": 6,
-   "upcoming": 82
+   "upcoming": 94
   },
   "Pinellas": {
    "sites": 39,
@@ -52,7 +52,7 @@
    "upcoming": 0
   },
   "Polk": {
-   "sites": 18,
+   "sites": 17,
    "mf": 2,
    "upcoming": 0
   }
