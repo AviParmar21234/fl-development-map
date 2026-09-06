@@ -184,8 +184,8 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2289,
-  "items_dev": 63,
+  "items_raw": 2236,
+  "items_dev": 60,
   "error": null
  },
  {
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 912,
-  "items_dev": 42,
+  "items_raw": 889,
+  "items_dev": 36,
   "error": null
  },
  {
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 852,
-  "items_dev": 367,
+  "items_raw": 816,
+  "items_dev": 354,
   "error": null
  },
  {
