@@ -112,8 +112,8 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1214,
-  "items_dev": 36,
+  "items_raw": 1182,
+  "items_dev": 35,
   "error": null
  },
  {
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 977,
+  "items_raw": 939,
   "items_dev": 36,
   "error": null
  },
@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 211,
+  "items_raw": 207,
   "items_dev": 16,
   "error": null
  },
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 889,
-  "items_dev": 36,
+  "items_raw": 856,
+  "items_dev": 30,
   "error": null
  },
  {
@@ -238,8 +238,8 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1550,
-  "items_dev": 70,
+  "items_raw": 1399,
+  "items_dev": 59,
   "error": null
  },
  {
@@ -247,7 +247,7 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1225,
+  "items_raw": 1211,
   "items_dev": 199,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 82,
+  "items_raw": 75,
   "items_dev": 0,
   "error": null
  },
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 816,
-  "items_dev": 354,
+  "items_raw": 767,
+  "items_dev": 342,
   "error": null
  },
  {
