@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2092,
+  "items_raw": 2093,
   "items_dev": 70,
   "error": null
  },
@@ -22,8 +22,8 @@
   "name": "Doral",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 542,
-  "items_dev": 37,
+  "items_raw": 491,
+  "items_dev": 33,
   "error": null
  },
  {
@@ -40,7 +40,7 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1712,
+  "items_raw": 1713,
   "items_dev": 87,
   "error": null
  },
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1143,
+  "items_raw": 1141,
   "items_dev": 44,
   "error": null
  },
@@ -121,7 +121,7 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1494,
+  "items_raw": 1497,
   "items_dev": 29,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 856,
+  "items_raw": 843,
   "items_dev": 30,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1211,
-  "items_dev": 199,
+  "items_raw": 1260,
+  "items_dev": 200,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 273,
+  "items_raw": 271,
   "items_dev": 0,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 75,
+  "items_raw": 70,
   "items_dev": 0,
   "error": null
  },
@@ -364,8 +364,8 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2262,
-  "items_dev": 113,
+  "items_raw": 2313,
+  "items_dev": 120,
   "error": null
  },
  {
