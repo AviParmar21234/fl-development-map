@@ -112,7 +112,7 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1268,
+  "items_raw": 1270,
   "items_dev": 37,
   "error": null
  },
@@ -157,8 +157,8 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 208,
-  "items_dev": 16,
+  "items_raw": 233,
+  "items_dev": 18,
   "error": null
  },
  {
@@ -184,8 +184,8 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2278,
-  "items_dev": 60,
+  "items_raw": 2257,
+  "items_dev": 58,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 285,
+  "items_raw": 267,
   "items_dev": 0,
   "error": null
  },
@@ -283,7 +283,7 @@
   "name": "St. Cloud",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 194,
+  "items_raw": 193,
   "items_dev": 42,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 73,
+  "items_raw": 72,
   "items_dev": 0,
   "error": null
  },
@@ -310,8 +310,8 @@
   "name": "City of Orlando",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1062,
-  "items_dev": 28,
+  "items_raw": 946,
+  "items_dev": 27,
   "error": null
  },
  {
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2403,
+  "items_raw": 2373,
   "items_dev": 120,
   "error": null
  },
