@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-09-19T13:53:11+00:00",
+ "generated_at": "2026-09-20T14:18:10+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 43,
-  "projects_mapped": 782,
-  "projects_unmapped": 969,
+  "projects_mapped": 775,
+  "projects_unmapped": 960,
   "multifamily": 277,
-  "sites": 643,
+  "sites": 636,
   "mf_sites": 88,
   "upcoming_sites": 120
  },
@@ -32,7 +32,7 @@
    "upcoming": 4
   },
   "Seminole": {
-   "sites": 88,
+   "sites": 82,
    "mf": 5,
    "upcoming": 0
   },
@@ -42,7 +42,7 @@
    "upcoming": 0
   },
   "Hillsborough": {
-   "sites": 231,
+   "sites": 230,
    "mf": 6,
    "upcoming": 89
   },

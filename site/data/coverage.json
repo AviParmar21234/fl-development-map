@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2402,
+  "items_raw": 2372,
   "items_dev": 65,
   "error": null
  },
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 873,
-  "items_dev": 34,
+  "items_raw": 857,
+  "items_dev": 32,
   "error": null
  },
  {
@@ -211,8 +211,8 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 483,
-  "items_dev": 11,
+  "items_raw": 456,
+  "items_dev": 10,
   "error": null
  },
  {
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1268,
-  "items_dev": 197,
+  "items_raw": 1252,
+  "items_dev": 190,
   "error": null
  },
  {
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 824,
-  "items_dev": 332,
+  "items_raw": 771,
+  "items_dev": 304,
   "error": null
  },
  {
@@ -337,7 +337,7 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1174,
+  "items_raw": 1162,
   "items_dev": 20,
   "error": null
  },
