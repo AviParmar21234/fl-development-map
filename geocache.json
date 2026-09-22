@@ -32,6 +32,10 @@
 "10 and 11 of Court, Clearwater, FL": null,
 "100 FT N of E Dr, , FL": null,
 "100 South Point Drive, Hialeah, FL": null,
+"1000 Dunhurst Court, , FL": [
+28.713008952712,
+-81.389457859151
+],
 "10002 Alafia St, , FL": [
 27.85106507851,
 -82.37045896671
@@ -99,6 +103,10 @@
 "1021 New Jersey Avenue, , FL": [
 28.676771434179,
 -81.433361486872
+],
+"103 Mercury Street, , FL": [
+28.6732945,
+-81.357831
 ],
 "103 N East Ave, Clearwater, FL": [
 27.967298163759,
@@ -300,6 +308,10 @@
 27.770182725026,
 -82.307626976648
 ],
+"116 SW 5th Avenue, Delray Beach, FL": [
+26.459484054879,
+-80.078202195277
+],
 "11608 672 Hwy, , FL": [
 27.770190483359,
 -82.30563889117
@@ -307,6 +319,10 @@
 "11613 North Florida Avenue, Tampa, FL": [
 28.053878368679,
 -82.459312475761
+],
+"1171 Pine Street, , FL": [
+30.4549903,
+-84.2714556
 ],
 "118 Florida Avenue, Coral Gables, FL": [
 25.728116533646,
@@ -344,6 +360,10 @@
 "120 SW 3rd Avenue, Delray Beach, FL": [
 26.459421454907,
 -80.076156309415
+],
+"120 Spring Cove Trail, , FL": [
+28.646007388868,
+-81.392117934923
 ],
 "1200 Enderby Court, , FL": [
 28.658015845999,
@@ -491,6 +511,10 @@
 28.063957554,
 -82.463538640459
 ],
+"1274 Stratford Road, , FL": [
+28.641096649835,
+-81.340845872235
+],
 "12800 Pines Boulevard, Pembroke Pines, FL": [
 26.007552961421,
 -80.3175775284
@@ -574,6 +598,10 @@
 ],
 "1315 Jack Junction Road, Apopka, FL": null,
 "1315 Jack Junction Way, Apopka, FL": null,
+"1331 Boyer Street, , FL": [
+28.689992144663,
+-81.368127397223
+],
 "13315 Glen Harwell Rd, , FL": [
 28.025037507416,
 -82.215670304071
@@ -723,6 +751,10 @@
 27.9496753,
 -82.7736101
 ],
+"1515 N. Congress Avenue, Delray Beach, FL": [
+26.480995040428,
+-80.089735356669
+],
 "1530 Levante Avenue, Coral Gables, FL": [
 25.7109925715,
 -80.283433701385
@@ -818,6 +850,10 @@
 "1625 NW 107 AVE, Doral, FL": [
 25.788423377801,
 -80.368727089
+],
+"165 Grey Dove Court, , FL": [
+28.711828342554,
+-81.432276651039
 ],
 "1650 West 37 Street, Hialeah, FL": [
 25.85521899992,
@@ -977,6 +1013,10 @@
 "1788 Rock Springs Road, Apopka, FL": [
 28.710356215723,
 -81.509184820782
+],
+"1801 South Federal Highway, Delray Beach, FL": [
+26.43966004726,
+-80.071224745169
 ],
 "18015 Palm Breeze Dr, , FL": [
 28.143244575099,
@@ -1398,6 +1438,10 @@
 26.457310371311,
 -80.094219927786
 ],
+"220 W. Cottesmore Circle, , FL": [
+28.683143974764,
+-81.450765915337
+],
 "2200 Jackson Street, Hollywood, FL": [
 26.008758651036,
 -80.15097049155
@@ -1752,6 +1796,10 @@
 "2742 Polk Street, Hollywood, FL": [
 26.012234694473,
 -80.162137355309
+],
+"2774 Snow Goose Lane, , FL": [
+28.755254344639,
+-81.346104389235
 ],
 "28 Avenue, Aventura, FL": [
 25.9454962,
@@ -2283,6 +2331,10 @@
 28.756559812161,
 -81.576993627305
 ],
+"405 Tucker Drive, , FL": [
+28.750203782699,
+-81.279255561197
+],
 "4050 McNeil Road, , FL": [
 28.656375229282,
 -81.436558127471
@@ -2385,6 +2437,10 @@
 "426 and James Dr, , FL": null,
 "426 and Mystic Lake Dr, , FL": null,
 "426 and Slavia Rd, , FL": null,
+"4270 Shades Crest Lane, , FL": [
+28.747123515022,
+-81.273827064974
+],
 "4290 East 4th Avenue, Hialeah, FL": [
 25.861491463523,
 -80.274697243385
@@ -2737,6 +2793,10 @@
 "5520 Mendenhall Place, , FL": [
 28.830223875717,
 -81.340811337563
+],
+"5541 Howell Branch Road, , FL": [
+28.622205,
+-81.2837607
 ],
 "5585 E County Line Rd, , FL": [
 28.169936426027,
@@ -3192,6 +3252,10 @@
 "7747 Nature Trail, , FL": [
 28.142308431794,
 -81.92502386056
+],
+"777 East Atlantic Avenue, Delray Beach, FL": [
+26.461723982343,
+-80.06548365613
 ],
 "777 S Douglas Road, Pembroke Pines, FL": [
 26.003933857539,
