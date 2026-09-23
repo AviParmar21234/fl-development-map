@@ -7,6 +7,7 @@
 "00 TO FRIENDSHIP CIRCLE, Miami Beach, FL": null,
 "00032 TPD Howard Ave, Tampa, FL": null,
 "01-032 Curry Ford Road, , FL": null,
+"03-008 Duskin Avenue, , FL": null,
 "07-038 Oak Ridge Road, , FL": null,
 "1 East 52nd Place, Hialeah, FL": [
 25.870086267851,
@@ -519,6 +520,10 @@
 26.007552961421,
 -80.3175775284
 ],
+"1281 Beulah Road, , FL": [
+28.548964105963,
+-81.571571918778
+],
 "1281 Ray Charles Blvd, Tampa, FL": [
 27.955505,
 -82.4515958
@@ -811,6 +816,10 @@
 28.523225957804,
 -81.432382366769
 ],
+"1601-1607 North Franklin Street, Tampa, FL": [
+27.958507133572,
+-82.460111159693
+],
 "1604 Bonair Street, Clearwater, FL": [
 27.976147124831,
 -82.770938130196
@@ -1046,9 +1055,17 @@
 28.136067668595,
 -81.512264340473
 ],
+"1860 East Fowler Avenue, Tampa, FL": [
+28.054565454197,
+-82.439044680569
+],
 "18623 Dorman Rd, , FL": [
 27.842663270716,
 -82.180308312809
+],
+"18801 N Dale Mabry Hwy, , FL": [
+27.9956564,
+-82.5052979
 ],
 "18810 Pines Boulevard, Pembroke Pines, FL": [
 26.007454303166,
@@ -1337,6 +1354,10 @@
 29.4991966,
 -82.866908
 ],
+"210 East Fowler Ave, Tampa, FL": [
+28.05470809786,
+-82.457853329491
+],
 "210 North Vernon Avenue, Kissimmee, FL": [
 28.293763846556,
 -81.411079621275
@@ -1598,6 +1619,10 @@
 "2407 E 148th Ave, , FL": [
 28.084302498654,
 -82.431633351529
+],
+"2410 North Boulevard, Tampa, FL": [
+27.965232018537,
+-82.467736465376
 ],
 "2414 West State Street, Tampa, FL": [
 27.951303514565,
@@ -2117,6 +2142,10 @@
 25.754748526825,
 -80.252433274058
 ],
+"3541 North Boulevard, Tampa, FL": [
+27.976629058111,
+-82.467595826119
+],
 "3550 West State Road 46, , FL": [
 28.7341464,
 -81.1159972
@@ -2314,6 +2343,10 @@
 "4001 North Riverside Drive, Tampa, FL": [
 27.981586774089,
 -82.473364134234
+],
+"4002 Garden Ln, , FL": [
+27.981612813995,
+-82.356568250579
 ],
 "4002 North Dale Mabry Highway, Tampa, FL": [
 27.977915290862,
@@ -2543,6 +2576,10 @@
 "4698 East 9th Court, Hialeah, FL": [
 25.865487610862,
 -80.264513038693
+],
+"4707 East Henry Avenue, Tampa, FL": [
+27.9997309,
+-82.4099773
 ],
 "4710 W McElroy Avenue, Tampa, FL": [
 27.89230898463,
@@ -2790,6 +2827,10 @@
 27.831957763997,
 -82.708221263035
 ],
+"5519 Rawls Rd, , FL": [
+28.092220654695,
+-82.547534369671
+],
 "5520 Mendenhall Place, , FL": [
 28.830223875717,
 -81.340811337563
@@ -2852,6 +2893,10 @@
 -80.130931795819
 ],
 "5757 WATERFORD DISTRICT DRIVE, North Miami, FL": null,
+"5804 East Columbus Drive, Tampa, FL": [
+27.96684021272,
+-82.389234427003
+],
 "5819 Bear Lake Circle, , FL": [
 28.647204110128,
 -81.445860717297
@@ -2947,6 +2992,10 @@
 -80.278496417056
 ],
 "6100 North Ocean Drive, Hialeah, FL": null,
+"6105 Shirley Ave, , FL": [
+27.844872066202,
+-82.385458141746
+],
 "6106 Hartford St, , FL": [
 27.911941646488,
 -82.386528869388
@@ -2978,6 +3027,14 @@
 "6201 150th Avenue North, , FL": [
 27.908801306264,
 -82.721134512871
+],
+"6203 North Florida Avenue, Tampa, FL": [
+28.003449763252,
+-82.459399097279
+],
+"6207 South Dale Mabry Highway, Tampa, FL": [
+27.877911046436,
+-82.506550121345
 ],
 "621 NE 1 Ave, Pompano Beach, FL": [
 26.237573030255,
