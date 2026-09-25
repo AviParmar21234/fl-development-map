@@ -4,6 +4,10 @@
 -81.4007761
 ],
 "0 Soapberry Avenue, Apopka, FL": null,
+"0 Zepher Lily Avenue, Apopka, FL": [
+28.7665778,
+-81.5865217
+],
 "00 TO FRIENDSHIP CIRCLE, Miami Beach, FL": null,
 "00032 TPD Howard Ave, Tampa, FL": null,
 "01-032 Curry Ford Road, , FL": null,
@@ -76,6 +80,10 @@
 "1010 SW 196 Avenue, Pembroke Pines, FL": [
 25.998281396748,
 -80.408673924198
+],
+"10139 Bryant Rd, , FL": [
+27.856833470243,
+-82.17033148747
 ],
 "1014 Eckles Dr, , FL": [
 28.057962335748,
@@ -296,6 +304,10 @@
 "1139 Venetia Avenue, Coral Gables, FL": [
 25.758675741209,
 -80.278608629573
+],
+"11402 Mcmullen Rd, , FL": [
+27.833452293701,
+-82.301878806814
 ],
 "1144 Milan Avenue, Coral Gables, FL": [
 25.756907214053,
@@ -618,6 +630,10 @@
 "13400 Pine Street, , FL": [
 28.069015860963,
 -82.422955093691
+],
+"13520 Prestige Pl, , FL": [
+28.03445606898,
+-82.641722460343
 ],
 "136 Avenue, , FL": [
 29.3014678,
@@ -1035,6 +1051,10 @@
 26.9852539,
 -80.0921381
 ],
+"1829 and 1839 Plymouth Sorrento Road, Apopka, FL": [
+28.711783160699,
+-81.5574248846
+],
 "1831-1857 Jackson Street, Hollywood, FL": [
 26.008783865516,
 -80.144103249374
@@ -1127,6 +1147,10 @@
 "19200 W. Country Club Drive, Aventura, FL": [
 25.952497562873,
 -80.138563052447
+],
+"19223 Ridgelake Dr, , FL": [
+28.154326099326,
+-82.436059454543
 ],
 "19297 3448 Charles Avenue, Miami, FL": [
 25.725516801655,
@@ -1325,6 +1349,10 @@
 "2026-7 Chambers Street, , FL": [
 24.5631271,
 -81.7893911
+],
+"205 E. Bearss Ave, , FL": [
+28.087980360782,
+-82.458302945661
 ],
 "205 South Fremont Avenue, Tampa, FL": [
 27.943191593974,
@@ -2468,6 +2496,10 @@
 28.113475282513,
 -82.032260090599
 ],
+"424 19th Ave NE, , FL": [
+27.7363386,
+-82.4286925
+],
 "426 and James Dr, , FL": null,
 "426 and Mystic Lake Dr, , FL": null,
 "426 and Slavia Rd, , FL": null,
@@ -2487,6 +2519,10 @@
 "4301 NE 11 Ave, Pompano Beach, FL": [
 26.283714798668,
 -80.108881982347
+],
+"4302 Gulfwinds Dr, , FL": [
+28.136463687808,
+-82.509981819044
 ],
 "4304 North 26th Street, Tampa, FL": [
 27.984458869755,
@@ -3444,6 +3480,7 @@
 28.026925704438,
 -82.552691685729
 ],
+"8501 Vijay Patel Ct, , FL": null,
 "851 Barr Street, , FL": [
 28.68365548004,
 -81.159460386497
@@ -3488,6 +3525,10 @@
 "905 Stanberry Rd, , FL": [
 27.924869266379,
 -82.290789242279
+],
+"908 Engman Street, Clearwater, FL": [
+27.978683199824,
+-82.794398239048
 ],
 "9107 Memorial Hwy, , FL": [
 28.001477243987,
@@ -3534,6 +3575,10 @@
 -80.13864521339
 ],
 "951 South Andrews Avenue 10, Pompano Beach, FL": null,
+"951 South Andrews Avenue, , FL": [
+26.110823484044,
+-80.143144866045
+],
 "951 South Highland Avenue, Apopka, FL": [
 28.66608726104,
 -81.505197904614
