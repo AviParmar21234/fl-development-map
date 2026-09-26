@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2087,
+  "items_raw": 2089,
   "items_dev": 73,
   "error": null
  },
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1181,
+  "items_raw": 1182,
   "items_dev": 45,
   "error": null
  },
@@ -185,7 +185,7 @@
   "county": "Palm Beach",
   "ok": true,
   "items_raw": 2295,
-  "items_dev": 68,
+  "items_dev": 67,
   "error": null
  },
  {
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1185,
-  "items_dev": 199,
+  "items_raw": 1194,
+  "items_dev": 204,
   "error": null
  },
  {
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 312,
-  "items_dev": 96,
+  "items_raw": 313,
+  "items_dev": 97,
   "error": null
  },
  {
@@ -364,26 +364,26 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2299,
-  "items_dev": 125,
+  "items_raw": 2300,
+  "items_dev": 124,
   "error": null
  },
  {
   "source_id": "hillsborough-dev-tracker",
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='maps.hillsboroughcounty.org', port=443): Read timed out. (read timeout=20)"
+  "ok": true,
+  "items_raw": 142,
+  "items_dev": 86,
+  "error": null
  },
  {
   "source_id": "tampa",
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 628,
-  "items_dev": 72,
+  "items_raw": 695,
+  "items_dev": 81,
   "error": null
  },
  {
