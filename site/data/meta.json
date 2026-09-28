@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-09-27T15:22:43+00:00",
+ "generated_at": "2026-09-28T18:18:50+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 44,
   "projects_mapped": 819,
-  "projects_unmapped": 986,
-  "multifamily": 275,
-  "sites": 671,
-  "mf_sites": 85,
-  "upcoming_sites": 134
+  "projects_unmapped": 997,
+  "multifamily": 277,
+  "sites": 670,
+  "mf_sites": 86,
+  "upcoming_sites": 136
  },
  "counties": {
   "Miami-Dade": {
@@ -52,9 +52,9 @@
    "upcoming": 3
   },
   "Polk": {
-   "sites": 19,
-   "mf": 2,
-   "upcoming": 0
+   "sites": 18,
+   "mf": 3,
+   "upcoming": 2
   }
  }
 }
