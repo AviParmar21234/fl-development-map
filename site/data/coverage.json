@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2093,
+  "items_raw": 2095,
   "items_dev": 73,
   "error": null
  },
@@ -40,7 +40,7 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1642,
+  "items_raw": 1648,
   "items_dev": 83,
   "error": null
  },
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1182,
+  "items_raw": 1180,
   "items_dev": 45,
   "error": null
  },
@@ -112,8 +112,8 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1218,
-  "items_dev": 38,
+  "items_raw": 1258,
+  "items_dev": 43,
   "error": null
  },
  {
@@ -130,7 +130,7 @@
   "name": "Miramar",
   "county": "Broward",
   "ok": true,
-  "items_raw": 568,
+  "items_raw": 527,
   "items_dev": 1,
   "error": null
  },
@@ -139,8 +139,8 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 999,
-  "items_dev": 41,
+  "items_raw": 1008,
+  "items_dev": 40,
   "error": null
  },
  {
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2291,
+  "items_raw": 2306,
   "items_dev": 67,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1195,
-  "items_dev": 205,
+  "items_raw": 1164,
+  "items_dev": 193,
   "error": null
  },
  {
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2347,
+  "items_raw": 2316,
   "items_dev": 135,
   "error": null
  },
