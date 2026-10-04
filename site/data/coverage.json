@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2106,
+  "items_raw": 2109,
   "items_dev": 76,
   "error": null
  },
@@ -103,7 +103,7 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1120,
+  "items_raw": 1137,
   "items_dev": 35,
   "error": null
  },
@@ -112,7 +112,7 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1363,
+  "items_raw": 1276,
   "items_dev": 46,
   "error": null
  },
@@ -121,7 +121,7 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1564,
+  "items_raw": 1554,
   "items_dev": 32,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2350,
+  "items_raw": 2334,
   "items_dev": 69,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 245,
+  "items_raw": 220,
   "items_dev": 0,
   "error": null
  },
@@ -310,8 +310,8 @@
   "name": "City of Orlando",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1074,
-  "items_dev": 28,
+  "items_raw": 958,
+  "items_dev": 26,
   "error": null
  },
  {
@@ -390,9 +390,9 @@
   "source_id": "winter-haven",
   "name": "Winter Haven",
   "county": "Polk",
-  "ok": false,
+  "ok": true,
   "items_raw": 0,
   "items_dev": 0,
-  "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://winterhaven-fl.granicus.com/ViewPublisher.php?view_id=1"
+  "error": null
  }
 ]

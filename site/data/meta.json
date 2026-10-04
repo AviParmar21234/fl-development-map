@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-10-03T15:00:40+00:00",
+ "generated_at": "2026-10-04T15:29:40+00:00",
  "totals": {
   "sources_attempted": 44,
-  "sources_ok": 43,
+  "sources_ok": 44,
   "projects_mapped": 833,
-  "projects_unmapped": 1051,
-  "multifamily": 296,
+  "projects_unmapped": 1049,
+  "multifamily": 295,
   "sites": 683,
   "mf_sites": 94,
   "upcoming_sites": 136
