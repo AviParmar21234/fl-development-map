@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2128,
+  "items_raw": 2140,
   "items_dev": 76,
   "error": null
  },
@@ -40,8 +40,8 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1590,
-  "items_dev": 81,
+  "items_raw": 1785,
+  "items_dev": 99,
   "error": null
  },
  {
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1242,
+  "items_raw": 1241,
   "items_dev": 45,
   "error": null
  },
@@ -103,7 +103,7 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1091,
+  "items_raw": 1104,
   "items_dev": 34,
   "error": null
  },
@@ -112,8 +112,8 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1276,
-  "items_dev": 46,
+  "items_raw": 1297,
+  "items_dev": 48,
   "error": null
  },
  {
@@ -121,7 +121,7 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1555,
+  "items_raw": 1556,
   "items_dev": 32,
   "error": null
  },
@@ -139,8 +139,8 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 994,
-  "items_dev": 39,
+  "items_raw": 1049,
+  "items_dev": 47,
   "error": null
  },
  {
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 854,
-  "items_dev": 30,
+  "items_raw": 858,
+  "items_dev": 32,
   "error": null
  },
  {
@@ -247,7 +247,7 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1265,
+  "items_raw": 1280,
   "items_dev": 203,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 237,
+  "items_raw": 245,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 334,
-  "items_dev": 103,
+  "items_raw": 330,
+  "items_dev": 100,
   "error": null
  },
  {
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 74,
+  "items_raw": 75,
   "items_dev": 0,
   "error": null
  },
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 871,
-  "items_dev": 360,
+  "items_dev": 359,
   "error": null
  },
  {
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1732,
-  "items_dev": 86,
+  "items_raw": 1740,
+  "items_dev": 87,
   "error": null
  },
  {
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2199,
+  "items_raw": 2269,
   "items_dev": 128,
   "error": null
  },
