@@ -13,8 +13,8 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2140,
-  "items_dev": 76,
+  "items_raw": 2207,
+  "items_dev": 66,
   "error": null
  },
  {
@@ -40,7 +40,7 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1785,
+  "items_raw": 1787,
   "items_dev": 99,
   "error": null
  },
@@ -49,7 +49,7 @@
   "name": "Hialeah",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 314,
+  "items_raw": 309,
   "items_dev": 52,
   "error": null
  },
@@ -94,8 +94,8 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1241,
-  "items_dev": 45,
+  "items_raw": 1291,
+  "items_dev": 51,
   "error": null
  },
  {
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1049,
+  "items_raw": 1050,
   "items_dev": 47,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 858,
+  "items_raw": 870,
   "items_dev": 32,
   "error": null
  },
@@ -229,7 +229,7 @@
   "name": "Royal Palm Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 103,
+  "items_raw": 93,
   "items_dev": 0,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 245,
+  "items_raw": 244,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 330,
-  "items_dev": 100,
+  "items_raw": 334,
+  "items_dev": 104,
   "error": null
  },
  {
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 75,
+  "items_raw": 77,
   "items_dev": 0,
   "error": null
  },
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 871,
-  "items_dev": 359,
+  "items_dev": 348,
   "error": null
  },
  {
@@ -373,8 +373,8 @@
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 136,
-  "items_dev": 75,
+  "items_raw": 138,
+  "items_dev": 76,
   "error": null
  },
  {
@@ -382,8 +382,8 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 644,
-  "items_dev": 75,
+  "items_raw": 632,
+  "items_dev": 63,
   "error": null
  },
  {
