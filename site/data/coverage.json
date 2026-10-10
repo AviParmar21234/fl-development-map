@@ -40,8 +40,8 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1787,
-  "items_dev": 99,
+  "items_raw": 1792,
+  "items_dev": 104,
   "error": null
  },
  {
@@ -49,8 +49,8 @@
   "name": "Hialeah",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 309,
-  "items_dev": 52,
+  "items_raw": 343,
+  "items_dev": 49,
   "error": null
  },
  {
@@ -85,8 +85,8 @@
   "name": "Aventura",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1829,
-  "items_dev": 138,
+  "items_raw": 1429,
+  "items_dev": 106,
   "error": null
  },
  {
@@ -104,7 +104,7 @@
   "county": "Broward",
   "ok": true,
   "items_raw": 1104,
-  "items_dev": 34,
+  "items_dev": 36,
   "error": null
  },
  {
@@ -202,7 +202,7 @@
   "name": "Jupiter",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 220,
+  "items_raw": 225,
   "items_dev": 13,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1280,
-  "items_dev": 203,
+  "items_raw": 1296,
+  "items_dev": 214,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 244,
+  "items_raw": 255,
   "items_dev": 0,
   "error": null
  },
@@ -274,8 +274,8 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 641,
-  "items_dev": 42,
+  "items_raw": 633,
+  "items_dev": 39,
   "error": null
  },
  {
@@ -292,7 +292,7 @@
   "name": "Lake County",
   "county": "Lake",
   "ok": true,
-  "items_raw": 295,
+  "items_raw": 329,
   "items_dev": 4,
   "error": null
  },
@@ -382,8 +382,8 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 632,
-  "items_dev": 63,
+  "items_raw": 725,
+  "items_dev": 73,
   "error": null
  },
  {
