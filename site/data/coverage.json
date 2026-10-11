@@ -112,7 +112,7 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1297,
+  "items_raw": 1288,
   "items_dev": 48,
   "error": null
  },
@@ -193,8 +193,8 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 870,
-  "items_dev": 32,
+  "items_raw": 847,
+  "items_dev": 30,
   "error": null
  },
  {
@@ -211,8 +211,8 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 484,
-  "items_dev": 12,
+  "items_raw": 452,
+  "items_dev": 11,
   "error": null
  },
  {
@@ -238,8 +238,8 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1562,
-  "items_dev": 67,
+  "items_raw": 1547,
+  "items_dev": 66,
   "error": null
  },
  {
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 871,
-  "items_dev": 348,
+  "items_raw": 834,
+  "items_dev": 334,
   "error": null
  },
  {
