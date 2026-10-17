@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2222,
+  "items_raw": 2219,
   "items_dev": 70,
   "error": null
  },
@@ -40,7 +40,7 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1589,
+  "items_raw": 1595,
   "items_dev": 96,
   "error": null
  },
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1180,
+  "items_raw": 1181,
   "items_dev": 43,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2290,
+  "items_raw": 2318,
   "items_dev": 70,
   "error": null
  },
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1567,
+  "items_raw": 1569,
   "items_dev": 66,
   "error": null
  },
@@ -247,7 +247,7 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1263,
+  "items_raw": 1230,
   "items_dev": 211,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 242,
+  "items_raw": 226,
   "items_dev": 0,
   "error": null
  },
@@ -265,7 +265,7 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 340,
+  "items_raw": 370,
   "items_dev": 102,
   "error": null
  },
@@ -337,7 +337,7 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1158,
+  "items_raw": 1160,
   "items_dev": 20,
   "error": null
  },
@@ -346,7 +346,7 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1769,
+  "items_raw": 1775,
   "items_dev": 89,
   "error": null
  },
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2329,
+  "items_raw": 2332,
   "items_dev": 137,
   "error": null
  },
@@ -372,18 +372,18 @@
   "source_id": "hillsborough-dev-tracker",
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
-  "ok": false,
-  "items_raw": 0,
-  "items_dev": 0,
-  "error": "ReadTimeout: HTTPSConnectionPool(host='maps.hillsboroughcounty.org', port=443): Read timed out. (read timeout=20)"
+  "ok": true,
+  "items_raw": 129,
+  "items_dev": 73,
+  "error": null
  },
  {
   "source_id": "tampa",
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 729,
-  "items_dev": 66,
+  "items_raw": 740,
+  "items_dev": 69,
   "error": null
  },
  {
