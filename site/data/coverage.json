@@ -184,8 +184,8 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2318,
-  "items_dev": 70,
+  "items_raw": 2295,
+  "items_dev": 68,
   "error": null
  },
  {
@@ -310,7 +310,7 @@
   "name": "City of Orlando",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1056,
+  "items_raw": 967,
   "items_dev": 28,
   "error": null
  },
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1775,
-  "items_dev": 89,
+  "items_raw": 1698,
+  "items_dev": 87,
   "error": null
  },
  {
