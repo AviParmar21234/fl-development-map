@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-10-18T14:01:05+00:00",
+ "generated_at": "2026-10-19T17:09:02+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 43,
-  "projects_mapped": 817,
-  "projects_unmapped": 1026,
-  "multifamily": 301,
-  "sites": 670,
-  "mf_sites": 92,
+  "projects_mapped": 809,
+  "projects_unmapped": 1007,
+  "multifamily": 298,
+  "sites": 666,
+  "mf_sites": 91,
   "upcoming_sites": 104
  },
  "counties": {
@@ -47,8 +47,8 @@
    "upcoming": 76
   },
   "Pinellas": {
-   "sites": 38,
-   "mf": 5,
+   "sites": 34,
+   "mf": 4,
    "upcoming": 1
   },
   "Polk": {
