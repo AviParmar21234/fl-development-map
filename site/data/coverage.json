@@ -13,8 +13,8 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2126,
-  "items_dev": 60,
+  "items_raw": 2235,
+  "items_dev": 67,
   "error": null
  },
  {
@@ -40,8 +40,8 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1623,
-  "items_dev": 97,
+  "items_raw": 1612,
+  "items_dev": 98,
   "error": null
  },
  {
@@ -85,7 +85,7 @@
   "name": "Aventura",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1429,
+  "items_raw": 1424,
   "items_dev": 106,
   "error": null
  },
@@ -112,7 +112,7 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1250,
+  "items_raw": 1249,
   "items_dev": 45,
   "error": null
  },
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 934,
+  "items_raw": 979,
   "items_dev": 45,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2271,
+  "items_raw": 2272,
   "items_dev": 69,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 226,
+  "items_raw": 243,
   "items_dev": 0,
   "error": null
  },
@@ -292,7 +292,7 @@
   "name": "Lake County",
   "county": "Lake",
   "ok": true,
-  "items_raw": 344,
+  "items_raw": 304,
   "items_dev": 4,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 75,
+  "items_raw": 76,
   "items_dev": 0,
   "error": null
  },
@@ -310,7 +310,7 @@
   "name": "City of Orlando",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1062,
+  "items_raw": 1066,
   "items_dev": 30,
   "error": null
  },
@@ -390,9 +390,9 @@
   "source_id": "winter-haven",
   "name": "Winter Haven",
   "county": "Polk",
-  "ok": false,
+  "ok": true,
   "items_raw": 0,
   "items_dev": 0,
-  "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+  "error": null
  }
 ]
