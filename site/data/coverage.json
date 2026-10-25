@@ -175,7 +175,7 @@
   "name": "Palm Beach County",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 53,
+  "items_raw": 0,
   "items_dev": 0,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 799,
+  "items_raw": 791,
   "items_dev": 29,
   "error": null
  },
@@ -211,7 +211,7 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 482,
+  "items_raw": 449,
   "items_dev": 10,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1285,
-  "items_dev": 214,
+  "items_raw": 1267,
+  "items_dev": 205,
   "error": null
  },
  {
@@ -292,7 +292,7 @@
   "name": "Lake County",
   "county": "Lake",
   "ok": true,
-  "items_raw": 304,
+  "items_raw": 333,
   "items_dev": 4,
   "error": null
  },
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 882,
-  "items_dev": 349,
+  "items_raw": 831,
+  "items_dev": 321,
   "error": null
  },
  {
