@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2171,
+  "items_raw": 2173,
   "items_dev": 61,
   "error": null
  },
@@ -40,7 +40,7 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1615,
+  "items_raw": 1612,
   "items_dev": 99,
   "error": null
  },
@@ -94,8 +94,8 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1126,
-  "items_dev": 39,
+  "items_raw": 1205,
+  "items_dev": 50,
   "error": null
  },
  {
@@ -103,7 +103,7 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 983,
+  "items_raw": 1036,
   "items_dev": 28,
   "error": null
  },
@@ -112,8 +112,8 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1305,
-  "items_dev": 47,
+  "items_raw": 1373,
+  "items_dev": 49,
   "error": null
  },
  {
@@ -121,8 +121,8 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1497,
-  "items_dev": 36,
+  "items_raw": 1566,
+  "items_dev": 37,
   "error": null
  },
  {
@@ -130,7 +130,7 @@
   "name": "Miramar",
   "county": "Broward",
   "ok": true,
-  "items_raw": 554,
+  "items_raw": 608,
   "items_dev": 2,
   "error": null
  },
@@ -202,7 +202,7 @@
   "name": "Jupiter",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 219,
+  "items_raw": 230,
   "items_dev": 10,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1273,
-  "items_dev": 205,
+  "items_raw": 1226,
+  "items_dev": 204,
   "error": null
  },
  {
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 381,
-  "items_dev": 102,
+  "items_raw": 383,
+  "items_dev": 105,
   "error": null
  },
  {
@@ -274,7 +274,7 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 654,
+  "items_raw": 746,
   "items_dev": 47,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 73,
+  "items_raw": 74,
   "items_dev": 0,
   "error": null
  },
@@ -346,7 +346,7 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1674,
+  "items_raw": 1687,
   "items_dev": 102,
   "error": null
  },
@@ -364,7 +364,7 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2349,
+  "items_raw": 2368,
   "items_dev": 129,
   "error": null
  },
@@ -372,10 +372,10 @@
   "source_id": "hillsborough-dev-tracker",
   "name": "Hillsborough County Zoning Applications",
   "county": "Hillsborough",
-  "ok": true,
-  "items_raw": 152,
-  "items_dev": 92,
-  "error": null
+  "ok": false,
+  "items_raw": 0,
+  "items_dev": 0,
+  "error": "ReadTimeout: HTTPSConnectionPool(host='maps.hillsboroughcounty.org', port=443): Read timed out. (read timeout=20)"
  },
  {
   "source_id": "tampa",
