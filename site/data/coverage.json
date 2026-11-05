@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2139,
+  "items_raw": 2141,
   "items_dev": 48,
   "error": null
  },
@@ -121,8 +121,8 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1503,
-  "items_dev": 37,
+  "items_raw": 1527,
+  "items_dev": 39,
   "error": null
  },
  {
@@ -130,7 +130,7 @@
   "name": "Miramar",
   "county": "Broward",
   "ok": true,
-  "items_raw": 561,
+  "items_raw": 554,
   "items_dev": 2,
   "error": null
  },
@@ -139,7 +139,7 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 941,
+  "items_raw": 982,
   "items_dev": 47,
   "error": null
  },
@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 228,
+  "items_raw": 229,
   "items_dev": 24,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2211,
+  "items_raw": 2220,
   "items_dev": 67,
   "error": null
  },
@@ -247,7 +247,7 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1289,
+  "items_raw": 1290,
   "items_dev": 204,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 234,
+  "items_raw": 236,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 383,
-  "items_dev": 105,
+  "items_raw": 370,
+  "items_dev": 103,
   "error": null
  },
  {
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 73,
+  "items_raw": 75,
   "items_dev": 0,
   "error": null
  },
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 880,
-  "items_dev": 379,
+  "items_dev": 373,
   "error": null
  },
  {
@@ -337,8 +337,8 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1018,
-  "items_dev": 16,
+  "items_raw": 1134,
+  "items_dev": 18,
   "error": null
  },
  {
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1606,
-  "items_dev": 88,
+  "items_raw": 1623,
+  "items_dev": 89,
   "error": null
  },
  {
@@ -382,8 +382,8 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 673,
-  "items_dev": 54,
+  "items_raw": 677,
+  "items_dev": 55,
   "error": null
  },
  {
