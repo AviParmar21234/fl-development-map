@@ -9,6 +9,7 @@
 -81.5865217
 ],
 "00 TO FRIENDSHIP CIRCLE, Miami Beach, FL": null,
+"000 from the St, St. Cloud, FL": null,
 "00032 TPD Howard Ave, Tampa, FL": null,
 "01-032 Curry Ford Road, , FL": null,
 "03-008 Duskin Avenue, , FL": null,
@@ -64,6 +65,10 @@
 "1008 Alhambra Circle, Coral Gables, FL": [
 25.754086282104,
 -80.275415593393
+],
+"1008 E Ponce de Leon Boulevard, Coral Gables, FL": [
+25.762041928639,
+-80.257650771291
 ],
 "1008 W. La Salle Street, Tampa, FL": [
 27.954802778386,
@@ -775,6 +780,10 @@
 "13318 Jaudon Ranch Rd, , FL": [
 27.97621911115,
 -82.236681332885
+],
+"1340 South Narcoosee Road, St. Cloud, FL": [
+28.270775053843,
+-81.242195064163
 ],
 "13400 Pine Street, , FL": [
 28.069015860963,
@@ -2180,6 +2189,10 @@
 "2820 Jacana Ct, , FL": [
 28.740348769924,
 -81.387867886989
+],
+"283 Catalonia Avenue, Coral Gables, FL": [
+25.744762880177,
+-80.260120598043
 ],
 "2830 De Soto Boulevard 1, Coral Gables, FL": [
 25.744931705114,

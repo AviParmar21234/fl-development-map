@@ -13,8 +13,8 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2141,
-  "items_dev": 48,
+  "items_raw": 2142,
+  "items_dev": 50,
   "error": null
  },
  {
@@ -49,7 +49,7 @@
   "name": "Hialeah",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 323,
+  "items_raw": 338,
   "items_dev": 33,
   "error": null
  },
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1178,
+  "items_raw": 1184,
   "items_dev": 50,
   "error": null
  },
@@ -112,7 +112,7 @@
   "name": "Hollywood",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1276,
+  "items_raw": 1277,
   "items_dev": 46,
   "error": null
  },
@@ -121,7 +121,7 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1527,
+  "items_raw": 1528,
   "items_dev": 39,
   "error": null
  },
@@ -157,8 +157,8 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 229,
-  "items_dev": 24,
+  "items_raw": 251,
+  "items_dev": 27,
   "error": null
  },
  {
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1570,
+  "items_raw": 1585,
   "items_dev": 62,
   "error": null
  },
@@ -247,7 +247,7 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1290,
+  "items_raw": 1302,
   "items_dev": 204,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 236,
+  "items_raw": 273,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 370,
-  "items_dev": 103,
+  "items_raw": 386,
+  "items_dev": 108,
   "error": null
  },
  {
@@ -283,8 +283,8 @@
   "name": "St. Cloud",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 183,
-  "items_dev": 50,
+  "items_raw": 229,
+  "items_dev": 65,
   "error": null
  },
  {
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 880,
-  "items_dev": 373,
+  "items_dev": 368,
   "error": null
  },
  {
