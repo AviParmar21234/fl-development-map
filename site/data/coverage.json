@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 251,
+  "items_raw": 253,
   "items_dev": 27,
   "error": null
  },
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2220,
+  "items_raw": 2146,
   "items_dev": 67,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 846,
+  "items_raw": 814,
   "items_dev": 32,
   "error": null
  },
@@ -211,8 +211,8 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 486,
-  "items_dev": 12,
+  "items_raw": 451,
+  "items_dev": 10,
   "error": null
  },
  {
@@ -274,7 +274,7 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 760,
+  "items_raw": 751,
   "items_dev": 47,
   "error": null
  },
@@ -310,7 +310,7 @@
   "name": "City of Orlando",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1161,
+  "items_raw": 1050,
   "items_dev": 32,
   "error": null
  },
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 880,
-  "items_dev": 368,
+  "items_raw": 841,
+  "items_dev": 348,
   "error": null
  },
  {

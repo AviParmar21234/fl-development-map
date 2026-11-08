@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-07T16:09:40+00:00",
+ "generated_at": "2026-11-08T16:31:18+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 43,
-  "projects_mapped": 849,
-  "projects_unmapped": 1054,
-  "multifamily": 315,
-  "sites": 692,
-  "mf_sites": 93,
+  "projects_mapped": 838,
+  "projects_unmapped": 1045,
+  "multifamily": 313,
+  "sites": 681,
+  "mf_sites": 92,
   "upcoming_sites": 137
  },
  "counties": {
@@ -22,8 +22,8 @@
    "upcoming": 6
   },
   "Palm Beach": {
-   "sites": 48,
-   "mf": 17,
+   "sites": 47,
+   "mf": 16,
    "upcoming": 1
   },
   "Orange": {
@@ -42,7 +42,7 @@
    "upcoming": 1
   },
   "Hillsborough": {
-   "sites": 264,
+   "sites": 254,
    "mf": 3,
    "upcoming": 115
   },
