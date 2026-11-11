@@ -13,8 +13,8 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2163,
-  "items_dev": 50,
+  "items_raw": 2168,
+  "items_dev": 51,
   "error": null
  },
  {
@@ -22,8 +22,8 @@
   "name": "Doral",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 395,
-  "items_dev": 31,
+  "items_raw": 466,
+  "items_dev": 32,
   "error": null
  },
  {
@@ -40,8 +40,8 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1666,
-  "items_dev": 101,
+  "items_raw": 1708,
+  "items_dev": 99,
   "error": null
  },
  {
@@ -67,8 +67,8 @@
   "name": "North Miami",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 606,
-  "items_dev": 119,
+  "items_raw": 690,
+  "items_dev": 123,
   "error": null
  },
  {
@@ -103,7 +103,7 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 967,
+  "items_raw": 973,
   "items_dev": 25,
   "error": null
  },
@@ -121,8 +121,8 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1536,
-  "items_dev": 40,
+  "items_raw": 1504,
+  "items_dev": 32,
   "error": null
  },
  {
@@ -157,8 +157,8 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 254,
-  "items_dev": 27,
+  "items_raw": 273,
+  "items_dev": 29,
   "error": null
  },
  {
@@ -184,8 +184,8 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2167,
-  "items_dev": 70,
+  "items_raw": 2268,
+  "items_dev": 75,
   "error": null
  },
  {
@@ -202,8 +202,8 @@
   "name": "Jupiter",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 231,
-  "items_dev": 11,
+  "items_raw": 246,
+  "items_dev": 13,
   "error": null
  },
  {
@@ -211,7 +211,7 @@
   "name": "Boca Raton",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 448,
+  "items_raw": 468,
   "items_dev": 9,
   "error": null
  },
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1585,
+  "items_raw": 1566,
   "items_dev": 62,
   "error": null
  },
@@ -247,7 +247,7 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1213,
+  "items_raw": 1196,
   "items_dev": 191,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 281,
+  "items_raw": 271,
   "items_dev": 0,
   "error": null
  },
@@ -274,8 +274,8 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 751,
-  "items_dev": 47,
+  "items_raw": 753,
+  "items_dev": 45,
   "error": null
  },
  {
@@ -283,8 +283,8 @@
   "name": "St. Cloud",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 229,
-  "items_dev": 65,
+  "items_raw": 203,
+  "items_dev": 57,
   "error": null
  },
  {
@@ -328,8 +328,8 @@
   "name": "Hillsborough County",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 786,
-  "items_dev": 334,
+  "items_raw": 833,
+  "items_dev": 352,
   "error": null
  },
  {
@@ -337,7 +337,7 @@
   "name": "Pinellas County",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1134,
+  "items_raw": 1122,
   "items_dev": 18,
   "error": null
  },
@@ -346,7 +346,7 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1644,
+  "items_raw": 1631,
   "items_dev": 90,
   "error": null
  },
@@ -364,8 +364,8 @@
   "name": "Polk County",
   "county": "Polk",
   "ok": true,
-  "items_raw": 2328,
-  "items_dev": 128,
+  "items_raw": 2336,
+  "items_dev": 130,
   "error": null
  },
  {
@@ -374,7 +374,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 132,
-  "items_dev": 77,
+  "items_dev": 76,
   "error": null
  },
  {
