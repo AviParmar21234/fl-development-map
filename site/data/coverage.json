@@ -13,8 +13,8 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2168,
-  "items_dev": 51,
+  "items_raw": 2169,
+  "items_dev": 50,
   "error": null
  },
  {
@@ -40,7 +40,7 @@
   "name": "Miami Beach",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 1708,
+  "items_raw": 1709,
   "items_dev": 99,
   "error": null
  },
@@ -94,7 +94,7 @@
   "name": "Broward County",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1088,
+  "items_raw": 1087,
   "items_dev": 46,
   "error": null
  },
@@ -103,8 +103,8 @@
   "name": "Fort Lauderdale",
   "county": "Broward",
   "ok": true,
-  "items_raw": 975,
-  "items_dev": 25,
+  "items_raw": 1066,
+  "items_dev": 28,
   "error": null
  },
  {
@@ -121,7 +121,7 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1504,
+  "items_raw": 1571,
   "items_dev": 32,
   "error": null
  },
@@ -130,8 +130,8 @@
   "name": "Miramar",
   "county": "Broward",
   "ok": true,
-  "items_raw": 557,
-  "items_dev": 2,
+  "items_raw": 617,
+  "items_dev": 3,
   "error": null
  },
  {
@@ -139,8 +139,8 @@
   "name": "Pompano Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 950,
-  "items_dev": 46,
+  "items_raw": 976,
+  "items_dev": 49,
   "error": null
  },
  {
@@ -184,7 +184,7 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2307,
+  "items_raw": 2323,
   "items_dev": 75,
   "error": null
  },
@@ -193,7 +193,7 @@
   "name": "Wellington",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 787,
+  "items_raw": 798,
   "items_dev": 32,
   "error": null
  },
@@ -229,7 +229,7 @@
   "name": "Royal Palm Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 82,
+  "items_raw": 93,
   "items_dev": 0,
   "error": null
  },
@@ -238,7 +238,7 @@
   "name": "Orange County",
   "county": "Orange",
   "ok": true,
-  "items_raw": 1580,
+  "items_raw": 1584,
   "items_dev": 62,
   "error": null
  },
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 287,
+  "items_raw": 279,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 380,
-  "items_dev": 106,
+  "items_raw": 393,
+  "items_dev": 113,
   "error": null
  },
  {
@@ -274,8 +274,8 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 637,
-  "items_dev": 31,
+  "items_raw": 729,
+  "items_dev": 33,
   "error": null
  },
  {
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 75,
+  "items_raw": 77,
   "items_dev": 0,
   "error": null
  },
@@ -319,8 +319,8 @@
   "name": "Altamonte Springs",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 210,
-  "items_dev": 15,
+  "items_raw": 206,
+  "items_dev": 13,
   "error": null
  },
  {
@@ -329,7 +329,7 @@
   "county": "Hillsborough",
   "ok": true,
   "items_raw": 833,
-  "items_dev": 354,
+  "items_dev": 358,
   "error": null
  },
  {
