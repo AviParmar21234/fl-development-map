@@ -22,7 +22,7 @@
   "name": "Doral",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 466,
+  "items_raw": 467,
   "items_dev": 32,
   "error": null
  },
@@ -184,8 +184,8 @@
   "name": "Delray Beach",
   "county": "Palm Beach",
   "ok": true,
-  "items_raw": 2323,
-  "items_dev": 75,
+  "items_raw": 2302,
+  "items_dev": 72,
   "error": null
  },
  {
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1210,
-  "items_dev": 193,
+  "items_raw": 1182,
+  "items_dev": 189,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 278,
+  "items_raw": 270,
   "items_dev": 0,
   "error": null
  },
@@ -274,7 +274,7 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 744,
+  "items_raw": 734,
   "items_dev": 37,
   "error": null
  },
@@ -301,7 +301,7 @@
   "name": "Clermont",
   "county": "Lake",
   "ok": true,
-  "items_raw": 77,
+  "items_raw": 76,
   "items_dev": 0,
   "error": null
  },
@@ -346,8 +346,8 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1680,
-  "items_dev": 90,
+  "items_raw": 1613,
+  "items_dev": 82,
   "error": null
  },
  {

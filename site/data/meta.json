@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-14T16:26:16+00:00",
+ "generated_at": "2026-11-15T16:52:57+00:00",
  "totals": {
   "sources_attempted": 44,
   "sources_ok": 43,
-  "projects_mapped": 844,
-  "projects_unmapped": 986,
-  "multifamily": 331,
-  "sites": 666,
-  "mf_sites": 93,
+  "projects_mapped": 838,
+  "projects_unmapped": 979,
+  "multifamily": 329,
+  "sites": 663,
+  "mf_sites": 91,
   "upcoming_sites": 120
  },
  "counties": {
@@ -22,8 +22,8 @@
    "upcoming": 7
   },
   "Palm Beach": {
-   "sites": 50,
-   "mf": 17,
+   "sites": 48,
+   "mf": 15,
    "upcoming": 7
   },
   "Orange": {
@@ -32,7 +32,7 @@
    "upcoming": 6
   },
   "Seminole": {
-   "sites": 91,
+   "sites": 90,
    "mf": 9,
    "upcoming": 1
   },
