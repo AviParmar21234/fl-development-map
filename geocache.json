@@ -14,6 +14,8 @@
 "01-032 Curry Ford Road, , FL": null,
 "03-008 Duskin Avenue, , FL": null,
 "07-038 Oak Ridge Road, , FL": null,
+"08-052 Liverpool Blvd, , FL": null,
+"08-064 E Colonial Dr, , FL": null,
 "1 East 52nd Place, Hialeah, FL": [
 25.870086267851,
 -80.283094538333
@@ -122,6 +124,10 @@
 "10155 NW 12 STREET, Doral, FL": [
 25.782741436312,
 -80.359302225108
+],
+"1016 Ingraham Avenue, Delray Beach, FL": [
+26.457958121022,
+-80.061984112978
 ],
 "1017 SW 19th Street, Fort Lauderdale, FL": [
 26.097183800045,
@@ -569,6 +575,10 @@
 -81.514307775629
 ],
 "1222 N Vista Del Mar Drive, Delray Beach, FL": [
+26.466831378174,
+-80.059182907931
+],
+"1222 Vista Del Mar Drive N, Delray Beach, FL": [
 26.466831378174,
 -80.059182907931
 ],
@@ -1680,6 +1690,7 @@
 28.126535,
 -82.0275382
 ],
+"2026-18 5955 South Florida Avenue, , FL": null,
 "2026-18 Anderson Road, , FL": [
 25.7452342,
 -80.2707648
