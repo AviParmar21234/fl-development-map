@@ -13,7 +13,7 @@
   "name": "Coral Gables",
   "county": "Miami-Dade",
   "ok": true,
-  "items_raw": 2155,
+  "items_raw": 2157,
   "items_dev": 47,
   "error": null
  },
@@ -121,7 +121,7 @@
   "name": "Pembroke Pines",
   "county": "Broward",
   "ok": true,
-  "items_raw": 1408,
+  "items_raw": 1483,
   "items_dev": 33,
   "error": null
  },
@@ -157,7 +157,7 @@
   "name": "Deerfield Beach",
   "county": "Broward",
   "ok": true,
-  "items_raw": 261,
+  "items_raw": 278,
   "items_dev": 31,
   "error": null
  },
@@ -247,8 +247,8 @@
   "name": "Seminole County",
   "county": "Seminole",
   "ok": true,
-  "items_raw": 1211,
-  "items_dev": 195,
+  "items_raw": 1224,
+  "items_dev": 203,
   "error": null
  },
  {
@@ -256,7 +256,7 @@
   "name": "Winter Park",
   "county": "Orange",
   "ok": true,
-  "items_raw": 279,
+  "items_raw": 263,
   "items_dev": 0,
   "error": null
  },
@@ -265,8 +265,8 @@
   "name": "Apopka",
   "county": "Orange",
   "ok": true,
-  "items_raw": 391,
-  "items_dev": 102,
+  "items_raw": 393,
+  "items_dev": 100,
   "error": null
  },
  {
@@ -274,8 +274,8 @@
   "name": "Kissimmee",
   "county": "Osceola",
   "ok": true,
-  "items_raw": 734,
-  "items_dev": 35,
+  "items_raw": 787,
+  "items_dev": 36,
   "error": null
  },
  {
@@ -292,7 +292,7 @@
   "name": "Lake County",
   "county": "Lake",
   "ok": true,
-  "items_raw": 313,
+  "items_raw": 297,
   "items_dev": 4,
   "error": null
  },
@@ -346,7 +346,7 @@
   "name": "Clearwater",
   "county": "Pinellas",
   "ok": true,
-  "items_raw": 1706,
+  "items_raw": 1709,
   "items_dev": 88,
   "error": null
  },
@@ -382,8 +382,8 @@
   "name": "City of Tampa",
   "county": "Hillsborough",
   "ok": true,
-  "items_raw": 740,
-  "items_dev": 67,
+  "items_raw": 798,
+  "items_dev": 85,
   "error": null
  },
  {
